@@ -1,0 +1,19 @@
+{
+  "id": "faculty-beta",
+  "name": {"en": "Example Faculty B"},
+  "academic_position": "Lecturer",
+  "badges": [],
+  "education": [],
+  "research_interests": ["Human-Computer Interaction"],
+  "expertise": ["User Experience"],
+  "selected_publications": [
+    {
+      "authors": ["Example Faculty B"],
+      "title": "Fixture Publication Without DOI",
+      "academic_year": "2024",
+      "year": 2024,
+      "venue": "Example Conference"
+    }
+  ],
+  "publication_profiles": []
+}
