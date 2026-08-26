@@ -1,0 +1,13 @@
+source_location,exact_source_field,serving_path,requirement,visibility,processing_rule,error_behavior,notes
+TBD_FROM_ACTUAL_SOURCE,TBD,id,Required,PUBLIC,Apply faculty identifier strategy,Reject/Hold,Do not guess source field
+TBD_FROM_ACTUAL_SOURCE,TBD,name.th,Conditional Required,PUBLIC/PENDING,Trim whitespace,Hold if no display name,Actual source required
+TBD_FROM_ACTUAL_SOURCE,TBD,name.en,Conditional Required,PUBLIC/PENDING,Trim whitespace,Hold if no display name,Actual source required
+TBD_FROM_ACTUAL_SOURCE,TBD,academic_position,Optional,PUBLIC/PENDING,Trim only,Omit,
+TBD_FROM_ACTUAL_SOURCE,TBD,contact.email,Optional,PUBLIC/PENDING,Validate email,Omit + report,
+TBD_FROM_ACTUAL_SOURCE,TBD,research_interests[],Optional,PUBLIC,Split only by confirmed delimiter; exact dedupe,[],
+TBD_FROM_ACTUAL_SOURCE,TBD,expertise[],Optional,PUBLIC,Formatting normalization only,[],No semantic rewrite
+TBD_FROM_ACTUAL_SOURCE,TBD,selected_publications[],Optional,PUBLIC/PENDING,Relationship validation + dedupe,[],
+TBD_FROM_ACTUAL_SOURCE,TBD,profile_image,Optional,PUBLIC/PENDING,Asset mapping,Omit,
+TBD_FROM_ACTUAL_SOURCE,TBD,cv,Optional,PUBLIC/PENDING,Asset mapping,Omit,
+TBD_FROM_ACTUAL_SOURCE,TBD,publication_profiles[],Optional,PUBLIC/PENDING,URL validation,[],
+TBD_FROM_ACTUAL_SOURCE,TBD,N/A,Not Used,PRIVATE,Exclude,Never serve,Internal/private field
