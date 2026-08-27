@@ -1,0 +1,243 @@
+[
+  {
+    "source_url": null,
+    "captured_at": "2026-08-27T19:00:00+07:00",
+    "public_visibility": true,
+    "name": {
+      "th": "ผศ.ดร.ประภาพร รัตนธำรง",
+      "en": "Asst.Prof.Dr. Prapaporn Rattanatamrong"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture30.jpg"
+    },
+    "badges": [
+      {
+        "label": "All_Badges",
+        "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2022/07/All_Badges.png"
+      }
+    ],
+    "cv": {
+      "url": "https://drive.google.com/file/d/1V1rWtmEoxpTbxBZMehGL05X8vqH5b_lO/view"
+    },
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+      "phone": "0-2986-9256",
+      "extension": "225",
+      "email": "rattanat@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Electrical and Computer Engineering",
+        "institution": "University of Florida",
+        "country": "USA",
+        "graduation_year": 2554,
+        "additional_information": null
+      },
+      {
+        "degree": "M.Sc.",
+        "field": "Computer Science",
+        "institution": "University of Southern California",
+        "country": "USA",
+        "graduation_year": 2547,
+        "additional_information": null
+      },
+      {
+        "degree": "วศ.บ.",
+        "field": "วิศวกรรมคอมพิวเตอร์",
+        "institution": "มหาวิทยาลัยเกษตรศาสตร์",
+        "country": "ประเทศไทย",
+        "graduation_year": 2544,
+        "additional_information": "เกียรตินิยมอันดับสอง"
+      }
+    ],
+    "research_interests": [
+      "Distributed Systems and Middleware",
+      "Cloud and Edge Computing",
+      "Big Data Engineering",
+      "Digital Twins",
+      "Data-Driven Decision Support Systems",
+      "Real-Time Scheduling"
+    ],
+    "expertise": [
+      "การออกแบบสถาปัตยกรรมของระบบสารสนเทศ (IT systems) บริการบนระบบอินเตอร์เน็ต (Internet-based services) และโครงสร้างพื้นฐานไซเบอร์ (Cyberinfrastructure) แบบกระจายศูนย์ (Distributed systems) และแบบที่อาศัยกลยุทธ์เชิงเทคนิคและศักยภาพของคลาวด์ (Cloud computing) เป็นองค์ประกอบ",
+      "ระบบในการบริหารจัดการการไหลของข้อมูล (Data workflow) เพื่อจัดเก็บ โอนย้าย และวิเคราะห์ข้อมูลทั้งในเซิร์ฟเวอร์บนคลาวด์และเอดจ์ (Cloud and Edge servers)",
+      "ระบบแสดงข้อมูลเป็นภาพ เพื่อสนับสนุนการใช้ข้อมูลประกอบการตัดสินใจขององค์กร (Dashboard and Decision support systems)"
+    ],
+    "selected_publications": [
+      {
+        "authors": "Thongthavorn, Wongsatorn & Rattanatamrong, Prapaporn",
+        "title": "Multi-Container Application Migration with Load Balanced and Adaptive Parallel TCP",
+        "year": 2019,
+        "venue": null,
+        "volume": null,
+        "issue": null,
+        "pages": "55-62",
+        "doi": "10.1109/HPCS48598.2019.9188218",
+        "url": null,
+        "citation_text": "Thongthavorn, Wongsatorn & Rattanatamrong, Prapaporn. (2019). Multi-Container Application Migration with Load Balanced and Adaptive Parallel TCP. 55-62. 10.1109/HPCS48598.2019.9188218."
+      },
+      {
+        "authors": "Wantanakorn, Pornchanok & Harintajinda, Supamas & Chuthapisith, Jariya & Anurathapan, Usanarat & Rattanatamrong, Prapaporn",
+        "title": "A New Mobile Application to Reduce Anxiety in Pediatric Patients Before Bone Marrow Aspiration Procedures",
+        "year": 2018,
+        "venue": "Hospital pediatrics",
+        "volume": "8",
+        "issue": null,
+        "pages": null,
+        "doi": "10.1542/hpeds.2018-0073",
+        "url": null,
+        "citation_text": "Wantanakorn, Pornchanok & Harintajinda, Supamas & Chuthapisith, Jariya & Anurathapan, Usanarat & Rattanatamrong, Prapaporn. (2018). A New Mobile Application to Reduce Anxiety in Pediatric Patients Before Bone Marrow Aspiration Procedures. Hospital pediatrics. 8. 10.1542/hpeds.2018-0073."
+      },
+      {
+        "authors": "Rattanatamrong, Prapaporn & Fortes, Jose",
+        "title": "Dynamic Scheduling of Real-Time Mixture-of-Experts Systems on Limited Resources",
+        "year": 2014,
+        "venue": "Computers, IEEE Transactions on",
+        "volume": "63",
+        "issue": null,
+        "pages": "1751-1764",
+        "doi": "10.1109/TC.2013.50",
+        "url": null,
+        "citation_text": "Rattanatamrong, Prapaporn & Fortes, Jose. (2014). Dynamic Scheduling of Real-Time Mixture-of-Experts Systems on Limited Resources. Computers, IEEE Transactions on. 63. 1751-1764. 10.1109/TC.2013.50."
+      },
+      {
+        "authors": "Rattanatamrong, Prapaporn & Fortes, Jose",
+        "title": "Improved real-time scheduling of periodic tasks on multiprocessors",
+        "year": 2012,
+        "venue": "Concurrency and Computation Practice and Experience",
+        "volume": "27",
+        "issue": null,
+        "pages": null,
+        "doi": "10.1002/cpe.2969",
+        "url": null,
+        "citation_text": "Rattanatamrong, Prapaporn & Fortes, Jose. (2012). Improved real-time scheduling of periodic tasks on multiprocessors. Concurrency and Computation Practice and Experience. 27. 10.1002/cpe.2969."
+      },
+      {
+        "authors": "Rattanatamrong, Prapaporn & Fortes, Jose",
+        "title": "Mode Transition for Online Scheduling of Adaptive Real-Time Systems on Multiprocessors",
+        "year": 2011,
+        "venue": null,
+        "volume": "1",
+        "issue": null,
+        "pages": "25-32",
+        "doi": "10.1109/RTCSA.2011.71",
+        "url": null,
+        "citation_text": "Rattanatamrong, Prapaporn & Fortes, Jose. (2011). Mode Transition for Online Scheduling of Adaptive Real-Time Systems on Multiprocessors. 1. 25-32. 10.1109/RTCSA.2011.71."
+      },
+      {
+        "authors": "Rattanatamrong, Prapaporn & Fortes, José",
+        "title": "Real-time scheduling of mixture-of-experts systems with limited resources",
+        "year": 2010,
+        "venue": "HSCC’10 - Proceedings of the 13th ACM International Conference on Hybrid Systems: Computation and Control",
+        "volume": null,
+        "issue": null,
+        "pages": "71-80",
+        "doi": "10.1145/1755952.1755964",
+        "url": null,
+        "citation_text": "Rattanatamrong, Prapaporn & Fortes, José. (2010). Real-time scheduling of mixture-of-experts systems with limited resources. HSCC’10 - Proceedings of the 13th ACM International Conference on Hybrid Systems: Computation and Control. 71-80. 10.1145/1755952.1755964."
+      },
+      {
+        "authors": "Digiovanna, Jack & Rattanatamrong, Prapaporn & Zhao, Ming & Mahmoudi, Babak & Hermer, Linda & Figueiredo, Renato & Principe, Jose & Fortes, Jose & Sanchez, Justin",
+        "title": "Cyber-Workstation for Computational Neuroscience",
+        "year": 2010,
+        "venue": "Frontiers in neuroengineering",
+        "volume": "2",
+        "issue": null,
+        "pages": "17",
+        "doi": "10.3389/neuro.16.017.2009",
+        "url": null,
+        "citation_text": "Digiovanna, Jack & Rattanatamrong, Prapaporn & Zhao, Ming & Mahmoudi, Babak & Hermer, Linda & Figueiredo, Renato & Principe, Jose & Fortes, Jose & Sanchez, Justin. (2010). Cyber-Workstation for Computational Neuroscience. Frontiers in neuroengineering. 2. 17. 10.3389/neuro.16.017.2009."
+      }
+    ],
+    "publication_profiles": [
+      {
+        "provider": "google_scholar",
+        "url": "https://scholar.google.com/citations?user=91z1Tv8AAAAJ&hl=en"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/profile/Prapaporn-Rattanatamrong"
+      }
+    ]
+  },
+  {
+    "source_url": null,
+    "captured_at": "2026-08-27T19:00:00+07:00",
+    "public_visibility": true,
+
+    "name": {
+      "th": "ผศ.ดร.ฐาปนา บุญชู",
+      "en": "Asst.Prof.Dr. Thapana Boonchoo"
+    },
+
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/01/1611910950203-e1612162735738.jpg"
+    },
+
+    "badges": [],
+
+    "cv": null,
+
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 222",
+      "phone": "02-564-4444 ต่อ 2157 ต่อ 222",
+      "extension": null,
+      "email": "thapana@cs.tu.ac.th"
+    },
+
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Computer Science and Technology",
+        "institution": "University of Chinese Academy of Sciences",
+        "country": "China",
+        "graduation_year": null,
+        "additional_information": "Machine Learning and Data Mining Group, Institute of Computing Technology"
+      },
+      {
+        "degree": "M.Sc.",
+        "field": "Computer Science and Technology",
+        "institution": "Tsinghua University",
+        "country": "China",
+        "graduation_year": null,
+        "additional_information": "Institute of High-Performance Computing"
+      },
+      {
+        "degree": "B.Sc.",
+        "field": "Computer Science",
+        "institution": "Thammasat University",
+        "country": "Thailand",
+        "graduation_year": null,
+        "additional_information": "First Class Honours"
+      }
+    ],
+
+    "research_interests": [
+      "Machine Learning/Data Mining",
+      "Human Movement Analysis",
+      "Data Clustering",
+      "Data Representation Learning",
+      "Matrix Factorization",
+      "Probabilistic Models"
+    ],
+
+    "expertise": [],
+
+    "selected_publications": [],
+
+    "publication_profiles": [
+      {
+        "provider": "semantic_scholar",
+        "url": "https://www.semanticscholar.org/author/Thapana-Boonchoo/35514166"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/profile/Thapana-Boonchoo"
+      }
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "status": "PASSED_WITH_WARNINGS",
+  "faculty_records": 2,
+  "valid_faculty": 2,
+  "invalid_faculty": 0,
+  "selected_publications": 7,
+  "warnings": 1,
+  "errors": 0,
+  "duplicate_faculty": 0,
+  "duplicate_publications": 0,
+  "warning_details": [
+    "thapana-boonchoo: CV missing"
+  ]
+}
