@@ -1,0 +1,42 @@
+[
+  {
+    "id": "prapaporn-rattanatamrong",
+    "name": {
+      "th": "ผศ.ดร.ประภาพร รัตนธำรง",
+      "en": "Asst.Prof.Dr. Prapaporn Rattanatamrong"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture30.jpg",
+      "alt": "ผศ.ดร.ประภาพร รัตนธำรง"
+    },
+    "research_interests": [
+      "Distributed Systems and Middleware",
+      "Cloud and Edge Computing",
+      "Big Data Engineering",
+      "Digital Twins",
+      "Data-Driven Decision Support Systems",
+      "Real-Time Scheduling"
+    ]
+  },
+  {
+    "id": "thapana-boonchoo",
+    "name": {
+      "th": "ผศ.ดร.ฐาปนา บุญชู",
+      "en": "Asst.Prof.Dr. Thapana Boonchoo"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/01/1611910950203-e1612162735738.jpg",
+      "alt": "ผศ.ดร.ฐาปนา บุญชู"
+    },
+    "research_interests": [
+      "Machine Learning/Data Mining",
+      "Human Movement Analysis",
+      "Data Clustering",
+      "Data Representation Learning",
+      "Matrix Factorization",
+      "Probabilistic Models"
+    ]
+  }
+]

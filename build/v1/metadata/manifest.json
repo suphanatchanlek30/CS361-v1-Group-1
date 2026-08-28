@@ -1,0 +1,11 @@
+{
+  "dataset_id": "faculty-v1-2026-08",
+  "source": "Department Public Faculty Website",
+  "source_domain": "cs.sci.tu.ac.th",
+  "source_version": "v1-initial",
+  "prepared_at": "2026-08-27T13:12:03+00:00",
+  "faculty_count": 2,
+  "publication_count": 7,
+  "validation_status": "passed_with_warnings",
+  "serving_version": "v1"
+}
