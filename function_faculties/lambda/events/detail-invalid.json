@@ -1,6 +1,0 @@
-{
-  "httpMethod": "GET",
-  "path": "/api/v1/faculties/x",
-  "pathParameters": { "id": "../source/faculties" },
-  "requestContext": { "stage": "prod", "httpMethod": "GET", "path": "/prod/api/v1/faculties/x" }
-}

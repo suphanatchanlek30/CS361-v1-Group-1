@@ -1,6 +1,0 @@
-{
-  "httpMethod": "DELETE",
-  "path": "/api/v1/faculties/eng",
-  "pathParameters": { "id": "eng" },
-  "requestContext": { "stage": "prod", "httpMethod": "DELETE", "path": "/prod/api/v1/faculties/eng" }
-}
