@@ -1,0 +1,6 @@
+{
+  "httpMethod": "GET",
+  "path": "/api/v1/faculties",
+  "pathParameters": null,
+  "requestContext": { "stage": "prod", "httpMethod": "GET", "path": "/prod/api/v1/faculties" }
+}
