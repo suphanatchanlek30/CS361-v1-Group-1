@@ -1,0 +1,16 @@
+﻿source_location,exact_source_field,example_value,classification,required_optional,v1_serving_concept,confirmation_owner,notes
+CS TU public faculty profile / Header,English faculty name,Asst.Prof.Dr. Prapaporn Rattanatamrong,PUBLIC,Conditional Required,id (derived) / name.en,Department / V1 Team,Publicly displayed source field. ID is derived as prapaporn-rattanatamrong because no stable source code was supplied.
+CS TU public faculty profile / Header,Thai faculty name,ผศ.ดร.ประภาพร รัตนธำรง,PUBLIC,Conditional Required,name.th,Department,Publicly displayed source field.
+CS TU public faculty profile / Header,Academic title embedded in name,ผศ. / Asst.Prof.,PUBLIC,Optional,academic_position,Department / V1 Team,May be derived only from the confirmed title prefix.
+CS TU public faculty profile / Header,Profile image,https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture30.jpg,PUBLIC,Optional,profile_image.url,Department,Already exposed as a public faculty profile asset.
+CS TU public faculty profile / Header,All_Badges,https://cs.sci.tu.ac.th/wp-content/uploads/2022/07/All_Badges.png,PUBLIC,Optional,badges[],Department,Already exposed as a public profile asset.
+CS TU public faculty profile / Curriculum Vitae (CV),CV URL,https://drive.google.com/file/d/1V1rWtmEoxpTbxBZMehGL05X8vqH5b_lO/view,PUBLIC,Optional,cv.url,Department,CV link is supplied as part of the public faculty profile source.
+CS TU public faculty profile / Contact Information,Office / building / room,อาคาร LC-2 ชั้น 2 ห้อง 210,PUBLIC,Optional,contact.office,Department,Public contact location.
+CS TU public faculty profile / Contact Information,Phone / extension,0-2986-9256 ต่อ 225,PUBLIC,Optional,contact.phone / contact.extension,Department,Public contact number shown in source.
+CS TU public faculty profile / Contact Information,Email,rattanat@tu.ac.th,PUBLIC,Optional,contact.email,Department,Public institutional email shown in source.
+CS TU public faculty profile / Education,Education,3 education records,PUBLIC,Optional,education[],Department,Publicly displayed academic background.
+CS TU public faculty profile / Research Interest,Research Interest,6 research-interest items,PUBLIC,Optional,research_interests[],Department,Public faculty research information.
+CS TU public faculty profile / Expertise,Expertise,3 expertise descriptions,PUBLIC,Optional,expertise[],Department,Public faculty expertise information; preserve meaning.
+CS TU public faculty profile / Selected Publication,Selected Publication,7 selected publication records,PUBLIC,Optional,selected_publications[],Department,Publicly displayed selected publications.
+CS TU public faculty profile / All Publications,Google Scholar Profile,https://scholar.google.com/citations?user=91z1Tv8AAAAJ&hl=en,PUBLIC,Optional,publication_profiles[],Department,Public external academic profile.
+CS TU public faculty profile / All Publications,ResearchGate Profile,https://www.researchgate.net/profile/Prapaporn-Rattanatamrong,PUBLIC,Optional,publication_profiles[],Department,Public external academic profile.
