@@ -43,6 +43,7 @@ export function FacultyProfileImage({ image, name }: FacultyProfileImageProps) {
         sizes="(max-width: 640px) 144px, 176px"
         className="object-cover"
         onError={() => setHasImageError(true)}
+        unoptimized
       />
     </div>
   );
