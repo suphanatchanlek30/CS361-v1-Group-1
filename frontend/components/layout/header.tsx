@@ -37,11 +37,14 @@ export const Header: React.FC = () => {
 
         {/* Right Actions & Hamburger Button */}
         <div className="flex items-center gap-3">
-          {/* Language Toggle */}
-          <div className="flex items-center gap-1 border border-[#81001D]/30 rounded px-2 py-1 text-xs font-semibold">
-            <span className="text-[#81001D] font-bold">TH</span>
-            <span className="text-[#81001D]">|</span>
-            <span className="text-[#81001D] hover:text-black cursor-pointer">EN</span>
+          {/* Fixed Language Display (Active: TH) */}
+          <div className="flex items-center border border-[#81001D] rounded-md p-0.5 text-xs font-semibold bg-gray-50 select-none">
+            <span className="bg-[#81001D] text-white font-bold px-2 py-0.5 rounded-sm shadow-sm">
+              TH
+            </span>
+            <span className="text-[#81001D]/40 px-2 py-0.5 cursor-default">
+              EN
+            </span>
           </div>
 
           {/* Hamburger Button (Mobile Only) */}
