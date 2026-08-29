@@ -1,23 +1,36 @@
-export interface FacultyName {
-  th: string | null;
-  en: string | null;
-}
-
+/** Image data returned by the public Faculty API. */
 export interface FacultyImage {
   url: string;
   alt: string | null;
 }
 
+/** Kept for the Directory helper introduced in #26. */
+export type ProfileImage = FacultyImage;
+
+/**
+ * Faculty Summary contract (#22 — frozen).
+ * This is intentionally smaller than the detail contract below.
+ */
+export interface FacultySummaryName {
+  th: string;
+  en?: string | null;
+}
+
 export interface FacultySummary {
   id: string;
-  name: FacultyName;
-  academic_position: string | null;
-  profile_image: FacultyImage | null;
-  research_interests: string[];
+  name: FacultySummaryName;
+  academic_position?: string | null;
+  profile_image?: FacultyImage | null;
+  research_interests?: string[];
 }
 
 export interface FacultyListResponse {
   data: FacultySummary[];
+}
+
+export interface FacultyName {
+  th: string | null;
+  en: string | null;
 }
 
 export interface FacultyBadge {
