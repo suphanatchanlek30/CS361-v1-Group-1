@@ -1,4 +1,9 @@
-import type { FacultyDetail, FacultyDetailResponse } from "@/types/faculty";
+import type {
+  FacultyDetail,
+  FacultyDetailResponse,
+  FacultyListResponse,
+  FacultySummary,
+} from "@/types/faculty";
 
 export type FacultyApiErrorKind =
   | "invalid-id"
@@ -50,31 +55,49 @@ function errorKindForStatus(status: number): FacultyApiErrorKind {
 }
 
 export async function getFacultyDetail(id: string): Promise<FacultyDetail> {
+  const payload = await getJson(`/api/v1/faculties/${encodeURIComponent(id)}`);
+
+  if (!hasFacultyDetail(payload)) {
+    throw new FacultyApiError("invalid-response");
+  }
+
+  return payload.data;
+}
+
+export async function getFaculties(): Promise<FacultySummary[]> {
+  const payload = await getJson("/api/v1/faculties");
+
+  if (!hasFacultyList(payload)) {
+    throw new FacultyApiError("invalid-response");
+  }
+
+  return payload.data;
+}
+
+async function getJson(path: string): Promise<unknown> {
+  let response: Response;
+
   try {
-    const response = await fetch(
-      `${getApiBaseUrl()}/api/v1/faculties/${encodeURIComponent(id)}`,
-      {
-        headers: { Accept: "application/json" },
-        cache: "no-store",
-      },
-    );
-
-    if (!response.ok) {
-      throw new FacultyApiError(errorKindForStatus(response.status), response.status);
-    }
-
-    const payload: unknown = await response.json();
-    if (!hasFacultyDetail(payload)) {
-      throw new FacultyApiError("invalid-response");
-    }
-
-    return payload.data;
+    response = await fetch(`${getApiBaseUrl()}${path}`, {
+      headers: { Accept: "application/json" },
+      cache: "no-store",
+    });
   } catch (error) {
     if (error instanceof FacultyApiError) {
       throw error;
     }
 
     throw new FacultyApiError("network");
+  }
+
+  if (!response.ok) {
+    throw new FacultyApiError(errorKindForStatus(response.status), response.status);
+  }
+
+  try {
+    return await response.json();
+  } catch {
+    throw new FacultyApiError("invalid-response");
   }
 }
 
@@ -87,5 +110,21 @@ function hasFacultyDetail(payload: unknown): payload is FacultyDetailResponse {
     payload.data !== null &&
     "id" in payload.data &&
     typeof payload.data.id === "string"
+  );
+}
+
+function hasFacultyList(payload: unknown): payload is FacultyListResponse {
+  return (
+    typeof payload === "object" &&
+    payload !== null &&
+    "data" in payload &&
+    Array.isArray(payload.data) &&
+    payload.data.every(
+      (faculty) =>
+        typeof faculty === "object" &&
+        faculty !== null &&
+        "id" in faculty &&
+        typeof faculty.id === "string",
+    )
   );
 }
