@@ -23,21 +23,21 @@ export const Header: React.FC = () => {
           </span>
         </Link>
 
-        {/* Desktop Navigation Menu */}
-        <nav className="hidden md:flex items-center gap-6 text-sm text-[#594141] font-medium">
-          <span className="hover:opacity-80 cursor-pointer">เกี่ยวกับเรา</span>
-          <span className="hover:opacity-80 cursor-pointer">หลักสูตร</span>
-          <span className="hover:opacity-80 cursor-pointer">วิจัย</span>
+        {/* Desktop Navigation Menu (ถอด Dead Interaction ออก) */}
+        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+          <span className="text-gray-400 cursor-default">เกี่ยวกับเรา</span>
+          <span className="text-gray-400 cursor-default">หลักสูตร</span>
+          <span className="text-gray-400 cursor-default">วิจัย</span>
           <Link href="/faculties" className="underline underline-offset-8 font-semibold text-[#81001D]">
             คณาจารย์
           </Link>
-          <span className="hover:opacity-80 cursor-pointer">ข่าวสาร</span>
-          <span className="hover:opacity-80 cursor-pointer">ติดต่อ</span>
+          <span className="text-gray-400 cursor-default">ข่าวสาร</span>
+          <span className="text-gray-400 cursor-default">ติดต่อ</span>
         </nav>
 
         {/* Right Actions & Hamburger Button */}
         <div className="flex items-center gap-3">
-          {/* Fixed Language Display (Active: TH) */}
+          {/* Fixed Language Display */}
           <div className="flex items-center border border-[#81001D] rounded-md p-0.5 text-xs font-semibold bg-gray-50 select-none">
             <span className="bg-[#81001D] text-white font-bold px-2 py-0.5 rounded-sm shadow-sm">
               TH
@@ -67,12 +67,12 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Floating Mobile Dropdown Menu (ไม่เบียด Layout ด้านล่าง) */}
+      {/* Floating Mobile Dropdown Menu (ถอด Dead Interaction ออก) */}
       {isMenuOpen && (
-        <nav className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 px-4 py-3 flex flex-col gap-3 text-sm text-[#594141] font-medium shadow-xl z-50">
-          <span className="hover:text-[#81001D] cursor-pointer py-1">เกี่ยวกับเรา</span>
-          <span className="hover:text-[#81001D] cursor-pointer py-1">หลักสูตร</span>
-          <span className="hover:text-[#81001D] cursor-pointer py-1">วิจัย</span>
+        <nav className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 px-4 py-3 flex flex-col gap-3 text-sm font-medium shadow-xl z-50">
+          <span className="text-gray-400 cursor-default py-1">เกี่ยวกับเรา</span>
+          <span className="text-gray-400 cursor-default py-1">หลักสูตร</span>
+          <span className="text-gray-400 cursor-default py-1">วิจัย</span>
           <Link
             href="/faculties"
             onClick={() => setIsMenuOpen(false)}
@@ -80,8 +80,8 @@ export const Header: React.FC = () => {
           >
             คณาจารย์
           </Link>
-          <span className="hover:text-[#81001D] cursor-pointer py-1">ข่าวสาร</span>
-          <span className="hover:text-[#81001D] cursor-pointer py-1">ติดต่อ</span>
+          <span className="text-gray-400 cursor-default py-1">ข่าวสาร</span>
+          <span className="text-gray-400 cursor-default py-1">ติดต่อ</span>
         </nav>
       )}
     </header>
