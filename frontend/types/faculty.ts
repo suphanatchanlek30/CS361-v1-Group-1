@@ -8,6 +8,18 @@ export interface FacultyImage {
   alt: string | null;
 }
 
+export interface FacultySummary {
+  id: string;
+  name: FacultyName;
+  academic_position: string | null;
+  profile_image: FacultyImage | null;
+  research_interests: string[];
+}
+
+export interface FacultyListResponse {
+  data: FacultySummary[];
+}
+
 export interface FacultyBadge {
   url: string;
   label?: string | null;
