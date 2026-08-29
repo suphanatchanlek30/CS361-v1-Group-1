@@ -1,74 +1,108 @@
-'use client';
-
-import React, { useState } from 'react';
 import Link from 'next/link';
-import { FacultySummary } from '@/types/faculty';
 
-export const FacultyCard: React.FC<{ faculty: FacultySummary }> = ({ faculty }) => {
-  const [imgError, setImgError] = useState(false);
+import { FacultyAvatar } from '@/components/faculty/faculty-avatar';
+import { getProfileImage } from '@/lib/faculty';
+import type { FacultySummary } from '@/types/faculty';
 
-  // ดึง URL รูปภาพรองรับทั้ง Object { url, alt } และ String
-  const imageUrl = typeof faculty.profile_image === 'object' && faculty.profile_image?.url
-    ? faculty.profile_image.url
-    : typeof faculty.profile_image === 'string'
-    ? faculty.profile_image
-    : null;
+interface FacultyCardProps {
+  faculty: FacultySummary;
+}
 
-  const imageAlt = typeof faculty.profile_image === 'object' && faculty.profile_image?.alt
-    ? faculty.profile_image.alt
-    : faculty.name.th;
+function InterestIcon() {
+  return (
+    <svg
+      className="h-3.5 w-3.5 shrink-0 text-ink-muted"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="5" r="2.2" />
+      <circle cx="5.5" cy="18" r="2.2" />
+      <circle cx="18.5" cy="18" r="2.2" />
+      <path d="M12 7.2v4.3m0 0-5 4.6m5-4.6 5 4.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function ArrowIcon() {
+  return (
+    <svg
+      className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      aria-hidden="true"
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 12h15m0 0-5.5-5.5M19 12l-5.5 5.5" />
+    </svg>
+  );
+}
+
+/**
+ * Server Component — ไม่ fetch detail API ต่อการ์ด แสดงเฉพาะ Faculty Summary (#22)
+ * ฟิลด์ที่เป็น optional ทุกตัวถูกครอบด้วยเงื่อนไข จึงไม่มีทางแสดง null/undefined
+ */
+export function FacultyCard({ faculty }: FacultyCardProps) {
+  const { url, alt } = getProfileImage(faculty);
+
+  const interests = faculty.research_interests ?? [];
+  const [primaryInterest] = interests;
+  const extraInterestCount = Math.max(interests.length - 1, 0);
 
   return (
     <Link
       href={`/faculties/${faculty.id}`}
-      className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm hover:shadow-md transition-shadow flex flex-col h-full group"
+      className="group flex h-full flex-col overflow-hidden rounded-xl border border-line bg-surface transition-all duration-200 hover:-translate-y-1 hover:border-brand/40 hover:shadow-lg"
     >
-      {/* Container รูปภาพ */}
-      <div className="relative w-full aspect-[3/4] bg-gray-100 rounded-md overflow-hidden mb-3">
-        {imageUrl && !imgError ? (
-          /* ใช้ <img> ปกติ + referrerPolicy เพื่อแก้ปัญหารูปถูกบล็อก Hotlink */
-          <img
-            src={imageUrl}
-            alt={imageAlt}
-            referrerPolicy="no-referrer"
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-            onError={() => setImgError(true)}
-          />
-        ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center text-gray-400 bg-gray-100">
-            <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-            </svg>
-          </div>
-        )}
+      <div className="aspect-4/5 w-full shrink-0 overflow-hidden bg-surface-alt">
+        <FacultyAvatar url={url} alt={alt} interactive />
       </div>
 
-      {/* ชื่อหลัก: แสดงเฉพาะ Thai Name เสมอตาม #26 และ Figma */}
-      <h3 className="font-bold text-gray-900 text-base mb-0.5 group-hover:text-[#81001D] transition-colors">
-        {faculty.name.th}
-      </h3>
+      <div className="flex flex-1 flex-col gap-1 p-4">
+        <h3
+          title={faculty.name.th}
+          className="truncate text-base font-extrabold leading-snug text-brand sm:text-lg"
+        >
+          {faculty.name.th}
+        </h3>
 
-      {/* ชื่อรอง: แสดง English Name ด้านล่างถ้ามี */}
-      {faculty.name.en && (
-        <p className="text-xs text-gray-500 mb-2">{faculty.name.en}</p>
-      )}
-
-      {/* ตำแหน่งทางวิชาการ */}
-      {faculty.academic_position && (
-        <p className="text-xs text-[#81001D] font-medium mb-3">
-          {faculty.academic_position}
-        </p>
-      )}
-
-      {/* ความสนใจงานวิจัย */}
-      {faculty.research_interests && faculty.research_interests.length > 0 && (
-        <div className="mt-auto pt-2 border-t border-gray-100">
-          <p className="text-[11px] text-gray-500 line-clamp-2">
-            <span className="font-semibold text-gray-700">สาขาที่เชี่ยวชาญ: </span>
-            {faculty.research_interests.join(', ')}
+        {faculty.name.en ? (
+          <p lang="en" title={faculty.name.en} className="truncate text-xs text-ink-muted/80">
+            {faculty.name.en}
           </p>
+        ) : null}
+
+        {faculty.academic_position ? (
+          <p className="truncate text-sm text-ink">{faculty.academic_position}</p>
+        ) : null}
+
+        {/* mt-auto ดันบล็อกล่างชิดก้นการ์ด ความสูงการ์ดในแถวเดียวกันจึงเท่ากันเสมอ */}
+        <div className="mt-auto pt-4">
+          {primaryInterest ? (
+            <div className="flex items-center gap-2 border-t border-line-soft pt-3">
+              <InterestIcon />
+              <span
+                lang="en"
+                title={interests.join(', ')}
+                className="truncate text-xs text-ink-muted"
+              >
+                {primaryInterest}
+              </span>
+              {extraInterestCount > 0 ? (
+                <span className="shrink-0 text-xs text-ink-muted/70">+{extraInterestCount}</span>
+              ) : null}
+            </div>
+          ) : null}
+
+          <span className="mt-3 flex items-center gap-1.5 text-sm font-bold text-brand">
+            ดูข้อมูลอาจารย์
+            <ArrowIcon />
+          </span>
         </div>
-      )}
+      </div>
     </Link>
   );
-};
+}
