@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { FacultySummary } from '@/types/faculty';
 
 export const FacultyCard: React.FC<{ faculty: FacultySummary }> = ({ faculty }) => {
@@ -27,11 +26,12 @@ export const FacultyCard: React.FC<{ faculty: FacultySummary }> = ({ faculty }) 
       {/* Container รูปภาพ */}
       <div className="relative w-full aspect-[3/4] bg-gray-100 rounded-md overflow-hidden mb-3">
         {imageUrl && !imgError ? (
-          <Image
+          /* ใช้ <img> ปกติ + referrerPolicy เพื่อแก้ปัญหารูปถูกบล็อก Hotlink */
+          <img
             src={imageUrl}
             alt={imageAlt}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
             onError={() => setImgError(true)}
           />
         ) : (
@@ -53,7 +53,7 @@ export const FacultyCard: React.FC<{ faculty: FacultySummary }> = ({ faculty }) 
         <p className="text-xs text-gray-500 mb-2">{faculty.name.en}</p>
       )}
 
-      {/* ตำแหน่งทางวิชาการ: แสดงเพียงจุดเดียว */}
+      {/* ตำแหน่งทางวิชาการ */}
       {faculty.academic_position && (
         <p className="text-xs text-[#81001D] font-medium mb-3">
           {faculty.academic_position}

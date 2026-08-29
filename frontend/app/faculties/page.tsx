@@ -13,10 +13,11 @@ export default function FacultyDirectoryPage() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  const loadData = useCallback(async () => {
+  // ฟังก์ชันสำหรับกด Retry
+  const handleRetry = useCallback(async () => {
+    setLoading(true);
+    setError(null);
     try {
-      setLoading(true);
-      setError(null);
       const data = await getFaculties();
       setFaculties(data);
     } catch (err) {
@@ -26,22 +27,43 @@ export default function FacultyDirectoryPage() {
     }
   }, []);
 
+  // โหลดข้อมูลครั้งแรกเมื่อ Mount (เปลี่ยนมาใช้ Promise เพื่อแก้ Synchronous setState in Effect)
   useEffect(() => {
-    loadData();
-  }, [loadData]);
+    let isMounted = true;
+
+    getFaculties()
+      .then((data) => {
+        if (isMounted) {
+          setFaculties(data);
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (isMounted) {
+          setError(err instanceof Error ? err.message : 'เกิดข้อผิดพลาดในการโหลดข้อมูล');
+          setLoading(false);
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   return (
     <div>
+      {/* Banner Section */}
       <section className="bg-[#FED65B] py-10 px-4 text-center">
         <p className="text-xs text-gray-700 tracking-wide uppercase mb-1">เกี่ยวกับสาขาวิชา</p>
         <h1 className="text-3xl font-bold text-gray-900 mb-2">คณาจารย์</h1>
         <p className="text-sm text-gray-800">รายชื่อคณาจารย์ - ภาควิชาวิทยาการคอมพิวเตอร์</p>
       </section>
 
+      {/* Content Section */}
       <main className="max-w-7xl mx-auto px-4 py-8">
         {loading && <LoadingState />}
 
-        {!loading && error && <ErrorState message={error} onRetry={loadData} />}
+        {!loading && error && <ErrorState message={error} onRetry={handleRetry} />}
 
         {!loading && !error && faculties.length === 0 && <EmptyState />}
 
