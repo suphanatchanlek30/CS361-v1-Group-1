@@ -1,0 +1,48 @@
+import { BackToFacultyDirectory } from '@/components/faculty/faculty-profile-sections';
+
+interface ProfileStateProps {
+  title: string;
+  description: string;
+  /** ปุ่ม "ลองใหม่" จะแสดงก็ต่อเมื่อ caller ส่ง handler มา (error boundary เท่านั้น) */
+  onRetry?: () => void;
+}
+
+/** การ์ดสถานะกลางหน้า ใช้ร่วมกันทั้ง not-found / invalid id / error */
+export function ProfileState({ title, description, onRetry }: ProfileStateProps) {
+  return (
+    <div className="mx-auto max-w-lg px-4 py-16 text-center sm:py-24">
+      <div className="rounded-xl border border-line bg-surface-alt p-8">
+        <svg
+          className="mx-auto mb-4 h-12 w-12 text-line"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.4}
+          aria-hidden="true"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM12 14a7 7 0 0 0-7 7h14a7 7 0 0 0-7-7Z"
+          />
+        </svg>
+
+        <h1 className="text-xl font-bold text-ink">{title}</h1>
+        <p className="mt-3 text-sm text-ink-muted">{description}</p>
+
+        <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
+          {onRetry ? (
+            <button
+              type="button"
+              onClick={onRetry}
+              className="rounded-full bg-brand px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-hover"
+            >
+              ลองใหม่อีกครั้ง
+            </button>
+          ) : null}
+          <BackToFacultyDirectory />
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,34 +1,52 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import { FacultyProfileImage } from "@/components/faculty/faculty-profile-image";
+import { FacultyAvatar } from '@/components/faculty/faculty-avatar';
 import type {
   Education,
   ExternalProfile,
   FacultyDetail,
   Publication,
-} from "@/types/faculty";
+} from '@/types/faculty';
 
 interface SectionProps {
   faculty: FacultyDetail;
 }
 
-function SectionHeading({ id, th, en }: { id: string; th: string; en?: string }) {
-  return (
-    <div className="mb-5 border-b border-[#81001D]/20 pb-3">
-      <h2 id={id} className="text-2xl font-bold text-stone-900">
-        {th}
-      </h2>
-      {en && <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#81001D]">{en}</p>}
-    </div>
-  );
+/** ป้ายชื่อ provider ที่รู้จัก — provider อื่นแสดงตามที่ API ส่งมา ไม่เดาเอง */
+const PROVIDER_LABELS: Record<string, string> = {
+  google_scholar: 'Google Scholar',
+  researchgate: 'ResearchGate',
+  semantic_scholar: 'Semantic Scholar',
+  orcid: 'ORCID',
+  scopus: 'Scopus',
+  personal_website: 'เว็บไซต์ส่วนตัว',
+};
+
+export function facultyDisplayName(faculty: FacultyDetail): string {
+  return faculty.name.th || faculty.name.en || 'ข้อมูลอาจารย์';
 }
 
-function displayName(faculty: FacultyDetail): string {
-  return faculty.name.th || faculty.name.en || "ข้อมูลอาจารย์";
+function providerLabel(profile: ExternalProfile): string {
+  return PROVIDER_LABELS[profile.provider] ?? profile.provider.replace(/[_-]/g, ' ');
 }
 
-function formatEducation(record: Education): string {
-  return [record.degree, record.field && `(${record.field})`].filter(Boolean).join(" ");
+/**
+ * เบอร์โทรจาก API อาจมีข้อความไทยปนมา เช่น "02-564-4444 ต่อ 2157"
+ * tel: รับเฉพาะตัวเลข จึงตัดตั้งแต่อักขระที่ไม่ใช่รูปแบบเบอร์โทรเป็นต้นไป
+ * ถ้าเหลือตัวเลขน้อยเกินไปให้คืน null แล้วแสดงเป็นข้อความธรรมดาแทนลิงก์
+ */
+function toTelHref(phone: string): string | null {
+  const [leading] = phone.split(/[^\d+\-() ]/);
+  const digits = (leading ?? '').replace(/[^\d+]/g, '');
+  return digits.length >= 6 ? digits : null;
+}
+
+function formatDegree(record: Education): string {
+  return [record.degree, record.field && `(${record.field})`].filter(Boolean).join(' ');
+}
+
+function formatInstitution(record: Education): string {
+  return [record.institution, record.country].filter(Boolean).join(', ');
 }
 
 function publicationMeta(publication: Publication): string[] {
@@ -41,53 +59,88 @@ function publicationMeta(publication: Publication): string[] {
   ].filter((item): item is string => Boolean(item));
 }
 
-function profileLabel(profile: ExternalProfile): string {
-  const knownLabels: Record<string, string> = {
-    google_scholar: "Google Scholar",
-    researchgate: "ResearchGate",
-    semantic_scholar: "Semantic Scholar",
-    orcid: "ORCID",
-    scopus: "Scopus",
-    personal_website: "เว็บไซต์ส่วนตัว",
-  };
-
-  return knownLabels[profile.provider] || profile.provider.replace(/[_-]/g, " ");
+/** หัวข้อ section ใช้แถบแดงนำหน้า ชุดเดียวกับหัวข้อในหน้า Directory */
+function SectionHeading({ id, th, en }: { id: string; th: string; en?: string }) {
+  return (
+    <div className="mb-5">
+      <h2 id={id} className="flex items-center gap-2.5 text-xl font-bold text-ink">
+        <span className="h-6 w-1.5 shrink-0 rounded-full bg-brand" aria-hidden="true" />
+        {th}
+      </h2>
+      {en ? (
+        <p lang="en" className="mt-1.5 ml-4 text-xs font-semibold tracking-[0.14em] text-ink-muted uppercase">
+          {en}
+        </p>
+      ) : null}
+    </div>
+  );
 }
 
+function Card({ children }: { children: React.ReactNode }) {
+  return <div className="rounded-xl border border-line bg-surface p-5 sm:p-6">{children}</div>;
+}
+
+/* ------------------------------------------------------------------ */
+/* Header                                                              */
+/* ------------------------------------------------------------------ */
+
 export function FacultyProfileHeader({ faculty }: SectionProps) {
-  const name = displayName(faculty);
+  const name = facultyDisplayName(faculty);
+  const englishName = faculty.name.en && faculty.name.en !== name ? faculty.name.en : null;
+  const imageUrl = faculty.profile_image?.url ?? null;
+  const imageAlt = faculty.profile_image?.alt || `รูปประจำตัวของ ${name}`;
 
   return (
-    <section className="rounded-2xl border border-[#81001D]/20 bg-white p-6 shadow-sm sm:p-8">
-      <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:items-start sm:text-left">
-        <FacultyProfileImage image={faculty.profile_image} name={name} />
-        <div className="min-w-0 flex-1">
-          <h1 className="break-words text-3xl font-bold leading-tight text-[#81001D] sm:text-4xl">
+    <section className="bg-brand px-4 py-10 sm:px-6 sm:py-14">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-7 text-center sm:flex-row sm:items-start sm:text-left">
+        <div className="aspect-4/5 w-40 shrink-0 overflow-hidden rounded-xl border-4 border-white/25 bg-white/10 sm:w-44">
+          <FacultyAvatar url={imageUrl} alt={imageAlt} />
+        </div>
+
+        <div className="min-w-0 flex-1 pt-1">
+          <h1 className="text-2xl font-extrabold leading-snug break-words text-white sm:text-3xl lg:text-4xl">
             {name}
           </h1>
-          {faculty.name.en && faculty.name.en !== name && (
-            <p className="mt-2 break-words text-lg text-stone-600">{faculty.name.en}</p>
-          )}
-          {faculty.academic_position && (
-            <p className="mt-3 text-base font-medium text-stone-700">{faculty.academic_position}</p>
-          )}
-          {faculty.badges.length > 0 && (
-            <div className="mt-5 flex flex-wrap justify-center gap-2 sm:justify-start">
-              {faculty.badges.map((badge, index) => (
-                <span
-                  key={`${badge.url}-${index}`}
-                  className="rounded-full border border-[#81001D]/20 bg-[#81001D]/5 px-3 py-1 text-sm font-medium text-[#81001D]"
-                >
-                  {badge.label || "Academic badge"}
-                </span>
+
+          {englishName ? (
+            <p lang="en" className="mt-2 text-base break-words text-white/75 sm:text-lg">
+              {englishName}
+            </p>
+          ) : null}
+
+          {faculty.academic_position ? (
+            <p className="mt-4 inline-block rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold text-white">
+              {faculty.academic_position}
+            </p>
+          ) : null}
+
+          {faculty.badges.length > 0 ? (
+            <ul className="mt-5 flex flex-wrap justify-center gap-3 sm:justify-start">
+              {faculty.badges.map((badge) => (
+                <li key={badge.url} className="rounded-lg bg-white/95 p-2">
+                  {/* badge จาก API เป็นรูปภาพ จึง render เป็นรูปพร้อม alt จาก label */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={badge.url}
+                    alt={badge.label ?? 'เครื่องหมายเชิดชูเกียรติ'}
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
+                    className="h-10 w-auto max-w-52 object-contain"
+                  />
+                </li>
               ))}
-            </div>
-          )}
+            </ul>
+          ) : null}
         </div>
       </div>
     </section>
   );
 }
+
+/* ------------------------------------------------------------------ */
+/* CV                                                                  */
+/* ------------------------------------------------------------------ */
 
 export function FacultyCvSection({ faculty }: SectionProps) {
   if (!faculty.cv?.url) return null;
@@ -99,52 +152,88 @@ export function FacultyCvSection({ faculty }: SectionProps) {
         href={faculty.cv.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex rounded-lg bg-[#81001D] px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-[#650016] focus:outline-none focus:ring-2 focus:ring-[#81001D] focus:ring-offset-2"
+        className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-hover"
       >
         เปิดประวัติย่อ (CV)
+        <svg
+          className="h-4 w-4"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          aria-hidden="true"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M14 5h5v5M19 5l-8 8M18 14v5H5V6h5" />
+        </svg>
+        <span className="sr-only">(เปิดในแท็บใหม่)</span>
       </a>
     </section>
   );
 }
 
+/* ------------------------------------------------------------------ */
+/* Contact                                                             */
+/* ------------------------------------------------------------------ */
+
 export function FacultyContactSection({ faculty }: SectionProps) {
   const contact = faculty.contact;
   if (!contact || !Object.values(contact).some(Boolean)) return null;
 
+  const telHref = contact.phone ? toTelHref(contact.phone) : null;
+  const phoneText = contact.phone
+    ? `${contact.phone}${contact.extension ? ` ต่อ ${contact.extension}` : ''}`
+    : null;
+
   return (
     <section aria-labelledby="contact-heading">
       <SectionHeading id="contact-heading" th="ข้อมูลติดต่อ" en="Contact Information" />
-      <dl className="grid gap-5 rounded-2xl border border-[#81001D]/20 bg-white p-5 sm:grid-cols-2 sm:p-6">
-        {contact.office && (
-          <div>
-            <dt className="text-sm font-semibold text-[#81001D]">ห้องทำงาน</dt>
-            <dd className="mt-1 break-words text-stone-700">{contact.office}</dd>
-          </div>
-        )}
-        {contact.phone && (
-          <div>
-            <dt className="text-sm font-semibold text-[#81001D]">โทรศัพท์</dt>
-            <dd className="mt-1">
-              <a className="break-words text-stone-700 underline decoration-[#81001D]/30 underline-offset-4 hover:text-[#81001D]" href={`tel:${contact.phone.replace(/\s/g, "")}`}>
-                {contact.phone}{contact.extension ? ` ต่อ ${contact.extension}` : ""}
-              </a>
-            </dd>
-          </div>
-        )}
-        {contact.email && (
-          <div>
-            <dt className="text-sm font-semibold text-[#81001D]">อีเมล</dt>
-            <dd className="mt-1">
-              <a className="break-all text-stone-700 underline decoration-[#81001D]/30 underline-offset-4 hover:text-[#81001D]" href={`mailto:${contact.email}`}>
-                {contact.email}
-              </a>
-            </dd>
-          </div>
-        )}
-      </dl>
+      <Card>
+        <dl className="grid gap-5 sm:grid-cols-2">
+          {contact.office ? (
+            <div>
+              <dt className="text-xs font-bold tracking-wide text-brand uppercase">ห้องทำงาน</dt>
+              <dd className="mt-1.5 break-words text-ink">{contact.office}</dd>
+            </div>
+          ) : null}
+
+          {phoneText ? (
+            <div>
+              <dt className="text-xs font-bold tracking-wide text-brand uppercase">โทรศัพท์</dt>
+              <dd className="mt-1.5 break-words text-ink">
+                {telHref ? (
+                  <a href={`tel:${telHref}`} className="underline underline-offset-4 hover:text-brand">
+                    {phoneText}
+                  </a>
+                ) : (
+                  phoneText
+                )}
+              </dd>
+            </div>
+          ) : null}
+
+          {contact.email ? (
+            <div>
+              <dt className="text-xs font-bold tracking-wide text-brand uppercase">อีเมล</dt>
+              <dd className="mt-1.5 break-all text-ink">
+                <a
+                  href={`mailto:${contact.email}`}
+                  lang="en"
+                  className="underline underline-offset-4 hover:text-brand"
+                >
+                  {contact.email}
+                </a>
+              </dd>
+            </div>
+          ) : null}
+        </dl>
+      </Card>
     </section>
   );
 }
+
+/* ------------------------------------------------------------------ */
+/* Research interests                                                  */
+/* ------------------------------------------------------------------ */
 
 export function FacultyResearchInterestsSection({ faculty }: SectionProps) {
   if (faculty.research_interests.length === 0) return null;
@@ -152,9 +241,13 @@ export function FacultyResearchInterestsSection({ faculty }: SectionProps) {
   return (
     <section aria-labelledby="research-heading">
       <SectionHeading id="research-heading" th="หัวข้อวิจัยที่สนใจ" en="Research Interests" />
-      <ul className="flex flex-wrap gap-2" aria-label="หัวข้อวิจัยที่สนใจ">
-        {faculty.research_interests.map((interest, index) => (
-          <li key={`${interest}-${index}`} className="rounded-full border border-amber-300 bg-[#FED65B] px-4 py-2 text-sm text-stone-800">
+      <ul className="flex flex-wrap gap-2">
+        {faculty.research_interests.map((interest) => (
+          <li
+            key={interest}
+            lang="en"
+            className="rounded-full border border-line bg-surface-alt px-4 py-2 text-sm text-ink"
+          >
             {interest}
           </li>
         ))}
@@ -163,30 +256,50 @@ export function FacultyResearchInterestsSection({ faculty }: SectionProps) {
   );
 }
 
+/* ------------------------------------------------------------------ */
+/* Education                                                           */
+/* ------------------------------------------------------------------ */
+
 export function FacultyEducationSection({ faculty }: SectionProps) {
   if (faculty.education.length === 0) return null;
 
   return (
     <section aria-labelledby="education-heading">
       <SectionHeading id="education-heading" th="การศึกษา" en="Education" />
-      <ol className="ml-2 border-l-2 border-[#81001D]/20 pl-6">
-        {faculty.education.map((record, index) => (
-          <li key={`${record.degree}-${record.institution}-${index}`} className="relative pb-7 last:pb-0">
-            <span aria-hidden="true" className="absolute -left-[1.96rem] top-1 size-4 rounded-full border-2 border-[#81001D] bg-white" />
-            {formatEducation(record) && <h3 className="text-lg font-bold text-stone-900">{formatEducation(record)}</h3>}
-            {[record.institution, record.country].filter(Boolean).join(", ") && (
-              <p className="mt-1 text-stone-700">{[record.institution, record.country].filter(Boolean).join(", ")}</p>
-            )}
-            {record.graduation_year !== null && record.graduation_year !== undefined && (
-              <p className="mt-1 text-sm text-stone-500">{record.graduation_year}</p>
-            )}
-            {record.additional_information && <p className="mt-2 text-sm text-stone-600">{record.additional_information}</p>}
-          </li>
-        ))}
+      <ol className="ml-2 space-y-6 border-l-2 border-line pl-6">
+        {faculty.education.map((record, index) => {
+          const degree = formatDegree(record);
+          const institution = formatInstitution(record);
+
+          return (
+            <li
+              // ข้อมูลการศึกษาไม่มี id จาก API — ใช้เนื้อหา + ลำดับเป็น key
+              key={`${record.degree ?? ''}-${record.institution ?? ''}-${index}`}
+              className="relative"
+            >
+              <span
+                aria-hidden="true"
+                className="absolute top-1.5 -left-[1.9rem] size-3.5 rounded-full border-2 border-brand bg-surface"
+              />
+              {degree ? <h3 className="text-base font-bold text-ink">{degree}</h3> : null}
+              {institution ? <p className="mt-1 text-sm text-ink-muted">{institution}</p> : null}
+              {record.graduation_year ? (
+                <p className="mt-1 text-sm font-medium text-brand">ปี {record.graduation_year}</p>
+              ) : null}
+              {record.additional_information ? (
+                <p className="mt-1.5 text-sm text-ink-muted">{record.additional_information}</p>
+              ) : null}
+            </li>
+          );
+        })}
       </ol>
     </section>
   );
 }
+
+/* ------------------------------------------------------------------ */
+/* Expertise                                                           */
+/* ------------------------------------------------------------------ */
 
 export function FacultyExpertiseSection({ faculty }: SectionProps) {
   if (faculty.expertise.length === 0) return null;
@@ -194,30 +307,49 @@ export function FacultyExpertiseSection({ faculty }: SectionProps) {
   return (
     <section aria-labelledby="expertise-heading">
       <SectionHeading id="expertise-heading" th="ความเชี่ยวชาญ" en="Expertise" />
-      <ul className="space-y-3 text-stone-700">
-        {faculty.expertise.map((item, index) => (
-          <li key={`${item}-${index}`} className="flex gap-3 leading-7">
-            <span aria-hidden="true" className="mt-2 size-2 shrink-0 rounded-full bg-[#81001D]" />
-            <span className="min-w-0 break-words">{item}</span>
-          </li>
-        ))}
-      </ul>
+      <Card>
+        <ul className="space-y-4">
+          {faculty.expertise.map((item) => (
+            <li key={item} className="flex gap-3 leading-7 text-ink">
+              <span
+                aria-hidden="true"
+                className="mt-2.5 size-2 shrink-0 rounded-full bg-brand"
+              />
+              <span className="min-w-0 break-words">{item}</span>
+            </li>
+          ))}
+        </ul>
+      </Card>
     </section>
   );
 }
 
+/* ------------------------------------------------------------------ */
+/* Publications                                                        */
+/* ------------------------------------------------------------------ */
+
 export function FacultyPublicationsSection({ faculty }: SectionProps) {
   return (
     <section aria-labelledby="publications-heading">
-      <SectionHeading id="publications-heading" th="ผลงานตีพิมพ์ที่ได้รับเลือก" en="Selected Publications" />
+      <SectionHeading
+        id="publications-heading"
+        th="ผลงานตีพิมพ์ที่ได้รับเลือก"
+        en="Selected Publications"
+      />
+
       {faculty.selected_publications.length === 0 ? (
-        <p className="rounded-xl border border-dashed border-stone-300 bg-stone-50 p-5 text-stone-600">
+        /* ข้อความต้องสื่อว่า "ชุดข้อมูลนี้ไม่มี" ไม่ใช่ "อาจารย์ไม่มีผลงาน" */
+        <div className="rounded-xl border border-dashed border-line bg-surface-alt p-6 text-center text-sm text-ink-muted">
           ยังไม่มีผลงานที่เปิดเผยในข้อมูลชุดนี้
-        </p>
+        </div>
       ) : (
         <ol className="space-y-4">
           {faculty.selected_publications.map((publication, index) => (
-            <PublicationCard key={`${publication.title}-${index}`} publication={publication} index={index + 1} />
+            <PublicationCard
+              key={`${publication.title ?? publication.citation_text ?? ''}-${index}`}
+              publication={publication}
+              index={index + 1}
+            />
           ))}
         </ol>
       )}
@@ -225,30 +357,86 @@ export function FacultyPublicationsSection({ faculty }: SectionProps) {
   );
 }
 
-function PublicationCard({ publication, index }: { publication: Publication; index: number }) {
-  const authors = Array.isArray(publication.authors) ? publication.authors.join(", ") : publication.authors;
+function PublicationCard({
+  publication,
+  index,
+}: {
+  publication: Publication;
+  index: number;
+}) {
+  const authors = Array.isArray(publication.authors)
+    ? publication.authors.join(', ')
+    : publication.authors;
   const meta = publicationMeta(publication);
 
+  // ถ้าไม่มี title เลย ใช้ citation_text เป็นเนื้อหาหลักแทน จะได้ไม่เหลือการ์ดว่าง
+  const heading = publication.title ?? publication.citation_text;
+
   return (
-    <li className="rounded-xl border border-[#81001D]/20 bg-white p-5">
-      <p className="text-sm font-semibold text-[#81001D]">{index}.</p>
-      {publication.title && <h3 className="mt-1 break-words text-lg font-bold leading-snug text-stone-900">{publication.title}</h3>}
-      {authors && <p className="mt-2 break-words text-stone-700">{authors}</p>}
-      {meta.length > 0 && <p className="mt-2 break-words text-sm text-stone-600">{meta.join(" · ")}</p>}
-      {publication.doi && <p className="mt-3 break-all text-sm text-[#81001D]">DOI: {publication.doi}</p>}
-      {publication.url && (
-        <a
-          href={publication.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 inline-flex text-sm font-semibold text-[#81001D] underline decoration-[#81001D]/40 underline-offset-4 hover:text-[#650016]"
+    <li className="rounded-xl border border-line bg-surface p-5">
+      <div className="flex gap-3">
+        <span
+          className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-soft text-xs font-bold text-brand"
+          aria-hidden="true"
         >
-          เปิดผลงาน
-        </a>
-      )}
+          {index}
+        </span>
+
+        <div className="min-w-0 flex-1">
+          {heading ? (
+            <h3 lang="en" className="text-base leading-snug font-bold break-words text-ink">
+              {heading}
+            </h3>
+          ) : null}
+
+          {authors ? (
+            <p lang="en" className="mt-2 text-sm break-words text-ink-muted">
+              {authors}
+            </p>
+          ) : null}
+
+          {meta.length > 0 ? (
+            <p lang="en" className="mt-2 text-sm break-words text-ink-muted">
+              {meta.join(' · ')}
+            </p>
+          ) : null}
+
+          {/* ผลงานที่ไม่มี DOI/URL ต้องยังแสดงได้ตามปกติ */}
+          <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+            {publication.doi ? (
+              <a
+                href={`https://doi.org/${publication.doi}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                lang="en"
+                className="text-xs font-semibold break-all text-brand underline underline-offset-4 hover:text-brand-hover"
+              >
+                DOI: {publication.doi}
+                <span className="sr-only">(เปิดในแท็บใหม่)</span>
+              </a>
+            ) : null}
+
+            {publication.url ? (
+              <a
+                href={publication.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-semibold text-brand underline underline-offset-4 hover:text-brand-hover"
+              >
+                เปิดผลงาน
+                <span className="sr-only">(เปิดในแท็บใหม่)</span>
+              </a>
+            ) : null}
+          </div>
+        </div>
+      </div>
     </li>
   );
 }
+
+/* ------------------------------------------------------------------ */
+/* External profiles                                                   */
+/* ------------------------------------------------------------------ */
 
 export function FacultyExternalProfilesSection({ faculty }: SectionProps) {
   if (faculty.publication_profiles.length === 0) return null;
@@ -257,15 +445,30 @@ export function FacultyExternalProfilesSection({ faculty }: SectionProps) {
     <section aria-labelledby="profiles-heading">
       <SectionHeading id="profiles-heading" th="โปรไฟล์ทางวิชาการ" en="Academic Profiles" />
       <ul className="flex flex-wrap gap-3">
-        {faculty.publication_profiles.map((profile, index) => (
-          <li key={`${profile.provider}-${profile.url}-${index}`}>
+        {faculty.publication_profiles.map((profile) => (
+          <li key={`${profile.provider}-${profile.url}`}>
             <a
               href={profile.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex rounded-lg border border-[#81001D]/30 px-4 py-2.5 text-sm font-semibold text-[#81001D] transition hover:bg-[#81001D] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#81001D] focus:ring-offset-2"
+              className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-4 py-2.5 text-sm font-semibold text-brand transition-colors hover:border-brand hover:bg-brand-soft"
             >
-              {profileLabel(profile)}
+              {providerLabel(profile)}
+              <svg
+                className="h-3.5 w-3.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M14 5h5v5M19 5l-8 8M18 14v5H5V6h5"
+                />
+              </svg>
+              <span className="sr-only">(เปิดในแท็บใหม่)</span>
             </a>
           </li>
         ))}
@@ -274,10 +477,31 @@ export function FacultyExternalProfilesSection({ faculty }: SectionProps) {
   );
 }
 
-export function BackToFacultyDirectory() {
+/* ------------------------------------------------------------------ */
+/* Navigation                                                          */
+/* ------------------------------------------------------------------ */
+
+export function BackToFacultyDirectory({ tone = 'brand' }: { tone?: 'brand' | 'inverse' }) {
   return (
-    <Link href="/faculties" className="inline-flex text-sm font-semibold text-[#81001D] underline decoration-[#81001D]/40 underline-offset-4 hover:text-[#650016] focus:outline-none focus:ring-2 focus:ring-[#81001D] focus:ring-offset-2">
-      ← กลับหน้ารายชื่ออาจารย์
+    <Link
+      href="/faculties"
+      className={
+        tone === 'inverse'
+          ? 'inline-flex items-center gap-2 text-sm font-semibold text-white/85 hover:text-white'
+          : 'inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-brand-hover'
+      }
+    >
+      <svg
+        className="h-4 w-4"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        aria-hidden="true"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M20 12H5m0 0 5.5-5.5M5 12l5.5 5.5" />
+      </svg>
+      กลับหน้ารายชื่อคณาจารย์
     </Link>
   );
 }
