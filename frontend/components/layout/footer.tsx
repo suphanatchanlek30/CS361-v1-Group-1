@@ -1,28 +1,65 @@
-import React from 'react';
+import Image from 'next/image';
 
-export const Footer: React.FC = () => {
+import csTuLogo from '@/public/cs-tu-logo.png';
+
+/** ลิงก์ท้ายเว็บตาม design #30 — V1 ยังไม่มีหน้าปลายทางจริง
+ *  จึง render เป็น <button aria-disabled> ที่โฟกัสได้ แทน <span cursor-pointer>
+ *  ที่ดูเหมือนลิงก์แต่คีย์บอร์ดกดไม่ได้ */
+const FOOTER_LINKS = [
+  'นโยบายความเป็นส่วนตัว',
+  'ข้อกำหนดการใช้งาน',
+  'ทำเนียบมหาวิทยาลัย',
+  'แผนผังเว็บไซต์',
+];
+
+export function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-600 text-xs py-6 px-4 border-t border-gray-200 mt-auto">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-        {/* Copyright Section */}
-        <div className="flex flex-col sm:flex-row items-center gap-2">
-          <span className="font-bold text-[#800020] whitespace-nowrap">TU CS</span>
-          <span>
-            &copy; {new Date().getFullYear()} Thammasat University, Department of Computer Science. All rights reserved.
-          </span>
-        </div>
+    <footer className="mt-auto bg-footer">
+      {/* เส้นแดงคั่นด้านบน ชุดเดียวกับใต้ navbar */}
+      <div className="h-1 w-full bg-brand" aria-hidden="true" />
 
-        {/* Footer Navigation Links */}
-        <div className="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 whitespace-nowrap text-gray-500">
-          <span className="hover:text-[#800020] hover:underline cursor-pointer">นโยบายความเป็นส่วนตัว</span>
-          <span className="text-gray-300 hidden sm:inline">•</span>
-          <span className="hover:text-[#800020] hover:underline cursor-pointer">ข้อตกลงการใช้งาน</span>
-          <span className="text-gray-300 hidden sm:inline">•</span>
-          <span className="hover:text-[#800020] hover:underline cursor-pointer">ทำเนียบมหาวิทยาลัย</span>
-          <span className="text-gray-300 hidden sm:inline">•</span>
-          <span className="hover:text-[#800020] hover:underline cursor-pointer">แผนผังเว็บไซต์</span>
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
+        <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between md:gap-12">
+          {/* โลโก้ + copyright */}
+          <div className="flex flex-col items-center gap-4 text-center md:items-start md:text-left">
+            <Image
+              src={csTuLogo}
+              alt="Computer Science, Thammasat University"
+              sizes="176px"
+              className="h-12 w-auto"
+            />
+            <p className="max-w-md text-xs leading-relaxed text-ink-muted" lang="en">
+              &copy; {new Date().getFullYear()} Thammasat University, Faculty of Science and
+              Technology, Department of Computer Science. All rights reserved.
+            </p>
+          </div>
+
+          {/* ลิงก์ท้ายเว็บ */}
+          <nav aria-label="ลิงก์ท้ายเว็บ" className="shrink-0">
+            <h2 className="mb-4 text-center text-xs font-bold tracking-wide text-brand uppercase md:text-left">
+              ลิงก์ที่เกี่ยวข้อง
+            </h2>
+            <ul className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-4 md:grid-cols-2 xl:grid-cols-4">
+              {FOOTER_LINKS.map((label) => (
+                <li key={label}>
+                  <button
+                    type="button"
+                    aria-disabled="true"
+                    title="อยู่ระหว่างพัฒนา"
+                    className="flex cursor-not-allowed items-start gap-2 text-left text-xs leading-relaxed text-ink-muted/70"
+                  >
+                    <span
+                      className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-line"
+                      aria-hidden="true"
+                    />
+                    {label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
     </footer>
   );
-};
+}
