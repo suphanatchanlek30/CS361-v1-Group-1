@@ -3,11 +3,16 @@ export interface FacultyName {
   en?: string;
 }
 
+export interface ProfileImage{
+  url : string;
+  alt? : string;
+}
+
 export interface FacultySummary {
   id: string;
   name: FacultyName;
   academic_position?: string;
-  profile_image?: string;
+  profile_image?:ProfileImage | string | null;
   research_interests?: string[];
 }
 

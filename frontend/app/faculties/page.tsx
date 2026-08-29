@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { getFaculties } from '@/lib/faculty-api';
 import { FacultySummary } from '@/types/faculty';
 import { FacultyCard } from '@/components/faculty/faculty-card';
@@ -13,36 +13,35 @@ export default function FacultyDirectoryPage() {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    async function loadData() {
-      try {
-        setLoading(true);
-        setError(null);
-        const data = await getFaculties();
-        setFaculties(data);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'เกิดข้อผิดพลาดในการโหลดข้อมูล');
-      } finally {
-        setLoading(false);
-      }
+  const loadData = useCallback(async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      const data = await getFaculties();
+      setFaculties(data);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'เกิดข้อผิดพลาดในการโหลดข้อมูล');
+    } finally {
+      setLoading(false);
     }
-    loadData();
   }, []);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
 
   return (
     <div>
-      {/* Banner Section */}
       <section className="bg-[#FED65B] py-10 px-4 text-center">
         <p className="text-xs text-gray-700 tracking-wide uppercase mb-1">เกี่ยวกับสาขาวิชา</p>
         <h1 className="text-3xl font-bold text-gray-900 mb-2">คณาจารย์</h1>
         <p className="text-sm text-gray-800">รายชื่อคณาจารย์ - ภาควิชาวิทยาการคอมพิวเตอร์</p>
       </section>
 
-      {/* Content Section */}
       <main className="max-w-7xl mx-auto px-4 py-8">
         {loading && <LoadingState />}
 
-        {!loading && error && <ErrorState message={error} />}
+        {!loading && error && <ErrorState message={error} onRetry={loadData} />}
 
         {!loading && !error && faculties.length === 0 && <EmptyState />}
 
