@@ -1,89 +1,160 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-export const Header: React.FC = () => {
+import csTuLogo from '@/public/cs-tu-logo.png';
+
+interface NavItem {
+  label: string;
+  /** null = ยังไม่มีหน้าปลายทางใน V1 */
+  href: string | null;
+}
+
+/**
+ * เมนูหลักตาม design #30 — V1 ส่งมอบจริงเฉพาะ "คณาจารย์"
+ * เมนูที่ยังไม่มีหน้าจะ render เป็น <button aria-disabled> ที่ยัง Tab เข้าถึงได้
+ * แทน <span> ที่ดูเหมือนลิงก์แต่คีย์บอร์ดกดไม่ได้เลย
+ */
+const NAV_ITEMS: readonly NavItem[] = [
+  { label: 'เกี่ยวกับเรา', href: null },
+  { label: 'หลักสูตร', href: null },
+  { label: 'วิจัย', href: null },
+  { label: 'คณาจารย์', href: '/faculties' },
+  { label: 'ข่าวสาร', href: null },
+  { label: 'ติดต่อ', href: null },
+];
+
+const COMING_SOON = 'อยู่ระหว่างพัฒนา';
+
+function MenuIcon({ open }: { open: boolean }) {
+  return (
+    <svg
+      className="h-6 w-6"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2.2}
+      aria-hidden="true"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d={open ? 'M6 18 18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
+      />
+    </svg>
+  );
+}
+
+/** ปุ่มเมนูที่ยังไม่เปิดใช้งาน — โฟกัสได้ และ screen reader อ่านว่ากดไม่ได้ */
+function DisabledNavButton({ label, className }: { label: string; className: string }) {
+  return (
+    <button type="button" aria-disabled="true" title={COMING_SOON} className={className}>
+      {label}
+    </button>
+  );
+}
+
+export function Header() {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
+  const isFacultiesActive = pathname === '/faculties' || pathname.startsWith('/faculties/');
+
+  // Escape = ปิดเมนู
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === 'Escape') setIsMenuOpen(false);
+    }
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   return (
-    <header className="border-b-2 border-[#81001D] text-white sticky top-0 z-50 shadow-md bg-white relative">
-      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Brand / Logo */}
-        <Link href="/faculties" className="flex items-center gap-3">
-          <div className="bg-[#81001D] text-white font-bold px-2 py-1 rounded tracking-tighter">
-            CS
-          </div>
-          <span className="font-bold text-[#81001D] text-base md:text-xl tracking-tight">
-            Computer Science Department
-          </span>
+    <header className="sticky top-0 z-50 bg-surface shadow-sm">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-20">
+        {/* โลโก้ภาควิชา — ใช้แทนข้อความชื่อสาขาเดิม */}
+        <Link href="/faculties" className="flex shrink-0 items-center" aria-label="ไปหน้าคณาจารย์">
+          <Image
+            src={csTuLogo}
+            alt="Computer Science, Thammasat University"
+            priority
+            sizes="(min-width: 1024px) 128px, 104px"
+            className="h-9 w-auto lg:h-11"
+          />
         </Link>
 
-        {/* Desktop Navigation Menu (ถอด Dead Interaction ออก) */}
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          <span className="text-gray-400 cursor-default">เกี่ยวกับเรา</span>
-          <span className="text-gray-400 cursor-default">หลักสูตร</span>
-          <span className="text-gray-400 cursor-default">วิจัย</span>
-          <Link href="/faculties" className="underline underline-offset-8 font-semibold text-[#81001D]">
-            คณาจารย์
-          </Link>
-          <span className="text-gray-400 cursor-default">ข่าวสาร</span>
-          <span className="text-gray-400 cursor-default">ติดต่อ</span>
+        <nav aria-label="เมนูหลัก" className="hidden items-center gap-5 lg:flex xl:gap-8">
+          {NAV_ITEMS.map((item) =>
+            item.href ? (
+              <Link
+                key={item.label}
+                href={item.href}
+                aria-current={isFacultiesActive ? 'page' : undefined}
+                className={
+                  isFacultiesActive
+                    ? 'relative py-7 text-sm font-bold text-brand after:absolute after:inset-x-0 after:bottom-0 after:h-[3px] after:rounded-full after:bg-brand after:content-[""]'
+                    : 'py-7 text-sm font-semibold text-ink-muted transition-colors hover:text-brand'
+                }
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <DisabledNavButton
+                key={item.label}
+                label={item.label}
+                className="cursor-not-allowed py-7 text-sm font-medium text-ink-muted/50"
+              />
+            )
+          )}
         </nav>
 
-        {/* Right Actions & Hamburger Button */}
-        <div className="flex items-center gap-3">
-          {/* Fixed Language Display */}
-          <div className="flex items-center border border-[#81001D] rounded-md p-0.5 text-xs font-semibold bg-gray-50 select-none">
-            <span className="bg-[#81001D] text-white font-bold px-2 py-0.5 rounded-sm shadow-sm">
-              TH
-            </span>
-            <span className="text-[#81001D]/40 px-2 py-0.5 cursor-default">
-              EN
-            </span>
-          </div>
-
-          {/* Hamburger Button (Mobile Only) */}
-          <button
-            onClick={toggleMenu}
-            type="button"
-            className="md:hidden text-[#81001D] p-1.5 focus:outline-none rounded hover:bg-gray-100 transition-colors"
-            aria-label="Toggle Navigation Menu"
-          >
-            {isMenuOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
-        </div>
+        <button
+          type="button"
+          onClick={() => setIsMenuOpen((open) => !open)}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
+          aria-label={isMenuOpen ? 'ปิดเมนู' : 'เปิดเมนู'}
+          className="-mr-2 shrink-0 rounded-full p-2 text-brand transition-colors hover:bg-brand-soft lg:hidden"
+        >
+          <MenuIcon open={isMenuOpen} />
+        </button>
       </div>
 
-      {/* Floating Mobile Dropdown Menu (ถอด Dead Interaction ออก) */}
-      {isMenuOpen && (
-        <nav className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 px-4 py-3 flex flex-col gap-3 text-sm font-medium shadow-xl z-50">
-          <span className="text-gray-400 cursor-default py-1">เกี่ยวกับเรา</span>
-          <span className="text-gray-400 cursor-default py-1">หลักสูตร</span>
-          <span className="text-gray-400 cursor-default py-1">วิจัย</span>
-          <Link
-            href="/faculties"
-            onClick={() => setIsMenuOpen(false)}
-            className="font-semibold text-[#81001D] py-1"
-          >
-            คณาจารย์
-          </Link>
-          <span className="text-gray-400 cursor-default py-1">ข่าวสาร</span>
-          <span className="text-gray-400 cursor-default py-1">ติดต่อ</span>
+      {/* เส้นแดงคั่นใต้ navbar */}
+      <div className="h-[3px] w-full bg-brand" aria-hidden="true" />
+
+      {isMenuOpen ? (
+        <nav
+          id="mobile-menu"
+          aria-label="เมนูหลัก (อุปกรณ์พกพา)"
+          className="absolute inset-x-0 top-full flex flex-col border-b border-line-soft bg-surface px-4 py-1 shadow-xl lg:hidden"
+        >
+          {NAV_ITEMS.map((item) =>
+            item.href ? (
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setIsMenuOpen(false)}
+                aria-current={isFacultiesActive ? 'page' : undefined}
+                className="flex items-center gap-2 border-b border-line-soft py-3 text-sm font-bold text-brand last:border-b-0"
+              >
+                <span className="h-4 w-1 rounded-full bg-brand" aria-hidden="true" />
+                {item.label}
+              </Link>
+            ) : (
+              <DisabledNavButton
+                key={item.label}
+                label={item.label}
+                className="cursor-not-allowed border-b border-line-soft py-3 pl-3 text-left text-sm font-medium text-ink-muted/50 last:border-b-0"
+              />
+            )
+          )}
         </nav>
-      )}
+      ) : null}
     </header>
   );
-};
+}
