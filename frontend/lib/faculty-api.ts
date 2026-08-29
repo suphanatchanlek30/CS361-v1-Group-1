@@ -1,3 +1,5 @@
+import 'server-only';
+
 import type {
   FacultyDetail,
   FacultyDetailResponse,
@@ -7,10 +9,13 @@ import type {
 
 /**
  * Faculty API client — จุดเดียวในโปรเจกต์ที่รู้จัก URL ของ backend
- * ใช้ได้ทั้ง Directory Server Component และ Profile Client Component
+ * โมดูลนี้ทำงานบน server เท่านั้น (`server-only`) จึงไม่มีทางหลุดไปฝั่ง browser
  * และไม่แตะ S3 โดยตรงตามข้อกำหนด #26/#27
  */
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_BASE_URL ?? '').replace(/\/+$/, '');
+
+/** cache 5 นาทีแล้วค่อย revalidate — ข้อมูลคณาจารย์ไม่ได้เปลี่ยนบ่อย */
+const REVALIDATE_SECONDS = 300;
 
 export type FacultyApiErrorKind =
   | 'config'
@@ -20,7 +25,7 @@ export type FacultyApiErrorKind =
   | 'http'
   | 'parse';
 
-/** แยกชนิด error เพื่อให้ error.tsx แสดงสาเหตุที่ถูกต้อง ไม่เหมารวมเป็น "เชื่อมต่อไม่ได้" */
+/** แยกชนิด error เพื่อให้หน้าแสดงสาเหตุที่ถูกต้อง ไม่เหมารวมเป็น "เชื่อมต่อไม่ได้" */
 export class FacultyApiError extends Error {
   readonly kind: FacultyApiErrorKind;
   readonly status?: number;
@@ -43,31 +48,14 @@ function requireApiBaseUrl(): string {
   return API_BASE_URL;
 }
 
-/** ตรวจว่า payload ตรง contract #22 จริง ถ้าไม่ตรงให้ตัดทิ้ง ดีกว่าปล่อย null หลุดขึ้นหน้าจอ */
-function isFacultySummary(value: unknown): value is FacultySummary {
-  if (typeof value !== 'object' || value === null) return false;
-
-  const candidate = value as Record<string, unknown>;
-  if (typeof candidate.id !== 'string' || candidate.id.length === 0) return false;
-
-  const name = candidate.name as Record<string, unknown> | undefined;
-  return typeof name === 'object' && name !== null && typeof name.th === 'string';
-}
-
-function isFacultyDetail(value: unknown): value is FacultyDetailResponse {
-  if (typeof value !== 'object' || value === null || !('data' in value)) return false;
-
-  const data = value.data;
-  return typeof data === 'object' && data !== null && 'id' in data && typeof data.id === 'string';
-}
-
+/** map HTTP status → error kind ที่หน้า UI เอาไปเลือกข้อความได้ตรงสาเหตุ */
 function errorForResponse(response: Response): FacultyApiError {
   if (response.status === 400) {
-    return new FacultyApiError('invalid-id', 'รูปแบบรหัสอาจารย์ไม่ถูกต้อง', response.status);
+    return new FacultyApiError('invalid-id', 'รูปแบบรหัสอาจารย์ไม่ถูกต้อง', 400);
   }
 
   if (response.status === 404) {
-    return new FacultyApiError('not-found', 'ไม่พบข้อมูลอาจารย์ที่ต้องการ', response.status);
+    return new FacultyApiError('not-found', 'ไม่พบข้อมูลอาจารย์ที่ต้องการ', 404);
   }
 
   return new FacultyApiError(
@@ -84,10 +72,10 @@ async function getJson(path: string): Promise<unknown> {
   try {
     response = await fetch(`${baseUrl}${path}`, {
       headers: { Accept: 'application/json' },
-      // Profile fetches in the browser too, so use a cache policy supported in both contexts.
-      cache: 'no-store',
+      next: { revalidate: REVALIDATE_SECONDS, tags: ['faculties'] },
     });
   } catch {
+    // ยิงไม่ถึงเซิร์ฟเวอร์เลย เช่น เน็ตหลุด / DNS ไม่ตอบ
     throw new FacultyApiError(
       'network',
       'ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้ กรุณาตรวจสอบการเชื่อมต่อแล้วลองใหม่อีกครั้ง'
@@ -99,8 +87,32 @@ async function getJson(path: string): Promise<unknown> {
   try {
     return await response.json();
   } catch {
-    throw new FacultyApiError('parse', 'ข้อมูลที่ได้รับจากเซิร์ฟเวอร์ไม่ถูกต้อง กรุณาแจ้งผู้ดูแลระบบ');
+    throw new FacultyApiError(
+      'parse',
+      'ข้อมูลที่ได้รับจากเซิร์ฟเวอร์ไม่ถูกต้อง กรุณาแจ้งผู้ดูแลระบบ'
+    );
   }
+}
+
+/** ตรวจว่า payload ตรง contract #22 จริง ถ้าไม่ตรงให้ตัดทิ้ง ดีกว่าปล่อย null หลุดขึ้นหน้าจอ */
+function isFacultySummary(value: unknown): value is FacultySummary {
+  if (typeof value !== 'object' || value === null) return false;
+
+  const candidate = value as Record<string, unknown>;
+  if (typeof candidate.id !== 'string' || candidate.id.length === 0) return false;
+
+  const name = candidate.name as Record<string, unknown> | undefined;
+  return typeof name === 'object' && name !== null && typeof name.th === 'string';
+}
+
+function isFacultyDetailResponse(value: unknown): value is FacultyDetailResponse {
+  if (typeof value !== 'object' || value === null || !('data' in value)) return false;
+
+  const data = (value as { data: unknown }).data;
+  if (typeof data !== 'object' || data === null) return false;
+
+  const candidate = data as Record<string, unknown>;
+  return typeof candidate.id === 'string' && candidate.id.length > 0;
 }
 
 /**
@@ -114,19 +126,22 @@ export async function getFaculties(): Promise<FacultySummary[]> {
     typeof payload !== 'object' ||
     payload === null ||
     !('data' in payload) ||
-    !Array.isArray(payload.data)
+    !Array.isArray((payload as FacultyListResponse).data)
   ) {
     throw new FacultyApiError('parse', 'รูปแบบข้อมูลคณาจารย์ไม่ตรงกับที่ระบบรองรับ');
   }
 
-  return payload.data.filter(isFacultySummary) as FacultyListResponse['data'];
+  return (payload as FacultyListResponse).data.filter(isFacultySummary);
 }
 
-/** `GET /api/v1/faculties/{id}` for the dynamic public Profile. */
+/**
+ * `GET {NEXT_PUBLIC_API_BASE_URL}/api/v1/faculties/{id}` สำหรับหน้า Profile (#27)
+ * 400 → invalid-id, 404 → not-found ให้หน้าเลือกแสดงสถานะได้ถูกต้อง
+ */
 export async function getFacultyDetail(id: string): Promise<FacultyDetail> {
   const payload = await getJson(`/api/v1/faculties/${encodeURIComponent(id)}`);
 
-  if (!isFacultyDetail(payload)) {
+  if (!isFacultyDetailResponse(payload)) {
     throw new FacultyApiError('parse', 'รูปแบบข้อมูลอาจารย์ไม่ตรงกับที่ระบบรองรับ');
   }
 
