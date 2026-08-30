@@ -1,8 +1,8 @@
 /**
- * Banner หัวหน้า Directory — คงโครงเดิมตาม design #30
- * (eyebrow → h1 → เส้นคั่น → คำอธิบาย) แต่เปลี่ยนจากพื้นเหลืองเป็นแดงเรียบ
- * แยกเป็น component เดียวเพื่อให้ page / loading / error ใช้ร่วมกัน
- * หน้าจึงไม่กระโดดเวลาสลับสถานะ
+ * Directory header banner — keeps the original structure from design #30
+ * (eyebrow → h1 → divider → description) but swaps the yellow background
+ * for a flat red. Split into its own component so page / loading / error
+ * all share it and the layout doesn't jump when the state changes.
  */
 export function DirectoryBanner() {
   return (

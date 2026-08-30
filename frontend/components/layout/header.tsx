@@ -9,14 +9,15 @@ import csTuLogo from '@/public/cs-tu-logo.png';
 
 interface NavItem {
   label: string;
-  /** null = ยังไม่มีหน้าปลายทางใน V1 */
+  /** null = no destination page yet in V1 */
   href: string | null;
 }
 
 /**
- * เมนูหลักตาม design #30 — V1 ส่งมอบจริงเฉพาะ "คณาจารย์"
- * เมนูที่ยังไม่มีหน้าจะ render เป็น <button aria-disabled> ที่ยัง Tab เข้าถึงได้
- * แทน <span> ที่ดูเหมือนลิงก์แต่คีย์บอร์ดกดไม่ได้เลย
+ * Main nav per design #30 — V1 only ships the "Faculties" destination.
+ * Items without a page render as <button aria-disabled>, which stays
+ * Tab-reachable, instead of a <span> that looks like a link but is
+ * unreachable by keyboard.
  */
 const NAV_ITEMS: readonly NavItem[] = [
   { label: 'เกี่ยวกับเรา', href: null },
@@ -48,7 +49,7 @@ function MenuIcon({ open }: { open: boolean }) {
   );
 }
 
-/** ปุ่มเมนูที่ยังไม่เปิดใช้งาน — โฟกัสได้ และ screen reader อ่านว่ากดไม่ได้ */
+/** A not-yet-enabled nav button — focusable, and screen readers announce it as disabled */
 function DisabledNavButton({ label, className }: { label: string; className: string }) {
   return (
     <button type="button" aria-disabled="true" title={COMING_SOON} className={className}>
@@ -63,7 +64,7 @@ export function Header() {
 
   const isFacultiesActive = pathname === '/faculties' || pathname.startsWith('/faculties/');
 
-  // Escape = ปิดเมนู
+  // Escape closes the mobile menu
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') setIsMenuOpen(false);
@@ -76,7 +77,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-surface shadow-sm">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-20">
-        {/* โลโก้ภาควิชา — ใช้แทนข้อความชื่อสาขาเดิม */}
+        {/* Department logo — replaces the old text-only department name */}
         <Link href="/faculties" className="flex shrink-0 items-center" aria-label="ไปหน้าคณาจารย์">
           <Image
             src={csTuLogo}
@@ -124,7 +125,7 @@ export function Header() {
         </button>
       </div>
 
-      {/* เส้นแดงคั่นใต้ navbar */}
+      {/* Red divider line under the navbar */}
       <div className="h-[3px] w-full bg-brand" aria-hidden="true" />
 
       {isMenuOpen ? (

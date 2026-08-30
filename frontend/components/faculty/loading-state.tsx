@@ -1,4 +1,4 @@
-/** ใช้ key เป็นค่าคงที่แทน index เพื่อไม่ให้ผิดกติกา "ห้ามใช้ array index เป็น key" */
+/** Fixed keys instead of index, to follow the "never use array index as key" rule */
 const SKELETON_SLOTS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'] as const;
 
 function FacultyCardSkeleton() {
@@ -24,8 +24,9 @@ function FacultyCardSkeleton() {
 }
 
 /**
- * โครงร่างต้องตรงกับ FacultyCard ทุกส่วน (รูป 4/5 → ชื่อ → ชื่ออังกฤษ → ตำแหน่ง
- * → เส้นคั่น → CTA) เพื่อไม่ให้เกิด layout shift ตอนข้อมูลจริงมาแทน
+ * The skeleton must mirror every part of FacultyCard (4/5 image → name →
+ * English name → position → divider → CTA) to avoid layout shift once
+ * real data replaces it.
  */
 export function LoadingState() {
   return (

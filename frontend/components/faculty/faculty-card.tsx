@@ -42,8 +42,9 @@ function ArrowIcon() {
 }
 
 /**
- * Server Component — ไม่ fetch detail API ต่อการ์ด แสดงเฉพาะ Faculty Summary (#22)
- * ฟิลด์ที่เป็น optional ทุกตัวถูกครอบด้วยเงื่อนไข จึงไม่มีทางแสดง null/undefined
+ * Server Component — doesn't fetch the detail API per card; renders only the
+ * Faculty Summary (#22). Every optional field is guarded by a condition, so
+ * null/undefined can never render.
  */
 export function FacultyCard({ faculty }: FacultyCardProps) {
   const { url, alt } = getProfileImage(faculty);
@@ -79,7 +80,7 @@ export function FacultyCard({ faculty }: FacultyCardProps) {
           <p className="truncate text-sm text-ink">{faculty.academic_position}</p>
         ) : null}
 
-        {/* mt-auto ดันบล็อกล่างชิดก้นการ์ด ความสูงการ์ดในแถวเดียวกันจึงเท่ากันเสมอ */}
+        {/* mt-auto pins this block to the card's bottom, so cards in a row stay equal height */}
         <div className="mt-auto pt-4">
           {primaryInterest ? (
             <div className="flex items-center gap-2 border-t border-line-soft pt-3">

@@ -1,8 +1,8 @@
 import { ProfileState } from '@/components/faculty/profile-state';
 
 /**
- * Next.js file convention — แสดงเมื่อหน้าเรียก notFound()
- * (detail API ตอบ 404) และส่ง HTTP 404 กลับไปจริงด้วย
+ * Next.js file convention — renders when the page calls notFound()
+ * (the detail API responded 404), and actually sends back HTTP 404.
  */
 export default function FacultyNotFound() {
   return (

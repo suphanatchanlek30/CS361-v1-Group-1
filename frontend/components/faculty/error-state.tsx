@@ -1,6 +1,6 @@
 interface ErrorStateProps {
   message?: string;
-  /** ปุ่ม "ลองใหม่" จะแสดงก็ต่อเมื่อ caller ส่ง handler มา */
+  /** The "retry" button only renders when the caller passes a handler */
   onRetry?: () => void;
 }
 

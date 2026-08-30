@@ -21,7 +21,7 @@ interface ProfilePageProps {
   params: Promise<{ id: string }>;
 }
 
-/** เมนูข้ามหัวข้อ — แสดงเฉพาะ section ที่มีข้อมูลจริง */
+/** Section jump-menu — only shows sections that actually have data */
 const SECTION_LINKS: ReadonlyArray<{
   id: string;
   label: string;
@@ -56,7 +56,7 @@ const SECTION_LINKS: ReadonlyArray<{
   {
     id: 'publications-heading',
     label: 'ผลงานตีพิมพ์',
-    // แสดงเสมอ เพราะกรณีไม่มีผลงานก็ยังต้องมีข้อความบอกสถานะ
+    // Always visible — even with no publications, a status message still needs to show
     isVisible: () => true,
   },
   {
@@ -72,8 +72,9 @@ type LoadResult =
   | { status: 'invalid-id' };
 
 /**
- * ดึงข้อมูลครั้งเดียว — ทั้ง generateMetadata และตัวหน้าเรียกฟังก์ชันนี้ได้
- * โดยไม่ยิง API ซ้ำ เพราะ fetch cache ของ Next dedupe ให้ในรอบ render เดียวกัน
+ * Fetches once — both generateMetadata and the page itself call this
+ * function without duplicating the API call, since Next's fetch cache
+ * dedupes it within the same render pass.
  */
 async function loadFaculty(id: string): Promise<LoadResult> {
   try {
@@ -87,7 +88,7 @@ async function loadFaculty(id: string): Promise<LoadResult> {
       return { status: 'invalid-id' };
     }
 
-    // network / http / parse / config → ปล่อยให้ error.tsx ของ segment จัดการ
+    // network / http / parse / config → let the segment's error.tsx handle it
     throw error;
   }
 }
@@ -96,9 +97,10 @@ export async function generateMetadata({ params }: ProfilePageProps): Promise<Me
   const { id } = await params;
   const result = await loadFaculty(id);
 
-  // เรียก notFound() ตั้งแต่ generateMetadata ด้วย เพราะ metadata ถูก await
-  // ก่อน stream shell ออกไป — จุดนี้จึงยังตั้ง HTTP 404 ได้จริง
-  // (ถ้ารอไปเรียกใน page อย่างเดียว loading.tsx จะ flush 200 ไปก่อนแล้ว)
+  // Call notFound() here in generateMetadata too, since metadata is awaited
+  // before the shell streams out — this is the last point where an HTTP 404
+  // can actually still be set. (Waiting until the page alone calls it is too
+  // late — loading.tsx would have already flushed a 200.)
   if (result.status === 'not-found') {
     notFound();
   }
@@ -118,9 +120,9 @@ export async function generateMetadata({ params }: ProfilePageProps): Promise<Me
 }
 
 /**
- * Server Component — ดึง `GET /api/v1/faculties/{id}` บน server
- * 404 → not-found.tsx, 400 → สถานะ "รหัสไม่ถูกต้อง", ที่เหลือ → error.tsx
- * ระหว่างรอ render จะเห็น loading.tsx ตาม file convention ของ Next.js
+ * Server Component — fetches `GET /api/v1/faculties/{id}` on the server.
+ * 404 → not-found.tsx, 400 → "invalid id" state, anything else → error.tsx.
+ * loading.tsx shows while rendering waits, per Next.js file convention.
  */
 export default async function FacultyProfilePage({ params }: ProfilePageProps) {
   const { id } = await params;
@@ -143,7 +145,7 @@ export default async function FacultyProfilePage({ params }: ProfilePageProps) {
   const visibleLinks = SECTION_LINKS.filter((link) => link.isVisible(faculty));
 
   return (
-    /* ไม่ใส่ <main> ซ้ำที่นี่ — layout.tsx มี <main> เดียวของทั้งเว็บอยู่แล้ว */
+    /* No nested <main> here — layout.tsx already provides the site's single <main> */
     <div>
       <FacultyProfileHeader faculty={faculty} />
 
