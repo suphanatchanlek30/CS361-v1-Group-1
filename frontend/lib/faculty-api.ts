@@ -8,13 +8,13 @@ import type {
 } from '@/types/faculty';
 
 /**
- * Faculty API client — จุดเดียวในโปรเจกต์ที่รู้จัก URL ของ backend
- * โมดูลนี้ทำงานบน server เท่านั้น (`server-only`) จึงไม่มีทางหลุดไปฝั่ง browser
- * และไม่แตะ S3 โดยตรงตามข้อกำหนด #26/#27
+ * Faculty API client — the only place in the project that knows the backend URL.
+ * This module is server-only (`server-only`), so it can never leak into the
+ * browser bundle, and it never talks to S3 directly, per #26/#27.
  */
 const API_BASE_URL = (process.env.NEXT_PUBLIC_API_BASE_URL ?? '').replace(/\/+$/, '');
 
-/** cache 5 นาทีแล้วค่อย revalidate — ข้อมูลคณาจารย์ไม่ได้เปลี่ยนบ่อย */
+/** Cache for 5 minutes before revalidating — faculty data doesn't change often */
 const REVALIDATE_SECONDS = 300;
 
 export type FacultyApiErrorKind =
@@ -25,7 +25,7 @@ export type FacultyApiErrorKind =
   | 'http'
   | 'parse';
 
-/** แยกชนิด error เพื่อให้หน้าแสดงสาเหตุที่ถูกต้อง ไม่เหมารวมเป็น "เชื่อมต่อไม่ได้" */
+/** Distinguishes error kinds so the UI shows the real cause instead of a generic "can't connect" */
 export class FacultyApiError extends Error {
   readonly kind: FacultyApiErrorKind;
   readonly status?: number;
@@ -48,7 +48,7 @@ function requireApiBaseUrl(): string {
   return API_BASE_URL;
 }
 
-/** map HTTP status → error kind ที่หน้า UI เอาไปเลือกข้อความได้ตรงสาเหตุ */
+/** Maps HTTP status → error kind so the UI can pick a message that matches the real cause */
 function errorForResponse(response: Response): FacultyApiError {
   if (response.status === 400) {
     return new FacultyApiError('invalid-id', 'รูปแบบรหัสอาจารย์ไม่ถูกต้อง', 400);
@@ -75,7 +75,7 @@ async function getJson(path: string): Promise<unknown> {
       next: { revalidate: REVALIDATE_SECONDS, tags: ['faculties'] },
     });
   } catch {
-    // ยิงไม่ถึงเซิร์ฟเวอร์เลย เช่น เน็ตหลุด / DNS ไม่ตอบ
+    // Request never reached the server — e.g. network dropped or DNS didn't resolve
     throw new FacultyApiError(
       'network',
       'ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้ กรุณาตรวจสอบการเชื่อมต่อแล้วลองใหม่อีกครั้ง'
@@ -94,7 +94,7 @@ async function getJson(path: string): Promise<unknown> {
   }
 }
 
-/** ตรวจว่า payload ตรง contract #22 จริง ถ้าไม่ตรงให้ตัดทิ้ง ดีกว่าปล่อย null หลุดขึ้นหน้าจอ */
+/** Validates the payload against contract #22; drop it rather than let null reach the screen */
 function isFacultySummary(value: unknown): value is FacultySummary {
   if (typeof value !== 'object' || value === null) return false;
 
@@ -117,7 +117,7 @@ function isFacultyDetailResponse(value: unknown): value is FacultyDetailResponse
 
 /**
  * `GET {NEXT_PUBLIC_API_BASE_URL}/api/v1/faculties`
- * อ่าน `{ "data": [...] }` ตาม contract #22 แล้วคืนเฉพาะรายการที่ผ่านการตรวจรูปแบบ
+ * Reads `{ "data": [...] }` per contract #22 and returns only the entries that pass validation.
  */
 export async function getFaculties(): Promise<FacultySummary[]> {
   const payload = await getJson('/api/v1/faculties');
@@ -135,8 +135,8 @@ export async function getFaculties(): Promise<FacultySummary[]> {
 }
 
 /**
- * `GET {NEXT_PUBLIC_API_BASE_URL}/api/v1/faculties/{id}` สำหรับหน้า Profile (#27)
- * 400 → invalid-id, 404 → not-found ให้หน้าเลือกแสดงสถานะได้ถูกต้อง
+ * `GET {NEXT_PUBLIC_API_BASE_URL}/api/v1/faculties/{id}` for the Profile page (#27).
+ * 400 → invalid-id, 404 → not-found, so the page can render the right state.
  */
 export async function getFacultyDetail(id: string): Promise<FacultyDetail> {
   const payload = await getJson(`/api/v1/faculties/${encodeURIComponent(id)}`);

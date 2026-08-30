@@ -6,16 +6,17 @@ import { ProfileState } from '@/components/faculty/profile-state';
 
 interface ProfileErrorProps {
   error: Error & { digest?: string };
-  /** Next.js 16 ส่ง `retry` มาให้ (เดิมชื่อ `reset`) — เรียกเพื่อ render segment ใหม่ */
+  /** Next.js 16 passes `retry` (formerly named `reset`) — call it to re-render the segment */
   retry: () => void;
 }
 
 /**
- * Next.js file convention — error boundary ของ segment `/faculties/[id]`
- * รับเฉพาะ network / http / parse / config ส่วน 404 กับ 400 ถูกดักที่ page แล้ว
+ * Next.js file convention — error boundary for the `/faculties/[id]` segment.
+ * Only handles network / http / parse / config; 404 and 400 are already
+ * caught in the page.
  *
- * หมายเหตุ: production Next จะซ่อนข้อความ error จริงจาก Server Component
- * จึงแสดงข้อความกลางที่ปลอดภัย ไม่หลุด error ภายในของ AWS/API ออกหน้าเว็บ
+ * Note: production Next hides the real error message from a Server Component,
+ * so this shows a safe generic message instead of leaking internal AWS/API errors.
  */
 export default function FacultyProfileError({ error, retry }: ProfileErrorProps) {
   useEffect(() => {

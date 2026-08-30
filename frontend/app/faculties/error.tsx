@@ -7,14 +7,14 @@ import { DirectoryBanner } from '@/components/faculty/directory-banner';
 
 interface FacultiesErrorProps {
   error: Error & { digest?: string };
-  /** Next.js 16 ส่ง `retry` มาให้ (เดิมชื่อ `reset`) — เรียกเพื่อ render segment ใหม่ */
+  /** Next.js 16 passes `retry` (formerly named `reset`) — call it to re-render the segment */
   retry: () => void;
 }
 
 /**
- * Next.js file convention — error boundary ของ segment `/faculties`
- * ทุก error ที่ getFaculties() โยนออกมาจะมาโผล่ที่นี่ พร้อมข้อความสาเหตุจริง
- * (config / network / http / parse) ไม่ถูกเหมารวมเป็น "เชื่อมต่อไม่ได้"
+ * Next.js file convention — error boundary for the `/faculties` segment.
+ * Every error getFaculties() throws surfaces here with its real cause
+ * (config / network / http / parse), not lumped into a generic "can't connect".
  */
 export default function FacultiesError({ error, retry }: FacultiesErrorProps) {
   useEffect(() => {

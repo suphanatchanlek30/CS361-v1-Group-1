@@ -1,14 +1,14 @@
 /**
- * Next.js file convention — แสดงอัตโนมัติระหว่างที่ Server Component ของ
- * segment `/faculties/[id]` กำลัง fetch ข้อมูล
- * โครงร่างล้อตาม header จริง เพื่อลด layout shift ตอนข้อมูลมาแทน
+ * Next.js file convention — renders automatically while the
+ * `/faculties/[id]` segment's Server Component is fetching data.
+ * The skeleton mirrors the real header to reduce layout shift once data replaces it.
  */
 export default function FacultyProfileLoading() {
   return (
     <div role="status" aria-live="polite" aria-busy="true">
       <span className="sr-only">กำลังโหลดข้อมูลอาจารย์</span>
 
-      {/* แถบหัวสีแดงคงที่ ไม่ต้อง pulse เพื่อไม่ให้หน้ากระพริบ */}
+      {/* Static red header bar — no pulse, to avoid the page flickering */}
       <div className="bg-brand px-4 py-10 sm:px-6 sm:py-14" aria-hidden="true">
         <div className="mx-auto flex max-w-7xl animate-pulse flex-col items-center gap-7 sm:flex-row sm:items-start">
           <div className="aspect-4/5 w-40 shrink-0 rounded-xl border-4 border-white/25 bg-white/20 sm:w-44" />

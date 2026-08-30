@@ -3,11 +3,11 @@ import { BackToFacultyDirectory } from '@/components/faculty/faculty-profile-sec
 interface ProfileStateProps {
   title: string;
   description: string;
-  /** ปุ่ม "ลองใหม่" จะแสดงก็ต่อเมื่อ caller ส่ง handler มา (error boundary เท่านั้น) */
+  /** The "retry" button only renders when the caller passes a handler (error boundary only) */
   onRetry?: () => void;
 }
 
-/** การ์ดสถานะกลางหน้า ใช้ร่วมกันทั้ง not-found / invalid id / error */
+/** Centered status card, shared by the not-found / invalid-id / error states */
 export function ProfileState({ title, description, onRetry }: ProfileStateProps) {
   return (
     <div className="mx-auto max-w-lg px-4 py-16 text-center sm:py-24">

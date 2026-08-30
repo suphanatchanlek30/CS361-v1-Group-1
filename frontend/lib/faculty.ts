@@ -1,11 +1,12 @@
 import type { FacultySummary, ProfileImage } from '@/types/faculty';
 
-/** จำนวนการ์ดต่อหนึ่งหน้าในหน้า Directory */
+/** Number of cards per page on the Directory page */
 export const FACULTIES_PER_PAGE = 8;
 
 /**
- * ทำให้ `profile_image` เหลือรูปแบบเดียวเสมอ และการันตีว่า `alt` ไม่มีทางเป็น
- * null/undefined — กันข้อความ "undefined" หลุดไปอยู่ใน DOM (#26)
+ * Normalizes `profile_image` into a single shape and guarantees `alt` is
+ * never null/undefined — prevents the literal string "undefined" from
+ * leaking into the DOM (#26).
  */
 export function getProfileImage(faculty: FacultySummary): { url: string | null; alt: string } {
   const image: ProfileImage | null | undefined = faculty.profile_image;
@@ -18,7 +19,7 @@ export function getProfileImage(faculty: FacultySummary): { url: string | null; 
   return { url, alt };
 }
 
-/** แปลง `?page=` เป็นเลขหน้าที่อยู่ในช่วงที่ถูกต้องเสมอ */
+/** Parses `?page=` into a page number that's always within a valid range */
 export function resolvePageNumber(
   rawPage: string | string[] | undefined,
   totalPages: number
@@ -51,7 +52,7 @@ export function paginate<T>(items: T[], page: number, perPage: number): Paginati
   };
 }
 
-/** ลิงก์ไปหน้าที่ n ของ Directory */
+/** Link to page n of the Directory */
 export function buildDirectoryHref(page: number): string {
   return page > 1 ? `/faculties?page=${page}` : '/faculties';
 }

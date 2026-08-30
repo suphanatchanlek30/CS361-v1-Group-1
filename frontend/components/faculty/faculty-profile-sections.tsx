@@ -12,7 +12,7 @@ interface SectionProps {
   faculty: FacultyDetail;
 }
 
-/** ป้ายชื่อ provider ที่รู้จัก — provider อื่นแสดงตามที่ API ส่งมา ไม่เดาเอง */
+/** Labels for known providers — unknown providers show whatever the API sends, unguessed */
 const PROVIDER_LABELS: Record<string, string> = {
   google_scholar: 'Google Scholar',
   researchgate: 'ResearchGate',
@@ -31,9 +31,10 @@ function providerLabel(profile: ExternalProfile): string {
 }
 
 /**
- * เบอร์โทรจาก API อาจมีข้อความไทยปนมา เช่น "02-564-4444 ต่อ 2157"
- * tel: รับเฉพาะตัวเลข จึงตัดตั้งแต่อักขระที่ไม่ใช่รูปแบบเบอร์โทรเป็นต้นไป
- * ถ้าเหลือตัวเลขน้อยเกินไปให้คืน null แล้วแสดงเป็นข้อความธรรมดาแทนลิงก์
+ * The API's phone number may contain Thai text, e.g. "02-564-4444 ต่อ 2157".
+ * `tel:` only accepts digits, so we cut the string at the first character
+ * that isn't part of a phone number. If too few digits remain, return null
+ * and render it as plain text instead of a link.
  */
 function toTelHref(phone: string): string | null {
   const [leading] = phone.split(/[^\d+\-() ]/);
@@ -59,7 +60,7 @@ function publicationMeta(publication: Publication): string[] {
   ].filter((item): item is string => Boolean(item));
 }
 
-/** หัวข้อ section ใช้แถบแดงนำหน้า ชุดเดียวกับหัวข้อในหน้า Directory */
+/** Section heading with a leading red bar, matching the Directory page's headings */
 function SectionHeading({ id, th, en }: { id: string; th: string; en?: string }) {
   return (
     <div className="mb-5">
@@ -118,7 +119,7 @@ export function FacultyProfileHeader({ faculty }: SectionProps) {
             <ul className="mt-5 flex flex-wrap justify-center gap-3 sm:justify-start">
               {faculty.badges.map((badge) => (
                 <li key={badge.url} className="rounded-lg bg-white/95 p-2">
-                  {/* badge จาก API เป็นรูปภาพ จึง render เป็นรูปพร้อม alt จาก label */}
+                  {/* Badges from the API are images, so render as <img> with alt from label */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={badge.url}
@@ -273,7 +274,7 @@ export function FacultyEducationSection({ faculty }: SectionProps) {
 
           return (
             <li
-              // ข้อมูลการศึกษาไม่มี id จาก API — ใช้เนื้อหา + ลำดับเป็น key
+              // Education records have no id from the API — key on content + index instead
               key={`${record.degree ?? ''}-${record.institution ?? ''}-${index}`}
               className="relative"
             >
@@ -338,7 +339,7 @@ export function FacultyPublicationsSection({ faculty }: SectionProps) {
       />
 
       {faculty.selected_publications.length === 0 ? (
-        /* ข้อความต้องสื่อว่า "ชุดข้อมูลนี้ไม่มี" ไม่ใช่ "อาจารย์ไม่มีผลงาน" */
+        /* Copy must say "this dataset has none" — not "this faculty member has no publications" */
         <div className="rounded-xl border border-dashed border-line bg-surface-alt p-6 text-center text-sm text-ink-muted">
           ยังไม่มีผลงานที่เปิดเผยในข้อมูลชุดนี้
         </div>
@@ -369,7 +370,7 @@ function PublicationCard({
     : publication.authors;
   const meta = publicationMeta(publication);
 
-  // ถ้าไม่มี title เลย ใช้ citation_text เป็นเนื้อหาหลักแทน จะได้ไม่เหลือการ์ดว่าง
+  // Fall back to citation_text as the main heading when there's no title, so the card isn't empty
   const heading = publication.title ?? publication.citation_text;
 
   return (
@@ -401,7 +402,7 @@ function PublicationCard({
             </p>
           ) : null}
 
-          {/* ผลงานที่ไม่มี DOI/URL ต้องยังแสดงได้ตามปกติ */}
+          {/* Publications without a DOI/URL must still render normally */}
           <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
             {publication.doi ? (
               <a
