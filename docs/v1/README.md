@@ -1,31 +1,24 @@
-# V1 Documentation
+# เอกสาร V1
 
-## Final canonical documentation
+## เอกสารหลักฉบับสุดท้าย
 
 **[`V1_Final_Documentation_Architecture_Decisions_Demo_Evidence.md`](./V1_Final_Documentation_Architecture_Decisions_Demo_Evidence.md)**
-(Issue #29) is the single source of truth for V1: requirements/scope, final architecture,
-source → serving data flow, API contract, IAM/security, deployment, architecture decisions,
-trade-offs, V1 → V2 direction, and the demo evidence index. Start here.
+(Issue #29) เป็นเอกสารหลักเพียงฉบับเดียวของ V1 — ครอบคลุมความต้องการ/ขอบเขต, สถาปัตยกรรมฉบับสุดท้าย,
+การไหลของข้อมูลจาก Source ไป Serving, API contract, IAM/ความปลอดภัย, การ deploy, เหตุผลการตัดสินใจ
+เชิงสถาปัตยกรรม, ข้อแลกเปลี่ยน (trade-offs), ทิศทาง V1 → V2 และรายการหลักฐานสำหรับปิด Issue #29
+เนื้อหาเป็นภาษาอังกฤษเพราะเป็นเอกสารเทคนิคที่ใช้อ้างอิงศัพท์ตรงกับโค้ด/AWS ให้เริ่มอ่านจากไฟล์นี้
 
-Thai-language close-out checklist for Issue #29, with an honest status per task:
-[`CS361-29_เช็คลิสต์ปิดงาน.md`](./CS361-29_เช็คลิสต์ปิดงาน.md).
+**[`CS361-29_เช็คลิสต์ปิดงาน.md`](./CS361-29_เช็คลิสต์ปิดงาน.md)** เป็นเวอร์ชันสรุปภาษาไทยของ
+Issue #29 พร้อมสถานะจริงของแต่ละงาน (อันไหนทำเสร็จแล้วจริง อันไหนยังต้องรอทีมเข้า AWS/Vercel
+เพื่อเก็บหลักฐานเพิ่ม) เหมาะสำหรับอ่านเร็วๆ ก่อนประชุมทีม
 
-The demo evidence package (`evidence/`) described in the final documentation has not been
-created in the repository yet — it's deferred until closer to the actual demo.
+หมายเหตุ: โฟลเดอร์ `evidence/` (screenshot, ผล API, ผลทดสอบความปลอดภัย ฯลฯ) ตามที่อธิบายไว้ในเอกสาร
+หลักยังไม่ได้สร้างขึ้นจริงใน repo — เลื่อนไปทำใกล้วันเดโมเมื่อมี URL และหลักฐานจริงให้แนบ
 
-## Historical design drafts
+## คลังเอกสารเก่า
 
-These package files were written **before** the real department source dataset was available.
-They describe the source as `faculties.xlsx` / `publications.csv` / generic Excel-CSV, which is
-**not** how V1 was actually built — the real source is the department's public faculty website,
-captured as a controlled JSON snapshot. Each file now carries a superseded-by banner pointing to
-the final documentation above; they are kept only as historical design records, not as current
-guidance.
-
-- `V1_Define_Scope_Architecture_Technical_Contracts_Central_21.md` — original scope/architecture/contract draft (Issue #21)
-- `V1_Validate_Source_Dataset_Public_Faculty_Data_Contract_22.md` — original data contract draft (Issue #22)
-- `source_to_serving_mapping_template.csv` / `source_to_serving_mapping.csv` — mapping worksheet templates from that period
-- `data_classification_register_template.csv` / `data_classification_register.csv` — field visibility worksheet templates from that period
-- `V1_TEAM_CARD_ASSIGNMENT_GUIDE.md` — team task-card assignment guide
-- `source_dataset_inventory.md` — early inventory notes taken before the real source was inspected
-- `AWS V1.drawio (4).png` — early architecture sketch; superseded by the Mermaid diagrams in the final documentation
+โฟลเดอร์ [`archive/`](./archive/) เก็บร่างเอกสารและไฟล์ที่ทำขึ้น**ก่อน**จะมีชุดข้อมูลจริงจาก
+เว็บไซต์สาขาวิชา (ร่าง Issue #21, #22, ตาราง mapping/classification ตัวอย่าง 1 คน, ภาพร่าง
+สถาปัตยกรรมเก่า ฯลฯ) เนื้อหาในนั้น**ไม่ตรงกับระบบที่ implement จริง**อีกต่อไป (เช่น ยังอ้างว่า
+Source เป็น Excel/CSV) เก็บไว้เป็นบันทึกประวัติการทำงานเท่านั้น ดูรายละเอียดแต่ละไฟล์ได้ใน
+[`archive/README.md`](./archive/README.md)

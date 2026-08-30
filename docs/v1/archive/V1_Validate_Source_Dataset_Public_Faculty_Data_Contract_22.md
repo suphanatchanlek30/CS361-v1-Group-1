@@ -4,7 +4,7 @@
 > still treats `faculties.xlsx` / `publications.csv` / generic Excel-CSV as the pending source
 > format. The real V1 source is the department's public faculty website, captured as a
 > controlled JSON snapshot (`data/v1/source/faculty_profiles.json`). See
-> [`V1_Final_Documentation_Architecture_Decisions_Demo_Evidence.md`](./V1_Final_Documentation_Architecture_Decisions_Demo_Evidence.md)
+> [`V1_Final_Documentation_Architecture_Decisions_Demo_Evidence.md`](../V1_Final_Documentation_Architecture_Decisions_Demo_Evidence.md)
 > (Issue #29) for the final, implementation-accurate data contract. This file is kept only as a
 > historical design record.
 

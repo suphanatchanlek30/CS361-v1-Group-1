@@ -110,11 +110,11 @@ metadata/preparation-summary.json
 
 ## 1.4 Older draft documents in this repo
 
-`docs/v1/V1_Define_Scope_Architecture_Technical_Contracts_Central_21.md` and both
-`docs/v1/V1_Validate_Source_Dataset_Public_Faculty_Data_Contract_22*.md` files were written
+`docs/v1/archive/V1_Define_Scope_Architecture_Technical_Contracts_Central_21.md` and
+`docs/v1/archive/V1_Validate_Source_Dataset_Public_Faculty_Data_Contract_22.md` were written
 **before** the real department source was available, so they still describe the source as
-`faculties.xlsx` / `publications.csv` / generic Excel-CSV. Those files remain in the repo as
-historical design records but are **superseded** by this document wherever they conflict with
+`faculties.xlsx` / `publications.csv` / generic Excel-CSV. Those files remain in the repo (under
+`docs/v1/archive/`) as historical design records but are **superseded** by this document wherever they conflict with
 it (see the notice banner added to the top of each file).
 
 ---
