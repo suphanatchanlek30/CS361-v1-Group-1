@@ -1,0 +1,10 @@
+{
+  "source": "Department Public Faculty Website",
+  "source_provider": "Department of Computer Science, Faculty of Science and Technology, Thammasat University",
+  "source_domain": "cs.sci.tu.ac.th",
+  "directory_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+  "captured_at": "2026-08-29T18:43:00+07:00",
+  "record_count": 22,
+  "source_version": "v1-full-faculty-snapshot-2026-08-29",
+  "capture_method": "Controlled manual snapshot from supplied public faculty directory and profile-page content"
+}

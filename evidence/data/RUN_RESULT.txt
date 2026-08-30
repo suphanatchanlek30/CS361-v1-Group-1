@@ -1,0 +1,55 @@
+========================================
+V1 Faculty Data Preparation
+========================================
+
+Dataset Preparation Completed
+
+Faculty Records: 22
+Valid Faculty: 22
+Invalid Faculty: 0
+Selected Publications: 7
+Warnings: 12
+Errors: 0
+
+Status: PASSED_WITH_WARNINGS
+
+Warnings:
+- kasidit-chanchio: CV missing
+- nuttanont-hongwarittorrn: CV missing
+- songsakdi-rongviriyapanish: CV missing
+- tanatorn-tanantong: CV missing
+- saowaluk-watanapa: CV missing
+- wanida-putthividhya: CV missing
+- sirikunya-nilpanich: CV missing
+- lumpapun-punchoojit: CV missing
+- thapana-boonchoo: CV missing
+- nawarerk-chalarak: CV missing
+- satanat-kitsiranuwat: CV missing
+- pakkaporn-saophan: CV missing
+
+Generated:
+build/v1/serving/faculties.json
+build/v1/serving/faculties/denduang-pradubsuwun.json
+build/v1/serving/faculties/kasidit-chanchio.json
+build/v1/serving/faculties/krittakom-srijiranon.json
+build/v1/serving/faculties/lumpapun-punchoojit.json
+build/v1/serving/faculties/nawarerk-chalarak.json
+build/v1/serving/faculties/nuttanont-hongwarittorrn.json
+build/v1/serving/faculties/onjira-sitthisak.json
+build/v1/serving/faculties/pakkaporn-saophan.json
+build/v1/serving/faculties/pakorn-leesutthipornchai.json
+build/v1/serving/faculties/pakorn-waewsawangwong.json
+build/v1/serving/faculties/pokpong-songmuang.json
+build/v1/serving/faculties/prapaporn-rattanatamrong.json
+build/v1/serving/faculties/saowaluk-watanapa.json
+build/v1/serving/faculties/satanat-kitsiranuwat.json
+build/v1/serving/faculties/sirikunya-nilpanich.json
+build/v1/serving/faculties/songsakdi-rongviriyapanish.json
+build/v1/serving/faculties/tanatorn-tanantong.json
+build/v1/serving/faculties/thapana-boonchoo.json
+build/v1/serving/faculties/wanida-putthividhya.json
+build/v1/serving/faculties/wilawan-rukpakavong.json
+build/v1/serving/faculties/wirat-jareevongpiboon.json
+build/v1/serving/faculties/worawan-marurngsith.json
+build/v1/metadata/manifest.json
+build/v1/metadata/preparation-summary.json

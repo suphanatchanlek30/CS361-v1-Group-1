@@ -285,6 +285,7 @@ Requirement → Issue → Branch → Implementation → Pull Request → Merge �
 | Issue #2 | System Boundary และ Decisions After Boundary Grill |
 | README.md | ภาพสรุปความเข้าใจร่วมกันของทีม ปรับปรุงเมื่อการออกแบบเปลี่ยน |
 | [`docs/v1/V1_Final_Documentation_Architecture_Decisions_Demo_Evidence.md`](docs/v1/V1_Final_Documentation_Architecture_Decisions_Demo_Evidence.md) | **เอกสารหลักของ V1 (Issue #29)** — Scope, Final Architecture, Data/API/Security, Deployment, Architecture Decisions, Demo Evidence — ใช้แทนร่างเก่าใน `docs/v1/` ที่ยังอ้างอิง Excel/CSV |
+| [`evidence/README.md`](evidence/README.md) | Demo Evidence Package สำหรับปิด Issue #29 |
 
 ### V1 Quick Start
 

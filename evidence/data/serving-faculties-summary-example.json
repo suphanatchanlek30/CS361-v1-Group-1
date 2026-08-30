@@ -1,0 +1,432 @@
+[
+  {
+    "id": "kasidit-chanchio",
+    "name": {
+      "th": "ผศ.ดร.กษิดิศ ชาญเชี่ยว",
+      "en": "Asst.Prof.Dr. Kasidit Chanchio"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/02/5-scaled-e1612367119916.jpg",
+      "alt": "ผศ.ดร.กษิดิศ ชาญเชี่ยว"
+    },
+    "research_interests": [
+      "Fault Tolerance",
+      "Distributed and Parallel Processing",
+      "High Performance Computing",
+      "System Software"
+    ],
+    "expertise": []
+  },
+  {
+    "id": "nuttanont-hongwarittorrn",
+    "name": {
+      "th": "รศ.ดร.ณัฐธนนท์ หงส์วริทธิ์ธร",
+      "en": "Assoc.Prof.Dr. Nuttanont Hongwarittorrn"
+    },
+    "academic_position": "รองศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/1587629164.jpg",
+      "alt": "รศ.ดร.ณัฐธนนท์ หงส์วริทธิ์ธร"
+    },
+    "research_interests": [
+      "Human Computer Interaction",
+      "Animated Characters",
+      "Pedagogical Agents",
+      "Individual Differences in HCI",
+      "Adaptive Interface",
+      "Usability Testing"
+    ],
+    "expertise": []
+  },
+  {
+    "id": "denduang-pradubsuwun",
+    "name": {
+      "th": "ผศ.ดร.เด่นดวง ประดับสุวรรณ",
+      "en": "Asst.Prof.Dr. Denduang Pradubsuwun"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture4-1.jpg",
+      "alt": "ผศ.ดร.เด่นดวง ประดับสุวรรณ"
+    },
+    "research_interests": [
+      "Formal Verification"
+    ],
+    "expertise": [
+      "Formal verification"
+    ]
+  },
+  {
+    "id": "songsakdi-rongviriyapanish",
+    "name": {
+      "th": "ผศ.ดร.ทรงศักดิ์ รองวิริยะพานิช",
+      "en": "Asst.Prof.Dr. Songsakdi Rongviriyapanish"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture8.jpg",
+      "alt": "ผศ.ดร.ทรงศักดิ์ รองวิริยะพานิช"
+    },
+    "research_interests": [
+      "Software Engineering (Software Verification, Software Process)",
+      "Simulation Model",
+      "Software Modeling (Formal Method)"
+    ],
+    "expertise": []
+  },
+  {
+    "id": "pakorn-leesutthipornchai",
+    "name": {
+      "th": "ผศ.ดร.ปกรณ์ ลี้สุทธิพรชัย",
+      "en": "Asst.Prof.Dr. Pakorn Leesutthipornchai"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture3.jpg",
+      "alt": "ผศ.ดร.ปกรณ์ ลี้สุทธิพรชัย"
+    },
+    "research_interests": [
+      "Machine Learning",
+      "Data Mining",
+      "Data Analytics",
+      "Association Mining Mobile and Web Applications"
+    ],
+    "expertise": []
+  },
+  {
+    "id": "wilawan-rukpakavong",
+    "name": {
+      "th": "ผศ.ดร.วิลาวรรณ รักผกาวงศ์",
+      "en": "Asst.Prof. Dr. Wilawan Rukpakavong"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture28.jpg",
+      "alt": "ผศ.ดร.วิลาวรรณ รักผกาวงศ์"
+    },
+    "research_interests": [
+      "Distributed Systems",
+      "Programming Languages"
+    ],
+    "expertise": []
+  },
+  {
+    "id": "worawan-marurngsith",
+    "name": {
+      "th": "ผศ.ดร.วรวรรณ ดีอัซ การ์บาโย",
+      "en": "Asst.Prof.Dr. Worawan Marurngsith"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture13.jpg",
+      "alt": "ผศ.ดร.วรวรรณ ดีอัซ การ์บาโย"
+    },
+    "research_interests": [
+      "Agent-based, multi-agent, and Discrete-event Simulations",
+      "High-performance computing on heterogeneous systems, GPGPU",
+      "Compiler techniques for high performance computing",
+      "Performance Evaluation of Computer Systems",
+      "Computers in Education"
+    ],
+    "expertise": []
+  },
+  {
+    "id": "tanatorn-tanantong",
+    "name": {
+      "th": "รศ.ดร.ธนาธร ทะนานทอง",
+      "en": "Assoc.Prof.Dr. Tanatorn Tanantong"
+    },
+    "academic_position": "รองศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/08/%E0%B8%AD.%E0%B8%94%E0%B8%A3.%E0%B8%98%E0%B8%99%E0%B8%B2%E0%B8%98%E0%B8%A3-%E0%B8%97%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%87-3-Edit.jpg",
+      "alt": "รศ.ดร.ธนาธร ทะนานทอง"
+    },
+    "research_interests": [
+      "Artificial Intelligence & Data Mining & Machine Learning",
+      "Formal Ontologies and Semantic Web Technology",
+      "Body Sensor Networks & Internet of Things (IoTs)",
+      "Medical Informatics & Hospital Information Systems"
+    ],
+    "expertise": [
+      "การวิเคราะห์และประมวลผลสัญญาณด้านสุขภาพและการแพทย์ (อาทิเช่น สัญญาณคลื่นไฟฟ้าหัวใจ และสัญญาณตรวจจับความเร่งในระนาบ 3 มิติ)",
+      "การวิเคราะห์และสร้างเหมืองข้อมูลจากข้อมูลสื่อสังคมออนไลน์ (Social Media Analytics and Mining) เช่น ข้อมูลบน Twitter FB และ Pantip",
+      "ระบบบริหารจัดการโรงพยาบาล (อาทิเช่น ระบบบริหารจัดการคิวผู้ป่วย)",
+      "ระบบบริหารจัดการงานทะเบียนนักศึกษา"
+    ]
+  },
+  {
+    "id": "onjira-sitthisak",
+    "name": {
+      "th": "ผศ.ดร.อรจิรา สิทธิศักดิ์",
+      "en": "Asst.Prof.Dr. Onjira Sitthisak"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture15.jpg",
+      "alt": "ผศ.ดร.อรจิรา สิทธิศักดิ์"
+    },
+    "research_interests": [
+      "Competency Modeling",
+      "Computational algorithm",
+      "E-learning",
+      "Geographic information system (GIS)",
+      "Adaptive Assessment"
+    ],
+    "expertise": [
+      "ระบบสารสนเทศภูมิศาสตร์",
+      "การประยุกต์ให้ competency modeling กับการเรียนรู้"
+    ]
+  },
+  {
+    "id": "wirat-jareevongpiboon",
+    "name": {
+      "th": "ผศ.ดร.วิรัตน์ จารีวงศ์ไพบูลย์",
+      "en": "Asst.Prof.Dr. Wirat Jareevongpiboon"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/02/1-scaled-e1612368374244.jpg",
+      "alt": "ผศ.ดร.วิรัตน์ จารีวงศ์ไพบูลย์"
+    },
+    "research_interests": [
+      "Data / Process Mining",
+      "Semantics via Ontology",
+      "Ontology-Relational Mapping",
+      "Topics related to Business Intelligence"
+    ],
+    "expertise": []
+  },
+  {
+    "id": "saowaluk-watanapa",
+    "name": {
+      "th": "ผศ.ดร.เสาวลักษณ์ วรรธนาภา",
+      "en": "Asst.Prof.Dr. Saowaluk Watanapa"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/02/3-scaled-e1612367313503.jpg",
+      "alt": "ผศ.ดร.เสาวลักษณ์ วรรธนาภา"
+    },
+    "research_interests": [
+      "Image Processing"
+    ],
+    "expertise": []
+  },
+  {
+    "id": "wanida-putthividhya",
+    "name": {
+      "th": "ผศ.ดร.วนิดา พฤทธิวิทยา",
+      "en": "Asst.Prof.Dr. Wanida Putthividhya"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture25.jpg",
+      "alt": "ผศ.ดร.วนิดา พฤทธิวิทยา"
+    },
+    "research_interests": [
+      "Software economics (เศรษฐศาสตร์การบริหารและการผลิตซอฟต์แวร์)",
+      "Quality of Service (QOS)",
+      "Congestion Control",
+      "Network Security and Operating systems"
+    ],
+    "expertise": []
+  },
+  {
+    "id": "pokpong-songmuang",
+    "name": {
+      "th": "ผศ.ดร.ปกป้อง ส่องเมือง",
+      "en": "Asst.Prof.Dr. Pokpong Songmuang"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture16.jpg",
+      "alt": "ผศ.ดร.ปกป้อง ส่องเมือง"
+    },
+    "research_interests": [
+      "Artificial Intelligence",
+      "Data mining",
+      "Optimization algorithms",
+      "e-Testing",
+      "Social network analytics"
+    ],
+    "expertise": [
+      "การออกแบบและพัฒนาระบบจัดการข้อสอบและคลังข้อสอบ",
+      "การประยุกต์ใช้เทคโนโลยีปัญญาประดิษฐ์และการเรียนรู้ของเครื่องจักรเพื่อแก้ปัญหา",
+      "การวิเคราะห์เครือข่ายสังคมออนไลน์"
+    ]
+  },
+  {
+    "id": "prapaporn-rattanatamrong",
+    "name": {
+      "th": "ผศ.ดร.ประภาพร รัตนธำรง",
+      "en": "Asst.Prof.Dr. Prapaporn Rattanatamrong"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture30.jpg",
+      "alt": "ผศ.ดร.ประภาพร รัตนธำรง"
+    },
+    "research_interests": [
+      "Distributed Systems and Middleware",
+      "Cloud and Edge Computing",
+      "Big Data Engineering",
+      "Digital Twins",
+      "Data-Driven Decision Support Systems",
+      "Real-Time Scheduling"
+    ],
+    "expertise": [
+      "การออกแบบสถาปัตยกรรมของระบบสารสนเทศ (IT systems) บริการบนระบบอินเตอร์เน็ต (Internet-based services) และโครงสร้างพื้นฐานไซเบอร์ (Cyberinfrastructure) แบบกระจายศูนย์ (Distributed systems) และแบบที่อาศัยกลยุทธ์เชิงเทคนิคและศักยภาพของคลาวด์ (Cloud computing) เป็นองค์ประกอบ",
+      "ระบบในการบริหารจัดการการไหลของข้อมูล (Data workflow) เพื่อจัดเก็บ โอนย้าย และวิเคราะห์ข้อมูลทั้งในเซิร์ฟเวอร์บนคลาวด์และเอดจ์ (Cloud and Edge servers)",
+      "ระบบแสดงข้อมูลเป็นภาพ เพื่อสนับสนุนการใช้ข้อมูลประกอบการตัดสินใจขององค์กร (Dashboard and Decision support systems)"
+    ]
+  },
+  {
+    "id": "sirikunya-nilpanich",
+    "name": {
+      "th": "อาจารย์สิริกันยา นิลพานิช",
+      "en": "Ajarn Sirikunya Nilpanich"
+    },
+    "academic_position": "อาจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/12/Siri-3.jpg",
+      "alt": "อาจารย์สิริกันยา นิลพานิช"
+    },
+    "research_interests": [],
+    "expertise": []
+  },
+  {
+    "id": "krittakom-srijiranon",
+    "name": {
+      "th": "ผศ.ดร.กฤตคม ศรีจิรานนท์",
+      "en": "Asst.Prof.Dr. Krittakom Srijiranon"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/1580868758.jpg",
+      "alt": "ผศ.ดร.กฤตคม ศรีจิรานนท์"
+    },
+    "research_interests": [
+      "Data Mining",
+      "Machine Learning"
+    ],
+    "expertise": []
+  },
+  {
+    "id": "pakorn-waewsawangwong",
+    "name": {
+      "th": "อาจารย์ปกรณ์ แววสว่างวงศ์",
+      "en": "Ajarn Pakorn Waewsawangwong"
+    },
+    "academic_position": "อาจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/1580870990.jpg",
+      "alt": "อาจารย์ปกรณ์ แววสว่างวงศ์"
+    },
+    "research_interests": [
+      "Formal Modeling"
+    ],
+    "expertise": []
+  },
+  {
+    "id": "lumpapun-punchoojit",
+    "name": {
+      "th": "ผศ.ดร.ลัมพาพรรณ พันธ์ชูจิตร์",
+      "en": "Asst.Prof.Dr. Lumpapun Punchoojit"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/01/1611910949289-e1612162750301.jpg",
+      "alt": "ผศ.ดร.ลัมพาพรรณ พันธ์ชูจิตร์"
+    },
+    "research_interests": [
+      "Human-Computer Interaction",
+      "Child-Computer Interaction",
+      "Human and Psychological factors in designing UX/UI",
+      "UX/UI research methods",
+      "Mobile Usability"
+    ],
+    "expertise": [
+      "วิจัยด้านการปฏิสัมพันธ์ระหว่างมนุษย์และคอมพิวเตอร์ และระหว่างเด็กและคอมพิวเตอร์ ศึกษาในเชิงทฤษฎี วัดผลและประเมินผล รวมถึงการประยุกต์ใช้ทฤษฎีในการสร้างผลิตภัณฑ์ต่าง ๆ",
+      "วิจัยด้านมนุษยปัจจัยและปัจจัยเชิงจิตวิทยาที่มีอิทธิพลต่อการออกแบบส่วนต่อประสานและประสบการณ์ผู้ใช้",
+      "การประยุกต์ใช้วิธีวิจัยรูปแบบต่าง ๆ ในการออกแบบส่วนต่อประสานและประสบการณ์ผู้ใช้",
+      "งานวิจัยด้านความยากง่ายในการใช้งานอุปกรณ์สื่อสารแบบเคลื่อนที่"
+    ]
+  },
+  {
+    "id": "thapana-boonchoo",
+    "name": {
+      "th": "ผศ.ดร.ฐาปนา บุญชู",
+      "en": "Asst.Prof.Dr. Thapana Boonchoo"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/01/1611910950203-e1612162735738.jpg",
+      "alt": "ผศ.ดร.ฐาปนา บุญชู"
+    },
+    "research_interests": [
+      "Machine Learning/Data Mining",
+      "Human Movement Analysis",
+      "Data Clustering",
+      "Data Representation Learning",
+      "Matrix Factorization",
+      "Probabilistic Models"
+    ],
+    "expertise": []
+  },
+  {
+    "id": "nawarerk-chalarak",
+    "name": {
+      "th": "อ.ดร.นวฤกษ์ ชลารักษ์",
+      "en": "Ajarn Dr.Nawarerk Chalarak"
+    },
+    "academic_position": "อาจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2022/07/HUT06889-7-scaled.jpg",
+      "alt": "อ.ดร.นวฤกษ์ ชลารักษ์"
+    },
+    "research_interests": [
+      "Medical image processing",
+      "Artificial Intelligence",
+      "Data mining"
+    ],
+    "expertise": []
+  },
+  {
+    "id": "satanat-kitsiranuwat",
+    "name": {
+      "th": "ผศ.ดร.ศาตนาฏ กิจศิรานุวัตร",
+      "en": "Asst.Prof.Dr.Satanat Kitsiranuwat"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2022/09/DSC_0003-scaled.jpg",
+      "alt": "ผศ.ดร.ศาตนาฏ กิจศิรานุวัตร"
+    },
+    "research_interests": [
+      "Bioinformatics",
+      "Machine Learning/ Data Mining",
+      "Mathematical Modeling"
+    ],
+    "expertise": []
+  },
+  {
+    "id": "pakkaporn-saophan",
+    "name": {
+      "th": "อ.ดร.ภัคพร เสาร์ฝั้น",
+      "en": "Ajarn Dr.Pakkaporn Saophan"
+    },
+    "academic_position": "อาจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2024/05/aj.hong_.png",
+      "alt": "อ.ดร.ภัคพร เสาร์ฝั้น"
+    },
+    "research_interests": [
+      "Optimization",
+      "Production Scheduling & Management",
+      "Management Mathematics",
+      "Machine Learning"
+    ],
+    "expertise": []
+  }
+]

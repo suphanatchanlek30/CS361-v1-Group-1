@@ -1450,6 +1450,15 @@ CS361-v1-Group-1/
 ├── docs/
 │   └── v1/                         # this document + historical drafts
 │
+├── evidence/                       # Issue #29 close-out evidence package
+│   ├── architecture/
+│   ├── data/
+│   ├── aws/
+│   ├── api/
+│   ├── frontend/
+│   ├── security/
+│   └── e2e/
+│
 ├── fixtures/
 │   └── v1/                         # synthetic fixtures for backend unit tests
 │
@@ -1488,8 +1497,9 @@ CS361-v1-Group-1/
 > Final documentation uses `function_faculties/` because that is the actual repository
 > structure — not an older generic `backend/` example.
 >
-> An `evidence/` folder (screenshots, API responses, security test results — see §49) is
-> planned for closing #29 but has not been created in the repository yet.
+> `evidence/data/` already has real data evidence (source snapshot metadata, serving JSON,
+> preparation results). The remaining `evidence/` subfolders (screenshots, API responses,
+> security test results — see §49) still need to be filled in from the live deployment.
 
 ---
 
@@ -2063,9 +2073,6 @@ belong to V2 unless the team's version plan says so.
 
 # 49. Evidence Package Structure
 
-Not created yet — planned for closer to the final demo, once there are real screenshots and a
-live URL to attach. When it's created, use this layout:
-
 ```text
 evidence/
 ├── architecture/
@@ -2077,7 +2084,10 @@ evidence/
 └── e2e/
 ```
 
-The folder name doesn't have to match exactly, but evidence should be easy to find by category.
+`evidence/data/` is already populated with real data evidence (see `evidence/README.md` for the
+exact file list). The other six subfolders exist but only hold a `.gitkeep` placeholder until
+someone captures the corresponding screenshots/API responses from the live deployment. The
+folder name doesn't have to match exactly, but evidence should be easy to find by category.
 
 ---
 
@@ -2301,12 +2311,11 @@ needs attaching · `[ ]` needs a human/team action.
 - [x] All eleven ADRs, trade-offs, and V1 → V2 direction
 
 ## Evidence / Demo
-- [x] Real data evidence exists in-repo (`data/v1/source/`, `build/v1/`) and is documented in
-  §12.3–§12.4 and §22; the manifest/preparation-summary numbers above are reproduced from a real
-  local run, not invented
-- [ ] `evidence/` package — not created yet (see §49)
-- [ ] Architecture / AWS / API / frontend / security / E2E screenshots — still need capturing
-  from the live deployment
+- [x] `evidence/` package created with the planned folder structure (§49)
+- [x] `evidence/data/` populated with real data evidence (source metadata, serving JSON,
+  preparation results) reproduced from a real local run, not invented
+- [ ] Architecture / AWS / API / frontend / security / E2E — folders exist but still need real
+  screenshots/responses captured from the live deployment
 - [ ] Final rehearsal and team sign-off
 
 ---

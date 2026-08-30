@@ -1,0 +1,60 @@
+{
+  "id": "thapana-boonchoo",
+  "name": {
+    "th": "ผศ.ดร.ฐาปนา บุญชู",
+    "en": "Asst.Prof.Dr. Thapana Boonchoo"
+  },
+  "academic_position": "ผู้ช่วยศาสตราจารย์",
+  "profile_image": {
+    "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/01/1611910950203-e1612162735738.jpg",
+    "alt": "ผศ.ดร.ฐาปนา บุญชู"
+  },
+  "badges": [],
+  "cv": null,
+  "contact": {
+    "office": "อาคาร LC-2 ชั้น 2 ห้อง 222",
+    "phone": "02-564-4444",
+    "extension": "2157 ต่อ 222",
+    "email": "thapana@cs.tu.ac.th"
+  },
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "field": "Computer Science and Technology",
+      "institution": "Machine Learning and Data Mining Group, Institute of Computing Technology, University of Chinese Academy of Sciences",
+      "country": "China"
+    },
+    {
+      "degree": "M.Sc.",
+      "field": "Computer Science and Technology",
+      "institution": "Institute of High-Performance Computing, Tsinghua University",
+      "country": "China"
+    },
+    {
+      "degree": "B.Sc.",
+      "field": "Computer Science, First Class Honours",
+      "institution": "Thammasat University",
+      "country": "Thailand"
+    }
+  ],
+  "research_interests": [
+    "Machine Learning/Data Mining",
+    "Human Movement Analysis",
+    "Data Clustering",
+    "Data Representation Learning",
+    "Matrix Factorization",
+    "Probabilistic Models"
+  ],
+  "expertise": [],
+  "selected_publications": [],
+  "publication_profiles": [
+    {
+      "provider": "semantic_scholar",
+      "url": "https://www.semanticscholar.org/author/Thapana-Boonchoo/35514166"
+    },
+    {
+      "provider": "researchgate",
+      "url": "https://www.researchgate.net/profile/Thapana-Boonchoo"
+    }
+  ]
+}
