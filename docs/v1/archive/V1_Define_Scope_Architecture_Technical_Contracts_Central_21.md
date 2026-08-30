@@ -1,5 +1,12 @@
 # [V1] Define V1 Scope, Architecture & Technical Contracts — Central V1 Contract
 
+> ⚠️ **Superseded.** This is the original design draft from before the real department source
+> was available. It still describes the source data as `faculties.xlsx` / `publications.csv` /
+> generic Excel-CSV, which does not match the final V1 implementation. For the final,
+> implementation-accurate architecture, data contract, and API/security documentation, see
+> [`V1_Final_Documentation_Architecture_Decisions_Demo_Evidence.md`](../V1_Final_Documentation_Architecture_Decisions_Demo_Evidence.md)
+> (Issue #29). This file is kept only as a historical design record.
+
 **Project:** Faculty Output & Workload Management System  
 **Issue:** #21 — `[V1] Define V1 Scope, Architecture & Technical Contracts`  
 **Document Version:** 1.0  

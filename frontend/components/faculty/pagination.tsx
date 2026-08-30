@@ -13,7 +13,7 @@ const ENABLED =
   'border-line bg-surface text-ink hover:border-brand hover:bg-brand-soft hover:text-brand';
 const DISABLED = 'cursor-not-allowed border-line/40 bg-white text-ink-muted/30';
 
-/** ย่อรายการหน้าเมื่อมีหลายหน้า เช่น 1 … 4 5 6 … 20 */
+/** Collapses the page list when there are many pages, e.g. 1 … 4 5 6 … 20 */
 function buildPageList(currentPage: number, totalPages: number): Array<number | 'gap'> {
   if (totalPages <= 7) {
     return Array.from({ length: totalPages }, (_, index) => index + 1);
@@ -50,8 +50,8 @@ function ChevronIcon({ direction }: { direction: 'prev' | 'next' }) {
 }
 
 /**
- * Server Component — เปลี่ยนหน้าด้วย <Link> ที่เขียนลง URL (`?page=`)
- * ทำให้กด back/forward และแชร์ลิงก์หน้าที่ 2 ได้ และไม่ต้องมี client state
+ * Server Component — changes page via a <Link> that writes to the URL (`?page=`),
+ * so back/forward and sharing a link to page 2 both work, with no client state needed.
  */
 export function Pagination({ currentPage, totalPages }: PaginationProps) {
   const isFirst = currentPage <= 1;

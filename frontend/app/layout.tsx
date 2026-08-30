@@ -1,11 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_Thai, Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
-// Latin ใช้ Plus Jakarta Sans ตาม design #30, Thai fallback เป็น Noto Sans Thai
+// Latin uses Plus Jakarta Sans per design #30; Thai text falls back to Noto Sans Thai
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
   subsets: ["latin"],
@@ -55,7 +56,7 @@ export default function RootLayout({
       className={`${plusJakarta.variable} ${notoSansThai.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-white">
-        {/* Skip link — a11y: ให้ผู้ใช้คีย์บอร์ดข้าม nav ไปยังเนื้อหาหลักได้ */}
+        {/* Skip link — a11y: lets keyboard users jump past nav to main content */}
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
@@ -63,12 +64,13 @@ export default function RootLayout({
           ข้ามไปยังเนื้อหาหลัก
         </a>
         <Header />
-        {/* <main> เดียวของทั้งเว็บ — หน้าอื่นห้ามซ้อน <main> ซ้ำ */}
+        {/* The site's single <main> landmark — pages must not nest another one */}
         <main id="main-content" className="flex-1">
           {children}
         </main>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -1,0 +1,61 @@
+{
+  "id": "wanida-putthividhya",
+  "name": {
+    "th": "ผศ.ดร.วนิดา พฤทธิวิทยา",
+    "en": "Asst.Prof.Dr. Wanida Putthividhya"
+  },
+  "academic_position": "ผู้ช่วยศาสตราจารย์",
+  "profile_image": {
+    "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture25.jpg",
+    "alt": "ผศ.ดร.วนิดา พฤทธิวิทยา"
+  },
+  "badges": [],
+  "cv": null,
+  "contact": {
+    "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+    "phone": "0-2986-9156",
+    "extension": "230",
+    "email": "wanidap@cs.tu.ac.th"
+  },
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "field": "Computer Science",
+      "institution": "Iowa State University",
+      "country": "USA",
+      "graduation_year": "2549"
+    },
+    {
+      "degree": "M.S.",
+      "field": "Computer Science",
+      "institution": "University of Southern California",
+      "country": "USA",
+      "graduation_year": "2543"
+    },
+    {
+      "degree": "วท.บ.",
+      "field": "ศาสตร์คอมพิวเตอร์ (เกียรตินิยมอันดับหนึ่งเหรียญทอง)",
+      "institution": "มหาวิทยาลัยธรรมศาสตร์",
+      "country": "ประเทศไทย",
+      "graduation_year": "2539"
+    }
+  ],
+  "research_interests": [
+    "Software economics (เศรษฐศาสตร์การบริหารและการผลิตซอฟต์แวร์)",
+    "Quality of Service (QOS)",
+    "Congestion Control",
+    "Network Security and Operating systems"
+  ],
+  "expertise": [],
+  "selected_publications": [],
+  "publication_profiles": [
+    {
+      "provider": "semantic_scholar",
+      "url": "https://www.semanticscholar.org/author/Wanida-Putthividhya/2933236"
+    },
+    {
+      "provider": "researchgate",
+      "url": "https://www.researchgate.net/profile/Wanida_Putthividhya"
+    }
+  ]
+}

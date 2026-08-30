@@ -1,0 +1,39 @@
+{
+  "id": "sirikunya-nilpanich",
+  "name": {
+    "th": "อาจารย์สิริกันยา นิลพานิช",
+    "en": "Ajarn Sirikunya Nilpanich"
+  },
+  "academic_position": "อาจารย์",
+  "profile_image": {
+    "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/12/Siri-3.jpg",
+    "alt": "อาจารย์สิริกันยา นิลพานิช"
+  },
+  "badges": [],
+  "cv": null,
+  "contact": {
+    "office": "อาคาร LC-2 ชั้น 2 ห้อง 211",
+    "phone": "0-2986-9156",
+    "extension": "218",
+    "email": "skn@cs.tu.ac.th"
+  },
+  "education": [
+    {
+      "degree": "M.Sc.",
+      "field": "Computer Science",
+      "institution": "Syracuse University",
+      "country": "USA",
+      "graduation_year": "2538"
+    },
+    {
+      "degree": "วท.บ.",
+      "field": "ศาสตร์คอมพิวเตอร์ (เกียรตินิยมอันดับสอง)",
+      "institution": "มหาวิทยาลัยธรรมศาสตร์",
+      "graduation_year": "2533"
+    }
+  ],
+  "research_interests": [],
+  "expertise": [],
+  "selected_publications": [],
+  "publication_profiles": []
+}

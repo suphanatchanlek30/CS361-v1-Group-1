@@ -1,0 +1,63 @@
+{
+  "id": "nawarerk-chalarak",
+  "name": {
+    "th": "อ.ดร.นวฤกษ์ ชลารักษ์",
+    "en": "Ajarn Dr.Nawarerk Chalarak"
+  },
+  "academic_position": "อาจารย์",
+  "profile_image": {
+    "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2022/07/HUT06889-7-scaled.jpg",
+    "alt": "อ.ดร.นวฤกษ์ ชลารักษ์"
+  },
+  "badges": [],
+  "cv": null,
+  "contact": {
+    "office": "อาคาร LC-2 ชั้น 2",
+    "phone": "02-546-4444",
+    "extension": "2157",
+    "email": "nawarerk@tu.ac.th"
+  },
+  "education": [
+    {
+      "degree": "B.Eng.",
+      "field": "Computer Engineering",
+      "institution": "Suranaree University of Technology",
+      "graduation_year": "2006"
+    },
+    {
+      "degree": "M.Eng.",
+      "field": "Information Management",
+      "institution": "Asian Institute of Technology",
+      "graduation_year": "2009"
+    },
+    {
+      "degree": "M.Sc.",
+      "field": "Knowledge Science",
+      "institution": "Japan Advanced Institute of Science and Technology",
+      "graduation_year": "2018"
+    },
+    {
+      "degree": "Ph.D.",
+      "field": "Knowledge Science",
+      "institution": "Japan Advanced Institute of Science and Technology",
+      "graduation_year": "2021"
+    }
+  ],
+  "research_interests": [
+    "Medical image processing",
+    "Artificial Intelligence",
+    "Data mining"
+  ],
+  "expertise": [],
+  "selected_publications": [],
+  "publication_profiles": [
+    {
+      "provider": "google_scholar",
+      "url": "https://scholar.google.com/citations?user=BWxR0bIAAAAJ&hl=en"
+    },
+    {
+      "provider": "researchgate",
+      "url": "https://www.researchgate.net/profile/Nawarerk-Chalarak"
+    }
+  ]
+}

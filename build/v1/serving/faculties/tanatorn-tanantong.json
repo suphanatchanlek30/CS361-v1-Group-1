@@ -1,0 +1,66 @@
+{
+  "id": "tanatorn-tanantong",
+  "name": {
+    "th": "รศ.ดร.ธนาธร ทะนานทอง",
+    "en": "Assoc.Prof.Dr. Tanatorn Tanantong"
+  },
+  "academic_position": "รองศาสตราจารย์",
+  "profile_image": {
+    "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/08/%E0%B8%AD.%E0%B8%94%E0%B8%A3.%E0%B8%98%E0%B8%99%E0%B8%B2%E0%B8%98%E0%B8%A3-%E0%B8%97%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%87-3-Edit.jpg",
+    "alt": "รศ.ดร.ธนาธร ทะนานทอง"
+  },
+  "badges": [],
+  "cv": null,
+  "contact": {
+    "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+    "phone": "0-2986-9156",
+    "extension": "217",
+    "email": "tanatorn@tu.ac.th"
+  },
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "field": "Computer Science",
+      "institution": "Sirindhorn International Institute of Technology, Thammasat University",
+      "country": "Thailand",
+      "graduation_year": "2558"
+    },
+    {
+      "degree": "M.Eng.",
+      "field": "Computer Engineering",
+      "institution": "Suranaree University of Technology",
+      "country": "Thailand",
+      "graduation_year": "2551"
+    },
+    {
+      "degree": "B.Eng.",
+      "field": "Computer Engineering",
+      "institution": "Suranaree University of Technology",
+      "country": "Thailand",
+      "graduation_year": "2548"
+    }
+  ],
+  "research_interests": [
+    "Artificial Intelligence & Data Mining & Machine Learning",
+    "Formal Ontologies and Semantic Web Technology",
+    "Body Sensor Networks & Internet of Things (IoTs)",
+    "Medical Informatics & Hospital Information Systems"
+  ],
+  "expertise": [
+    "การวิเคราะห์และประมวลผลสัญญาณด้านสุขภาพและการแพทย์ (อาทิเช่น สัญญาณคลื่นไฟฟ้าหัวใจ และสัญญาณตรวจจับความเร่งในระนาบ 3 มิติ)",
+    "การวิเคราะห์และสร้างเหมืองข้อมูลจากข้อมูลสื่อสังคมออนไลน์ (Social Media Analytics and Mining) เช่น ข้อมูลบน Twitter FB และ Pantip",
+    "ระบบบริหารจัดการโรงพยาบาล (อาทิเช่น ระบบบริหารจัดการคิวผู้ป่วย)",
+    "ระบบบริหารจัดการงานทะเบียนนักศึกษา"
+  ],
+  "selected_publications": [],
+  "publication_profiles": [
+    {
+      "provider": "google_scholar",
+      "url": "https://scholar.google.com/citations?hl=en&user=G3WUmckAAAAJ&view_op=list_works&sortby=pubdate"
+    },
+    {
+      "provider": "researchgate",
+      "url": "https://www.researchgate.net/profile/Tanatorn_Tanantong"
+    }
+  ]
+}

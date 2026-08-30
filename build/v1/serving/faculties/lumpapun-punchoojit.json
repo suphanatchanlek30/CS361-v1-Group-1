@@ -1,0 +1,64 @@
+{
+  "id": "lumpapun-punchoojit",
+  "name": {
+    "th": "ผศ.ดร.ลัมพาพรรณ พันธ์ชูจิตร์",
+    "en": "Asst.Prof.Dr. Lumpapun Punchoojit"
+  },
+  "academic_position": "ผู้ช่วยศาสตราจารย์",
+  "profile_image": {
+    "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/01/1611910949289-e1612162750301.jpg",
+    "alt": "ผศ.ดร.ลัมพาพรรณ พันธ์ชูจิตร์"
+  },
+  "badges": [],
+  "cv": null,
+  "contact": {
+    "office": "อาคาร LC-2 ชั้น 2 ห้อง 224",
+    "phone": "02-546-4444",
+    "extension": "2157 ต่อ 224",
+    "email": "lumpapun_p@sci.tu.ac.th"
+  },
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "field": "Computer Science",
+      "institution": "Faculty of Science and Technology, Thammasat University",
+      "graduation_year": "2019"
+    },
+    {
+      "degree": "M.Sc.",
+      "field": "Information Technology",
+      "institution": "Faculty of Information Technology, King Mongkut’s University of Technology North Bangkok",
+      "graduation_year": "2013"
+    },
+    {
+      "degree": "B.Sc.",
+      "field": "Computer Science",
+      "institution": "Mahidol University International College",
+      "graduation_year": "2009"
+    }
+  ],
+  "research_interests": [
+    "Human-Computer Interaction",
+    "Child-Computer Interaction",
+    "Human and Psychological factors in designing UX/UI",
+    "UX/UI research methods",
+    "Mobile Usability"
+  ],
+  "expertise": [
+    "วิจัยด้านการปฏิสัมพันธ์ระหว่างมนุษย์และคอมพิวเตอร์ และระหว่างเด็กและคอมพิวเตอร์ ศึกษาในเชิงทฤษฎี วัดผลและประเมินผล รวมถึงการประยุกต์ใช้ทฤษฎีในการสร้างผลิตภัณฑ์ต่าง ๆ",
+    "วิจัยด้านมนุษยปัจจัยและปัจจัยเชิงจิตวิทยาที่มีอิทธิพลต่อการออกแบบส่วนต่อประสานและประสบการณ์ผู้ใช้",
+    "การประยุกต์ใช้วิธีวิจัยรูปแบบต่าง ๆ ในการออกแบบส่วนต่อประสานและประสบการณ์ผู้ใช้",
+    "งานวิจัยด้านความยากง่ายในการใช้งานอุปกรณ์สื่อสารแบบเคลื่อนที่"
+  ],
+  "selected_publications": [],
+  "publication_profiles": [
+    {
+      "provider": "google_scholar",
+      "url": "https://scholar.google.com/citations?user=6lbEl34KcAAC&hl=th"
+    },
+    {
+      "provider": "researchgate",
+      "url": "https://www.researchgate.net/publication/320986719_Usability_Studies_on_Mobile_User_Interface_Design_Patterns_A_Systematic_Literature_Review"
+    }
+  ]
+}

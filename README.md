@@ -284,3 +284,22 @@ Requirement → Issue → Branch → Implementation → Pull Request → Merge �
 | Issue #1 | Project Definition และ Decisions After Project Grill |
 | Issue #2 | System Boundary และ Decisions After Boundary Grill |
 | README.md | ภาพสรุปความเข้าใจร่วมกันของทีม ปรับปรุงเมื่อการออกแบบเปลี่ยน |
+| [`docs/v1/V1_Final_Documentation_Architecture_Decisions_Demo_Evidence.md`](docs/v1/V1_Final_Documentation_Architecture_Decisions_Demo_Evidence.md) | **เอกสารหลักของ V1 (Issue #29)** — Scope, Final Architecture, Data/API/Security, Deployment, Architecture Decisions, Demo Evidence — ใช้แทนร่างเก่าใน `docs/v1/` ที่ยังอ้างอิง Excel/CSV |
+| [`evidence/README.md`](evidence/README.md) | Demo Evidence Package สำหรับปิด Issue #29 |
+
+### V1 Quick Start
+
+```bash
+# 1) Prepare the real 22-faculty dataset (data/v1/source/ -> build/v1/)
+python scripts/prepare_faculty_data.py
+
+# 2) Backend tests
+cd function_faculties && python -m pytest tests/
+
+# 3) Frontend
+cd frontend && npm install && cp .env.example .env.local
+# set NEXT_PUBLIC_API_BASE_URL, then:
+npm run dev   # http://localhost:3000/faculties
+```
+
+Full setup, deployment, and AWS/security details are in the V1 final documentation linked above.

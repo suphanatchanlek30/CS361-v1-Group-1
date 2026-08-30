@@ -1,8 +1,845 @@
 [
   {
-    "source_url": null,
-    "captured_at": "2026-08-27T19:00:00+07:00",
-    "public_visibility": true,
+    "source_url": "https://cs.sci.tu.ac.th/2022/01/30/profile-%e0%b8%81%e0%b8%a9%e0%b8%b4%e0%b8%94%e0%b8%b4%e0%b8%a8-%e0%b8%8a%e0%b8%b2%e0%b8%8d%e0%b9%80%e0%b8%8a%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b8%a7/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.กษิดิศ ชาญเชี่ยว",
+      "en": "Asst.Prof.Dr. Kasidit Chanchio"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/02/5-scaled-e1612367119916.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+      "phone": "0-2986-9156",
+      "extension": "200",
+      "email": "ckasidit@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Computer Science",
+        "institution": "Louisiana State University",
+        "country": "USA",
+        "graduation_year": "2543"
+      },
+      {
+        "degree": "M.S.",
+        "field": "Computer Science",
+        "institution": "Louisiana State University",
+        "country": "USA",
+        "graduation_year": "2539"
+      },
+      {
+        "degree": "วท.บ.",
+        "field": "ศาสตร์คอมพิวเตอร์",
+        "institution": "มหาวิทยาลัยธรรมศาสตร์",
+        "country": "ประเทศไทย",
+        "graduation_year": "2533"
+      }
+    ],
+    "research_interests": [
+      "Fault Tolerance",
+      "Distributed and Parallel Processing",
+      "High Performance Computing",
+      "System Software"
+    ],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": [
+      {
+        "provider": "google_scholar",
+        "url": "https://scholar.google.co.th/citations?hl=th&user=Xa3otrYAAAAJ&view_op=list_works&sortby=pubdate"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/profile/K_Chanchio"
+      }
+    ]
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/2022/01/31/profile-%e0%b8%93%e0%b8%b1%e0%b8%90%e0%b8%98%e0%b8%99%e0%b8%99%e0%b8%97%e0%b9%8c-%e0%b8%ab%e0%b8%87%e0%b8%aa%e0%b9%8c%e0%b8%a7%e0%b8%a3%e0%b8%b4%e0%b8%97%e0%b8%98%e0%b8%b4%e0%b9%8c%e0%b8%98%e0%b8%a3/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "รศ.ดร.ณัฐธนนท์ หงส์วริทธิ์ธร",
+      "en": "Assoc.Prof.Dr. Nuttanont Hongwarittorrn"
+    },
+    "academic_position": "รองศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/1587629164.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+      "phone": "0-2986-9156",
+      "extension": "229",
+      "email": "nuttanon@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Information Science",
+        "institution": "University of Pittsburgh",
+        "country": "USA",
+        "graduation_year": "2545"
+      },
+      {
+        "degree": "M.S.",
+        "field": "Information Science",
+        "institution": "University of Pittsburgh",
+        "country": "USA",
+        "graduation_year": "2545"
+      },
+      {
+        "degree": "M.Ed.",
+        "field": "Research Methodology",
+        "institution": "University of Pittsburgh",
+        "country": "USA",
+        "graduation_year": "2545"
+      },
+      {
+        "degree": "M.Sc.",
+        "field": "Computer and Information Sciences",
+        "institution": "New Jersey Institute of Technology",
+        "country": "USA",
+        "graduation_year": "2539"
+      },
+      {
+        "degree": "ศศ.ม.",
+        "field": "จิตวิทยาอุตสาหกรรมและองค์การ",
+        "institution": "มหาวิทยาลัยธรรมศาสตร์",
+        "country": "ประเทศไทย",
+        "graduation_year": "2539"
+      },
+      {
+        "degree": "วท.บ.",
+        "field": "ศาสตร์คอมพิวเตอร์",
+        "institution": "มหาวิทยาลัยธรรมศาสตร์",
+        "country": "ประเทศไทย",
+        "graduation_year": "2533"
+      }
+    ],
+    "research_interests": [
+      "Human Computer Interaction",
+      "Animated Characters",
+      "Pedagogical Agents",
+      "Individual Differences in HCI",
+      "Adaptive Interface",
+      "Usability Testing"
+    ],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": [
+      {
+        "provider": "semantic_scholar",
+        "url": "https://www.semanticscholar.org/author/Nuttanont-Hongwarittorrn/8654996"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/profile/Nuttanont-Hongwarittorrn"
+      }
+    ]
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/denduang-th/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.เด่นดวง ประดับสุวรรณ",
+      "en": "Asst.Prof.Dr. Denduang Pradubsuwun"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture4-1.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+      "phone": "0-2986-9156",
+      "extension": "203",
+      "email": "denduang@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "D.Eng.",
+        "field": "Computer Science",
+        "institution": "Tokyo Institute of Technology",
+        "country": "Japan",
+        "graduation_year": "2548"
+      },
+      {
+        "degree": "วท.ม.",
+        "field": "วิทยาการคอมพิวเตอร์",
+        "institution": "จุฬาลงกรณ์มหาวิทยาลัย",
+        "country": "ประเทศไทย",
+        "graduation_year": "2542"
+      },
+      {
+        "degree": "วท.บ.",
+        "field": "วิทยาการคอมพิวเตอร์ (เกียรตินิยมอันดับสอง)",
+        "institution": "มหาวิทยาลัยรามคำแหง",
+        "country": "ประเทศไทย",
+        "graduation_year": "2538"
+      }
+    ],
+    "research_interests": [
+      "Formal Verification"
+    ],
+    "expertise": [
+      "Formal verification"
+    ],
+    "selected_publications": [],
+    "publication_profiles": [],
+    "cv": {
+      "url": "https://docs.google.com/document/d/1im_YfsJrCo2Xs6qLDZ_3he3GJN9Sq5ohueXxQWLesVM/edit?usp=sharing"
+    }
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/2022/01/31/profile-%e0%b8%97%e0%b8%a3%e0%b8%87%e0%b8%a8%e0%b8%b1%e0%b8%81%e0%b8%94%e0%b8%b4%e0%b9%8c-%e0%b8%a3%e0%b8%ad%e0%b8%87%e0%b8%a7%e0%b8%b4%e0%b8%a3%e0%b8%b4%e0%b8%a2%e0%b8%b0%e0%b8%9e%e0%b8%b2%e0%b8%99/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.ทรงศักดิ์ รองวิริยะพานิช",
+      "en": "Asst.Prof.Dr. Songsakdi Rongviriyapanish"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture8.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 223",
+      "phone": "0-2986-9156",
+      "extension": "204",
+      "email": "rongviri@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Decorat en informatique",
+        "institution": "Université de Nancy II",
+        "country": "France",
+        "graduation_year": "2543"
+      },
+      {
+        "degree": "DEA",
+        "field": "Diplôme d’étude aprofondi specialisé en bases de données, du parallélisme et des systèmes distributes",
+        "institution": "Institut National des Télécommunications",
+        "country": "France",
+        "graduation_year": "2539"
+      },
+      {
+        "degree": "Maîtrise",
+        "field": "Maîtrise d’informatique",
+        "institution": "Institut Galilée, Université de Paris XIII",
+        "country": "France",
+        "graduation_year": "2538"
+      },
+      {
+        "degree": "Licence",
+        "field": "Licence d’informatique",
+        "institution": "Institut Galilée, Université de Paris XIII",
+        "country": "France",
+        "graduation_year": "2537"
+      }
+    ],
+    "research_interests": [
+      "Software Engineering (Software Verification, Software Process)",
+      "Simulation Model",
+      "Software Modeling (Formal Method)"
+    ],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": [
+      {
+        "provider": "google_scholar",
+        "url": "https://scholar.google.com/citations?hl=th&user=w57gQ0EAAAAJ&view_op=list_works&sortby=pubdate"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/profile/Songsak_Rongviriyapanich"
+      }
+    ]
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/pakorn-l-th/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.ปกรณ์ ลี้สุทธิพรชัย",
+      "en": "Asst.Prof.Dr. Pakorn Leesutthipornchai"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture3.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+      "phone": "0-2986-9156",
+      "extension": "217",
+      "email": "pakornl@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "ปร.ด.",
+        "field": "วิศวกรรมไฟฟ้าและคอมพิวเตอร์",
+        "institution": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี",
+        "country": "ประเทศไทย",
+        "graduation_year": "2554"
+      },
+      {
+        "degree": "วศ.ม.",
+        "field": "วิศวกรรมคอมพิวเตอร์",
+        "institution": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี",
+        "country": "ประเทศไทย",
+        "graduation_year": "2550"
+      },
+      {
+        "degree": "วศ.บ.",
+        "field": "วิศวกรรมคอมพิวเตอร์ (เกียรตินิยมอันดับสอง)",
+        "institution": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี",
+        "country": "ประเทศไทย",
+        "graduation_year": "2547"
+      }
+    ],
+    "research_interests": [
+      "Machine Learning",
+      "Data Mining",
+      "Data Analytics",
+      "Association Mining Mobile and Web Applications"
+    ],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": [
+      {
+        "provider": "other",
+        "url": "http://www.cs.tu.ac.th/staff.php"
+      }
+    ],
+    "cv": {
+      "url": "https://docs.google.com/document/d/1vekBy1AXOxkOeFyaQV1ouvOIdzOjxhqwb9RqxDyO7I0/edit?usp=sharing"
+    }
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/wilawan-th/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.วิลาวรรณ รักผกาวงศ์",
+      "en": "Asst.Prof. Dr. Wilawan Rukpakavong"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture28.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+      "phone": "0-2986-9156",
+      "extension": "215",
+      "email": "wilawan@cs.tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Computer Science",
+        "institution": "Loughborough University",
+        "country": "UK",
+        "graduation_year": "2557"
+      },
+      {
+        "degree": "M.Sc.",
+        "field": "Computer Technology",
+        "institution": "Asian Institute of Technology",
+        "country": "ประเทศไทย",
+        "graduation_year": "2534"
+      },
+      {
+        "degree": "วท.บ.",
+        "field": "ศาสตร์คอมพิวเตอร์",
+        "institution": "มหาวิทยาลัยธรรมศาสตร์",
+        "country": "ประเทศไทย",
+        "graduation_year": "2533"
+      }
+    ],
+    "research_interests": [
+      "Distributed Systems",
+      "Programming Languages"
+    ],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": [
+      {
+        "provider": "semantic_scholar",
+        "url": "https://www.semanticscholar.org/author/W.-Rukpakavong/1767714"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/profile/Wilawan_Rukpakavong2"
+      }
+    ],
+    "cv": {
+      "url": "https://docs.google.com/document/d/12bONVOyWkVggalWSIPdfQsC6T530zOWD36kJuaD8Gm8/edit?usp=sharing"
+    }
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/worawan-th/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.วรวรรณ ดีอัซ การ์บาโย",
+      "en": "Asst.Prof.Dr. Worawan Marurngsith"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture13.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "ประจำที่ศูนย์ลำปาง",
+      "phone": "0-5426-8701",
+      "extension": "5626",
+      "email": "papong@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Informatics",
+        "institution": "University of Edinburgh",
+        "country": "UK",
+        "graduation_year": "2549"
+      },
+      {
+        "degree": "M.Sc.",
+        "field": "Computer Science",
+        "institution": "University of Edinburgh",
+        "country": "UK",
+        "graduation_year": "2542"
+      },
+      {
+        "degree": "วท.บ.",
+        "field": "ศาสตร์คอมพิวเตอร์",
+        "institution": "มหาวิทยาลัยธรรมศาสตร์",
+        "country": "ประเทศไทย",
+        "graduation_year": "2539"
+      }
+    ],
+    "research_interests": [
+      "Agent-based, multi-agent, and Discrete-event Simulations",
+      "High-performance computing on heterogeneous systems, GPGPU",
+      "Compiler techniques for high performance computing",
+      "Performance Evaluation of Computer Systems",
+      "Computers in Education"
+    ],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": [
+      {
+        "provider": "semantic_scholar",
+        "url": "https://www.semanticscholar.org/author/Worawan-Marurngsith/2669309?sort=velocity"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/profile/Worawan_Marurngsith"
+      }
+    ],
+    "cv": {
+      "url": "https://docs.google.com/document/d/1gXCp7sEA9rxp4fhRykJ2FKGBEAX-MHx6/edit?usp=sharing&ouid=107381143129169183514&rtpof=true&sd=true"
+    }
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/tanatorn-th/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "รศ.ดร.ธนาธร ทะนานทอง",
+      "en": "Assoc.Prof.Dr. Tanatorn Tanantong"
+    },
+    "academic_position": "รองศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/08/%E0%B8%AD.%E0%B8%94%E0%B8%A3.%E0%B8%98%E0%B8%99%E0%B8%B2%E0%B8%98%E0%B8%A3-%E0%B8%97%E0%B8%B0%E0%B8%99%E0%B8%B2%E0%B8%99%E0%B8%97%E0%B8%AD%E0%B8%87-3-Edit.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+      "phone": "0-2986-9156",
+      "extension": "217",
+      "email": "tanatorn@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Computer Science",
+        "institution": "Sirindhorn International Institute of Technology, Thammasat University",
+        "country": "Thailand",
+        "graduation_year": "2558"
+      },
+      {
+        "degree": "M.Eng.",
+        "field": "Computer Engineering",
+        "institution": "Suranaree University of Technology",
+        "country": "Thailand",
+        "graduation_year": "2551"
+      },
+      {
+        "degree": "B.Eng.",
+        "field": "Computer Engineering",
+        "institution": "Suranaree University of Technology",
+        "country": "Thailand",
+        "graduation_year": "2548"
+      }
+    ],
+    "research_interests": [
+      "Artificial Intelligence & Data Mining & Machine Learning",
+      "Formal Ontologies and Semantic Web Technology",
+      "Body Sensor Networks & Internet of Things (IoTs)",
+      "Medical Informatics & Hospital Information Systems"
+    ],
+    "expertise": [
+      "การวิเคราะห์และประมวลผลสัญญาณด้านสุขภาพและการแพทย์ (อาทิเช่น สัญญาณคลื่นไฟฟ้าหัวใจ และสัญญาณตรวจจับความเร่งในระนาบ 3 มิติ)",
+      "การวิเคราะห์และสร้างเหมืองข้อมูลจากข้อมูลสื่อสังคมออนไลน์ (Social Media Analytics and Mining) เช่น ข้อมูลบน Twitter FB และ Pantip",
+      "ระบบบริหารจัดการโรงพยาบาล (อาทิเช่น ระบบบริหารจัดการคิวผู้ป่วย)",
+      "ระบบบริหารจัดการงานทะเบียนนักศึกษา"
+    ],
+    "selected_publications": [],
+    "publication_profiles": [
+      {
+        "provider": "google_scholar",
+        "url": "https://scholar.google.com/citations?hl=en&user=G3WUmckAAAAJ&view_op=list_works&sortby=pubdate"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/profile/Tanatorn_Tanantong"
+      }
+    ]
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/2022/01/31/profile-%e0%b8%ad%e0%b8%a3%e0%b8%88%e0%b8%b4%e0%b8%a3%e0%b8%b2-%e0%b8%aa%e0%b8%b4%e0%b8%97%e0%b8%98%e0%b8%b4%e0%b8%a8%e0%b8%b1%e0%b8%81%e0%b8%94%e0%b8%b4%e0%b9%8c/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.อรจิรา สิทธิศักดิ์",
+      "en": "Asst.Prof.Dr. Onjira Sitthisak"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture15.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+      "phone": "0-2986-9156",
+      "extension": "202",
+      "email": "onjira@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Computer Science",
+        "institution": "University of Southampton",
+        "country": "UK",
+        "graduation_year": "2009"
+      },
+      {
+        "degree": "วท.ม.",
+        "field": "การจัดการระบบสารสนเทศ",
+        "institution": "สถาบันบัณฑิตพัฒนบริหารศาสตร์",
+        "graduation_year": "2545"
+      },
+      {
+        "degree": "วท.บ.",
+        "field": "วิทยาการคอมพิวเตอร์ (เกียรตินิยมอันดับ 1)",
+        "institution": "มหาวิทยาลัยสงขลานครินทร์",
+        "graduation_year": "2542"
+      }
+    ],
+    "research_interests": [
+      "Competency Modeling",
+      "Computational algorithm",
+      "E-learning",
+      "Geographic information system (GIS)",
+      "Adaptive Assessment"
+    ],
+    "expertise": [
+      "ระบบสารสนเทศภูมิศาสตร์",
+      "การประยุกต์ให้ competency modeling กับการเรียนรู้"
+    ],
+    "selected_publications": [],
+    "publication_profiles": [
+      {
+        "provider": "google_scholar",
+        "url": "https://scholar.google.com/citations?user=9qwG-5sAAAAJ&hl=en"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/profile/Onjira_Sitthisak"
+      }
+    ],
+    "cv": {
+      "url": "https://docs.google.com/document/d/1vHVEOnqqg6D735WrkBUL9MJ-a1GU5-GygUF5MgE_zuM/edit"
+    }
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/2022/01/31/profile-%e0%b8%a7%e0%b8%b4%e0%b8%a3%e0%b8%b1%e0%b8%95%e0%b8%99%e0%b9%8c-%e0%b8%88%e0%b8%b2%e0%b8%a3%e0%b8%b5%e0%b8%a7%e0%b8%87%e0%b8%a8%e0%b9%8c%e0%b9%84%e0%b8%9e%e0%b8%9a%e0%b8%b9%e0%b8%a5%e0%b8%a2/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.วิรัตน์ จารีวงศ์ไพบูลย์",
+      "en": "Asst.Prof.Dr. Wirat Jareevongpiboon"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/02/1-scaled-e1612368374244.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+      "phone": "0-2986-9156",
+      "extension": "202",
+      "email": "wirat@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Computer Science",
+        "institution": "Asian Institute of Technology",
+        "country": "ประเทศไทย",
+        "graduation_year": "2556"
+      },
+      {
+        "degree": "M.B.A.",
+        "field": "Management Information System",
+        "institution": "University of Illinois at Urbana Champaign",
+        "country": "USA",
+        "graduation_year": "2541"
+      },
+      {
+        "degree": "วท.บ.",
+        "field": "ศาสตร์คอมพิวเตอร์ (เกียรตินิยมอันดับสอง)",
+        "institution": "มหาวิทยาลัยธรรมศาสตร์",
+        "country": "ประเทศไทย",
+        "graduation_year": "2535"
+      }
+    ],
+    "research_interests": [
+      "Data / Process Mining",
+      "Semantics via Ontology",
+      "Ontology-Relational Mapping",
+      "Topics related to Business Intelligence"
+    ],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": [
+      {
+        "provider": "semantic_scholar",
+        "url": "https://www.semanticscholar.org/author/Wirat-Jareevongpiboon/2751016"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/profile/Wirat_Jareevongpiboon"
+      }
+    ],
+    "cv": {
+      "url": "https://docs.google.com/document/d/1RgBog2nOXbv1LLcHSc7JDhrex4k8jp3OSpB4dsaut_Q/edit"
+    }
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/2022/02/04/profile-%e0%b9%80%e0%b8%aa%e0%b8%b2%e0%b8%a7%e0%b8%a5%e0%b8%b1%e0%b8%81%e0%b8%a9%e0%b8%93%e0%b9%8c-%e0%b8%a7%e0%b8%a3%e0%b8%a3%e0%b8%98%e0%b8%99%e0%b8%b2%e0%b8%a0%e0%b8%b2/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.เสาวลักษณ์ วรรธนาภา",
+      "en": "Asst.Prof.Dr. Saowaluk Watanapa"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/02/3-scaled-e1612367313503.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 211",
+      "phone": "0-2986-9156",
+      "extension": "214",
+      "email": "wsaowalu@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "ปร.ด.",
+        "field": "Information Technology",
+        "institution": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี",
+        "country": "ประเทศไทย",
+        "graduation_year": "2551"
+      },
+      {
+        "degree": "M.Sc.",
+        "field": "Computer Technology",
+        "institution": "Asian Institute of Technology",
+        "country": "ประเทศไทย",
+        "graduation_year": "2534"
+      },
+      {
+        "degree": "วท.บ.",
+        "field": "ศาสตร์คอมพิวเตอร์",
+        "institution": "มหาวิทยาลัยธรรมศาสตร์",
+        "country": "ประเทศไทย",
+        "graduation_year": "2533"
+      }
+    ],
+    "research_interests": [
+      "Image Processing"
+    ],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": [
+      {
+        "provider": "semantic_scholar",
+        "url": "https://www.semanticscholar.org/author/Saowaluk-Watanapa/3120769"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/scientific-contributions/Saowaluk-C-Watanapa-32507620"
+      }
+    ]
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/2022/02/04/profile-%e0%b8%a7%e0%b8%99%e0%b8%b4%e0%b8%94%e0%b8%b2-%e0%b8%9e%e0%b8%a4%e0%b8%97%e0%b8%98%e0%b8%b4%e0%b8%a7%e0%b8%b4%e0%b8%97%e0%b8%a2%e0%b8%b2/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.วนิดา พฤทธิวิทยา",
+      "en": "Asst.Prof.Dr. Wanida Putthividhya"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture25.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+      "phone": "0-2986-9156",
+      "extension": "230",
+      "email": "wanidap@cs.tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Computer Science",
+        "institution": "Iowa State University",
+        "country": "USA",
+        "graduation_year": "2549"
+      },
+      {
+        "degree": "M.S.",
+        "field": "Computer Science",
+        "institution": "University of Southern California",
+        "country": "USA",
+        "graduation_year": "2543"
+      },
+      {
+        "degree": "วท.บ.",
+        "field": "ศาสตร์คอมพิวเตอร์ (เกียรตินิยมอันดับหนึ่งเหรียญทอง)",
+        "institution": "มหาวิทยาลัยธรรมศาสตร์",
+        "country": "ประเทศไทย",
+        "graduation_year": "2539"
+      }
+    ],
+    "research_interests": [
+      "Software economics (เศรษฐศาสตร์การบริหารและการผลิตซอฟต์แวร์)",
+      "Quality of Service (QOS)",
+      "Congestion Control",
+      "Network Security and Operating systems"
+    ],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": [
+      {
+        "provider": "semantic_scholar",
+        "url": "https://www.semanticscholar.org/author/Wanida-Putthividhya/2933236"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/profile/Wanida_Putthividhya"
+      }
+    ]
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/2022/02/04/profile-%e0%b8%9b%e0%b8%81%e0%b8%9b%e0%b9%89%e0%b8%ad%e0%b8%87-%e0%b8%aa%e0%b9%88%e0%b8%ad%e0%b8%87%e0%b9%80%e0%b8%a1%e0%b8%b7%e0%b8%ad%e0%b8%87/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.ปกป้อง ส่องเมือง",
+      "en": "Asst.Prof.Dr. Pokpong Songmuang"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture16.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+      "phone": "0-2986-9156",
+      "extension": "213",
+      "email": "pokpongs@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Information Science",
+        "institution": "The University of Electro-Communications",
+        "country": "Japan",
+        "graduation_year": "2553"
+      },
+      {
+        "degree": "M.Eng.",
+        "field": "Master of Engineering",
+        "institution": "Naoka University of Technology",
+        "country": "Japan",
+        "graduation_year": "2549"
+      },
+      {
+        "degree": "วท.บ.",
+        "field": "วิศวกรรมไฟฟ้า",
+        "institution": "มหาวิทยาลัยธรรมศาสตร์",
+        "country": "ประเทศไทย",
+        "graduation_year": "2546"
+      }
+    ],
+    "research_interests": [
+      "Artificial Intelligence",
+      "Data mining",
+      "Optimization algorithms",
+      "e-Testing",
+      "Social network analytics"
+    ],
+    "expertise": [
+      "การออกแบบและพัฒนาระบบจัดการข้อสอบและคลังข้อสอบ",
+      "การประยุกต์ใช้เทคโนโลยีปัญญาประดิษฐ์และการเรียนรู้ของเครื่องจักรเพื่อแก้ปัญหา",
+      "การวิเคราะห์เครือข่ายสังคมออนไลน์"
+    ],
+    "selected_publications": [],
+    "publication_profiles": [
+      {
+        "provider": "google_scholar",
+        "url": "https://scholar.google.co.th/citations?hl=th&user=UCNA6dQAAAAJ&view_op=list_works&sortby=pubdate"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/profile/Pokpong_Songmuang"
+      }
+    ],
+    "cv": {
+      "url": "https://docs.google.com/document/d/16jbufwpMbcuJmB7PuuNdo6J0JmIMBykxt9jUj-9LBmk/edit"
+    }
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/2022/01/25/profile-%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b8%a0%e0%b8%b2%e0%b8%9e%e0%b8%a3-%e0%b8%a3%e0%b8%b1%e0%b8%95%e0%b8%99%e0%b8%98%e0%b8%b3%e0%b8%a3%e0%b8%87/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
     "name": {
       "th": "ผศ.ดร.ประภาพร รัตนธำรง",
       "en": "Asst.Prof.Dr. Prapaporn Rattanatamrong"
@@ -13,13 +850,10 @@
     },
     "badges": [
       {
-        "label": "All_Badges",
+        "label": "All Badges",
         "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2022/07/All_Badges.png"
       }
     ],
-    "cv": {
-      "url": "https://drive.google.com/file/d/1V1rWtmEoxpTbxBZMehGL05X8vqH5b_lO/view"
-    },
     "contact": {
       "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
       "phone": "0-2986-9256",
@@ -32,24 +866,21 @@
         "field": "Electrical and Computer Engineering",
         "institution": "University of Florida",
         "country": "USA",
-        "graduation_year": 2554,
-        "additional_information": null
+        "graduation_year": "2554"
       },
       {
         "degree": "M.Sc.",
         "field": "Computer Science",
         "institution": "University of Southern California",
         "country": "USA",
-        "graduation_year": 2547,
-        "additional_information": null
+        "graduation_year": "2547"
       },
       {
         "degree": "วศ.บ.",
-        "field": "วิศวกรรมคอมพิวเตอร์",
+        "field": "วิศวกรรมคอมพิวเตอร์ (เกียรตินิยมอันดับสอง)",
         "institution": "มหาวิทยาลัยเกษตรศาสตร์",
         "country": "ประเทศไทย",
-        "graduation_year": 2544,
-        "additional_information": "เกียรตินิยมอันดับสอง"
+        "graduation_year": "2544"
       }
     ],
     "research_interests": [
@@ -67,87 +898,59 @@
     ],
     "selected_publications": [
       {
-        "authors": "Thongthavorn, Wongsatorn & Rattanatamrong, Prapaporn",
         "title": "Multi-Container Application Migration with Load Balanced and Adaptive Parallel TCP",
         "year": 2019,
-        "venue": null,
-        "volume": null,
-        "issue": null,
         "pages": "55-62",
         "doi": "10.1109/HPCS48598.2019.9188218",
-        "url": null,
         "citation_text": "Thongthavorn, Wongsatorn & Rattanatamrong, Prapaporn. (2019). Multi-Container Application Migration with Load Balanced and Adaptive Parallel TCP. 55-62. 10.1109/HPCS48598.2019.9188218."
       },
       {
-        "authors": "Wantanakorn, Pornchanok & Harintajinda, Supamas & Chuthapisith, Jariya & Anurathapan, Usanarat & Rattanatamrong, Prapaporn",
         "title": "A New Mobile Application to Reduce Anxiety in Pediatric Patients Before Bone Marrow Aspiration Procedures",
         "year": 2018,
-        "venue": "Hospital pediatrics",
+        "venue": "Hospital Pediatrics",
         "volume": "8",
-        "issue": null,
-        "pages": null,
         "doi": "10.1542/hpeds.2018-0073",
-        "url": null,
         "citation_text": "Wantanakorn, Pornchanok & Harintajinda, Supamas & Chuthapisith, Jariya & Anurathapan, Usanarat & Rattanatamrong, Prapaporn. (2018). A New Mobile Application to Reduce Anxiety in Pediatric Patients Before Bone Marrow Aspiration Procedures. Hospital pediatrics. 8. 10.1542/hpeds.2018-0073."
       },
       {
-        "authors": "Rattanatamrong, Prapaporn & Fortes, Jose",
         "title": "Dynamic Scheduling of Real-Time Mixture-of-Experts Systems on Limited Resources",
         "year": 2014,
-        "venue": "Computers, IEEE Transactions on",
+        "venue": "IEEE Transactions on Computers",
         "volume": "63",
-        "issue": null,
         "pages": "1751-1764",
         "doi": "10.1109/TC.2013.50",
-        "url": null,
         "citation_text": "Rattanatamrong, Prapaporn & Fortes, Jose. (2014). Dynamic Scheduling of Real-Time Mixture-of-Experts Systems on Limited Resources. Computers, IEEE Transactions on. 63. 1751-1764. 10.1109/TC.2013.50."
       },
       {
-        "authors": "Rattanatamrong, Prapaporn & Fortes, Jose",
         "title": "Improved real-time scheduling of periodic tasks on multiprocessors",
         "year": 2012,
-        "venue": "Concurrency and Computation Practice and Experience",
+        "venue": "Concurrency and Computation: Practice and Experience",
         "volume": "27",
-        "issue": null,
-        "pages": null,
         "doi": "10.1002/cpe.2969",
-        "url": null,
         "citation_text": "Rattanatamrong, Prapaporn & Fortes, Jose. (2012). Improved real-time scheduling of periodic tasks on multiprocessors. Concurrency and Computation Practice and Experience. 27. 10.1002/cpe.2969."
       },
       {
-        "authors": "Rattanatamrong, Prapaporn & Fortes, Jose",
         "title": "Mode Transition for Online Scheduling of Adaptive Real-Time Systems on Multiprocessors",
         "year": 2011,
-        "venue": null,
-        "volume": "1",
-        "issue": null,
         "pages": "25-32",
         "doi": "10.1109/RTCSA.2011.71",
-        "url": null,
-        "citation_text": "Rattanatamrong, Prapaporn & Fortes, Jose. (2011). Mode Transition for Online Scheduling of Adaptive Real-Time Systems on Multiprocessors. 1. 25-32. 10.1109/RTCSA.2011.71."
+        "citation_text": "Rattanatamrong, Prapaporn & Fortes, José. (2011). Mode Transition for Online Scheduling of Adaptive Real-Time Systems on Multiprocessors. 1. 25-32. 10.1109/RTCSA.2011.71."
       },
       {
-        "authors": "Rattanatamrong, Prapaporn & Fortes, José",
         "title": "Real-time scheduling of mixture-of-experts systems with limited resources",
         "year": 2010,
-        "venue": "HSCC’10 - Proceedings of the 13th ACM International Conference on Hybrid Systems: Computation and Control",
-        "volume": null,
-        "issue": null,
+        "venue": "HSCC 2010 - Proceedings of the 13th ACM International Conference on Hybrid Systems: Computation and Control",
         "pages": "71-80",
         "doi": "10.1145/1755952.1755964",
-        "url": null,
         "citation_text": "Rattanatamrong, Prapaporn & Fortes, José. (2010). Real-time scheduling of mixture-of-experts systems with limited resources. HSCC’10 - Proceedings of the 13th ACM International Conference on Hybrid Systems: Computation and Control. 71-80. 10.1145/1755952.1755964."
       },
       {
-        "authors": "Digiovanna, Jack & Rattanatamrong, Prapaporn & Zhao, Ming & Mahmoudi, Babak & Hermer, Linda & Figueiredo, Renato & Principe, Jose & Fortes, Jose & Sanchez, Justin",
         "title": "Cyber-Workstation for Computational Neuroscience",
         "year": 2010,
-        "venue": "Frontiers in neuroengineering",
+        "venue": "Frontiers in Neuroengineering",
         "volume": "2",
-        "issue": null,
         "pages": "17",
         "doi": "10.3389/neuro.16.017.2009",
-        "url": null,
         "citation_text": "Digiovanna, Jack & Rattanatamrong, Prapaporn & Zhao, Ming & Mahmoudi, Babak & Hermer, Linda & Figueiredo, Renato & Principe, Jose & Fortes, Jose & Sanchez, Justin. (2010). Cyber-Workstation for Computational Neuroscience. Frontiers in neuroengineering. 2. 17. 10.3389/neuro.16.017.2009."
       }
     ],
@@ -160,62 +963,243 @@
         "provider": "researchgate",
         "url": "https://www.researchgate.net/profile/Prapaporn-Rattanatamrong"
       }
-    ]
+    ],
+    "cv": {
+      "url": "https://drive.google.com/file/d/1V1rWtmEoxpTbxBZMehGL05X8vqH5b_lO/view"
+    }
   },
   {
-    "source_url": null,
-    "captured_at": "2026-08-27T19:00:00+07:00",
-    "public_visibility": true,
-
+    "source_url": "https://cs.sci.tu.ac.th/2022/02/04/profile-%e0%b8%aa%e0%b8%b4%e0%b8%a3%e0%b8%b4%e0%b8%81%e0%b8%b1%e0%b8%99%e0%b8%a2%e0%b8%b2-%e0%b8%99%e0%b8%b4%e0%b8%a5%e0%b8%9e%e0%b8%b2%e0%b8%99%e0%b8%b4%e0%b8%8a/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
     "name": {
-      "th": "ผศ.ดร.ฐาปนา บุญชู",
-      "en": "Asst.Prof.Dr. Thapana Boonchoo"
+      "th": "อาจารย์สิริกันยา นิลพานิช",
+      "en": "Ajarn Sirikunya Nilpanich"
     },
-
-    "academic_position": "ผู้ช่วยศาสตราจารย์",
-
+    "academic_position": "อาจารย์",
     "profile_image": {
-      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/01/1611910950203-e1612162735738.jpg"
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/12/Siri-3.jpg"
     },
-
     "badges": [],
-
-    "cv": null,
-
     "contact": {
-      "office": "อาคาร LC-2 ชั้น 2 ห้อง 222",
-      "phone": "02-564-4444 ต่อ 2157 ต่อ 222",
-      "extension": null,
-      "email": "thapana@cs.tu.ac.th"
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 211",
+      "phone": "0-2986-9156",
+      "extension": "218",
+      "email": "skn@cs.tu.ac.th"
     },
-
+    "education": [
+      {
+        "degree": "M.Sc.",
+        "field": "Computer Science",
+        "institution": "Syracuse University",
+        "country": "USA",
+        "graduation_year": "2538"
+      },
+      {
+        "degree": "วท.บ.",
+        "field": "ศาสตร์คอมพิวเตอร์ (เกียรตินิยมอันดับสอง)",
+        "institution": "มหาวิทยาลัยธรรมศาสตร์",
+        "graduation_year": "2533"
+      }
+    ],
+    "research_interests": [],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": []
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/%e0%b8%ad-%e0%b8%94%e0%b8%a3-%e0%b8%81%e0%b8%a4%e0%b8%95%e0%b8%84%e0%b8%a1-%e0%b8%a8%e0%b8%a3%e0%b8%b5%e0%b8%88%e0%b8%b4%e0%b8%a3%e0%b8%b2%e0%b8%99%e0%b8%99%e0%b8%97%e0%b9%8c/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.กฤตคม ศรีจิรานนท์",
+      "en": "Asst.Prof.Dr. Krittakom Srijiranon"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/1580868758.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคารบุญชูปณิธาน ห้อง 7301/2",
+      "phone": "0-5423-7999",
+      "extension": "5627",
+      "email": "non_krit@tu.ac.th"
+    },
     "education": [
       {
         "degree": "Ph.D.",
-        "field": "Computer Science and Technology",
-        "institution": "University of Chinese Academy of Sciences",
-        "country": "China",
-        "graduation_year": null,
-        "additional_information": "Machine Learning and Data Mining Group, Institute of Computing Technology"
+        "field": "Computer Engineering",
+        "institution": "Chiang Mai University",
+        "country": "Thailand",
+        "graduation_year": "2021"
+      },
+      {
+        "degree": "M.Eng.",
+        "field": "Computer Engineering",
+        "institution": "Chiang Mai University",
+        "country": "Thailand",
+        "graduation_year": "2015"
+      },
+      {
+        "degree": "B.Eng.",
+        "field": "Computer Engineering",
+        "institution": "Chiang Mai University",
+        "country": "Thailand",
+        "graduation_year": "2014"
+      }
+    ],
+    "research_interests": [
+      "Data Mining",
+      "Machine Learning"
+    ],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": [],
+    "cv": {
+      "url": "https://docs.google.com/document/d/1ndWW4gUVdXYS66qVc75dZLW9Zla-ZkUgBWrTbLGDKN4/edit"
+    }
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/2022/02/17/profile-%e0%b8%9b%e0%b8%81%e0%b8%a3%e0%b8%93%e0%b9%8c-%e0%b9%81%e0%b8%a7%e0%b8%a7%e0%b8%aa%e0%b8%a7%e0%b9%88%e0%b8%b2%e0%b8%87%e0%b8%a7%e0%b8%87%e0%b8%a8%e0%b9%8c/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "อาจารย์ปกรณ์ แววสว่างวงศ์",
+      "en": "Ajarn Pakorn Waewsawangwong"
+    },
+    "academic_position": "อาจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/1580870990.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": null,
+      "phone": "0-5423-7999",
+      "extension": "5627",
+      "email": "wpakorn@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "M.Sc.",
+        "field": "Software Engineering (Distinction)",
+        "institution": "University of York",
+        "graduation_year": "2001"
+      }
+    ],
+    "research_interests": [
+      "Formal Modeling"
+    ],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": [],
+    "cv": {
+      "url": "https://docs.google.com/document/d/1ml-vlMIy3LHN4LQHfIPGKHGRkhA7R_avBnPM0Cb9G6A/edit"
+    }
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/2022/02/04/profile-%e0%b8%a5%e0%b8%b1%e0%b8%a1%e0%b8%9e%e0%b8%b2%e0%b8%9e%e0%b8%a3%e0%b8%a3%e0%b8%93-%e0%b8%9e%e0%b8%b1%e0%b8%99%e0%b8%98%e0%b9%8c%e0%b8%8a%e0%b8%b9%e0%b8%88%e0%b8%b4%e0%b8%95%e0%b8%a3%e0%b9%8c/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.ลัมพาพรรณ พันธ์ชูจิตร์",
+      "en": "Asst.Prof.Dr. Lumpapun Punchoojit"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/01/1611910949289-e1612162750301.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 224",
+      "phone": "02-546-4444",
+      "extension": "2157 ต่อ 224",
+      "email": "lumpapun_p@sci.tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Computer Science",
+        "institution": "Faculty of Science and Technology, Thammasat University",
+        "graduation_year": "2019"
       },
       {
         "degree": "M.Sc.",
-        "field": "Computer Science and Technology",
-        "institution": "Tsinghua University",
-        "country": "China",
-        "graduation_year": null,
-        "additional_information": "Institute of High-Performance Computing"
+        "field": "Information Technology",
+        "institution": "Faculty of Information Technology, King Mongkut’s University of Technology North Bangkok",
+        "graduation_year": "2013"
       },
       {
         "degree": "B.Sc.",
         "field": "Computer Science",
-        "institution": "Thammasat University",
-        "country": "Thailand",
-        "graduation_year": null,
-        "additional_information": "First Class Honours"
+        "institution": "Mahidol University International College",
+        "graduation_year": "2009"
       }
     ],
-
+    "research_interests": [
+      "Human-Computer Interaction",
+      "Child-Computer Interaction",
+      "Human and Psychological factors in designing UX/UI",
+      "UX/UI research methods",
+      "Mobile Usability"
+    ],
+    "expertise": [
+      "วิจัยด้านการปฏิสัมพันธ์ระหว่างมนุษย์และคอมพิวเตอร์ และระหว่างเด็กและคอมพิวเตอร์ ศึกษาในเชิงทฤษฎี วัดผลและประเมินผล รวมถึงการประยุกต์ใช้ทฤษฎีในการสร้างผลิตภัณฑ์ต่าง ๆ",
+      "วิจัยด้านมนุษยปัจจัยและปัจจัยเชิงจิตวิทยาที่มีอิทธิพลต่อการออกแบบส่วนต่อประสานและประสบการณ์ผู้ใช้",
+      "การประยุกต์ใช้วิธีวิจัยรูปแบบต่าง ๆ ในการออกแบบส่วนต่อประสานและประสบการณ์ผู้ใช้",
+      "งานวิจัยด้านความยากง่ายในการใช้งานอุปกรณ์สื่อสารแบบเคลื่อนที่"
+    ],
+    "selected_publications": [],
+    "publication_profiles": [
+      {
+        "provider": "google_scholar",
+        "url": "https://scholar.google.com/citations?user=6lbEl34KcAAC&hl=th"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/publication/320986719_Usability_Studies_on_Mobile_User_Interface_Design_Patterns_A_Systematic_Literature_Review"
+      }
+    ]
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/2022/02/04/profile-%e0%b8%90%e0%b8%b2%e0%b8%9b%e0%b8%99%e0%b8%b2-%e0%b8%9a%e0%b8%b8%e0%b8%8d%e0%b8%8a%e0%b8%b9/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.ฐาปนา บุญชู",
+      "en": "Asst.Prof.Dr. Thapana Boonchoo"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/01/1611910950203-e1612162735738.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2 ห้อง 222",
+      "phone": "02-564-4444",
+      "extension": "2157 ต่อ 222",
+      "email": "thapana@cs.tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Computer Science and Technology",
+        "institution": "Machine Learning and Data Mining Group, Institute of Computing Technology, University of Chinese Academy of Sciences",
+        "country": "China"
+      },
+      {
+        "degree": "M.Sc.",
+        "field": "Computer Science and Technology",
+        "institution": "Institute of High-Performance Computing, Tsinghua University",
+        "country": "China"
+      },
+      {
+        "degree": "B.Sc.",
+        "field": "Computer Science, First Class Honours",
+        "institution": "Thammasat University",
+        "country": "Thailand"
+      }
+    ],
     "research_interests": [
       "Machine Learning/Data Mining",
       "Human Movement Analysis",
@@ -224,11 +1208,8 @@
       "Matrix Factorization",
       "Probabilistic Models"
     ],
-
     "expertise": [],
-
     "selected_publications": [],
-
     "publication_profiles": [
       {
         "provider": "semantic_scholar",
@@ -239,5 +1220,146 @@
         "url": "https://www.researchgate.net/profile/Thapana-Boonchoo"
       }
     ]
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/%e0%b8%ad-%e0%b8%94%e0%b8%a3-%e0%b8%99%e0%b8%a7%e0%b8%a4%e0%b8%81%e0%b8%a9%e0%b9%8c-%e0%b8%8a%e0%b8%a5%e0%b8%b2%e0%b8%a3%e0%b8%b1%e0%b8%81%e0%b8%a9%e0%b9%8c/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "อ.ดร.นวฤกษ์ ชลารักษ์",
+      "en": "Ajarn Dr.Nawarerk Chalarak"
+    },
+    "academic_position": "อาจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2022/07/HUT06889-7-scaled.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2",
+      "phone": "02-546-4444",
+      "extension": "2157",
+      "email": "nawarerk@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "B.Eng.",
+        "field": "Computer Engineering",
+        "institution": "Suranaree University of Technology",
+        "graduation_year": "2006"
+      },
+      {
+        "degree": "M.Eng.",
+        "field": "Information Management",
+        "institution": "Asian Institute of Technology",
+        "graduation_year": "2009"
+      },
+      {
+        "degree": "M.Sc.",
+        "field": "Knowledge Science",
+        "institution": "Japan Advanced Institute of Science and Technology",
+        "graduation_year": "2018"
+      },
+      {
+        "degree": "Ph.D.",
+        "field": "Knowledge Science",
+        "institution": "Japan Advanced Institute of Science and Technology",
+        "graduation_year": "2021"
+      }
+    ],
+    "research_interests": [
+      "Medical image processing",
+      "Artificial Intelligence",
+      "Data mining"
+    ],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": [
+      {
+        "provider": "google_scholar",
+        "url": "https://scholar.google.com/citations?user=BWxR0bIAAAAJ&hl=en"
+      },
+      {
+        "provider": "researchgate",
+        "url": "https://www.researchgate.net/profile/Nawarerk-Chalarak"
+      }
+    ]
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/%e0%b8%9c%e0%b8%a8-%e0%b8%94%e0%b8%a3-%e0%b8%a8%e0%b8%b2%e0%b8%95%e0%b8%99%e0%b8%b2%e0%b8%8f-%e0%b8%81%e0%b8%b4%e0%b8%88%e0%b8%a8%e0%b8%b4%e0%b8%a3%e0%b8%b2%e0%b8%99%e0%b8%b8%e0%b8%a7%e0%b8%b1/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "ผศ.ดร.ศาตนาฏ กิจศิรานุวัตร",
+      "en": "Asst.Prof.Dr.Satanat Kitsiranuwat"
+    },
+    "academic_position": "ผู้ช่วยศาสตราจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2022/09/DSC_0003-scaled.jpg"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2",
+      "phone": "02-546-4444",
+      "extension": "2157",
+      "email": "satanat@tu.ac.th"
+    },
+    "education": [],
+    "research_interests": [
+      "Bioinformatics",
+      "Machine Learning/ Data Mining",
+      "Mathematical Modeling"
+    ],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": []
+  },
+  {
+    "source_url": "https://cs.sci.tu.ac.th/%e0%b8%ad-%e0%b8%94%e0%b8%a3-%e0%b8%a0%e0%b8%b1%e0%b8%84%e0%b8%9e%e0%b8%a3-%e0%b9%80%e0%b8%aa%e0%b8%b2%e0%b8%a3%e0%b9%8c%e0%b8%9d%e0%b8%b1%e0%b9%89%e0%b8%99/",
+    "directory_source_url": "https://cs.sci.tu.ac.th/faculty-member-th/",
+    "captured_at": "2026-08-29T18:43:00+07:00",
+    "name": {
+      "th": "อ.ดร.ภัคพร เสาร์ฝั้น",
+      "en": "Ajarn Dr.Pakkaporn Saophan"
+    },
+    "academic_position": "อาจารย์",
+    "profile_image": {
+      "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2024/05/aj.hong_.png"
+    },
+    "badges": [],
+    "contact": {
+      "office": "อาคาร LC-2 ชั้น 2",
+      "phone": "02-546-4444",
+      "extension": "2157",
+      "email": "pakkp@tu.ac.th"
+    },
+    "education": [
+      {
+        "degree": "Ph.D.",
+        "field": "Knowledge Science",
+        "institution": "Japan Advanced Institute of Science and Technology (JAIST)",
+        "country": "Japan"
+      },
+      {
+        "degree": "M.Sc.",
+        "field": "Management Mathematics",
+        "institution": "Sirindhorn International Institute of Technology (SIIT), Thammasat University",
+        "country": "Thailand"
+      },
+      {
+        "degree": "B.Sc.",
+        "field": "Management Mathematics (Second Class Honors)",
+        "institution": "Thammasat University",
+        "country": "Thailand"
+      }
+    ],
+    "research_interests": [
+      "Optimization",
+      "Production Scheduling & Management",
+      "Management Mathematics",
+      "Machine Learning"
+    ],
+    "expertise": [],
+    "selected_publications": [],
+    "publication_profiles": []
   }
 ]

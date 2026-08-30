@@ -2,8 +2,8 @@ import { LoadingState } from '@/components/faculty/loading-state';
 import { DirectoryBanner } from '@/components/faculty/directory-banner';
 
 /**
- * Next.js file convention — แสดงอัตโนมัติระหว่างที่ Server Component ของ
- * segment `/faculties` กำลัง fetch ข้อมูล จึงไม่ต้องมี state `loading` ในโค้ด
+ * Next.js file convention — renders automatically while the `/faculties`
+ * segment's Server Component is fetching data, so no `loading` state is needed in code.
  */
 export default function FacultiesLoading() {
   return (

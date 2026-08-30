@@ -1,0 +1,29 @@
+{
+  "id": "satanat-kitsiranuwat",
+  "name": {
+    "th": "ผศ.ดร.ศาตนาฏ กิจศิรานุวัตร",
+    "en": "Asst.Prof.Dr.Satanat Kitsiranuwat"
+  },
+  "academic_position": "ผู้ช่วยศาสตราจารย์",
+  "profile_image": {
+    "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2022/09/DSC_0003-scaled.jpg",
+    "alt": "ผศ.ดร.ศาตนาฏ กิจศิรานุวัตร"
+  },
+  "badges": [],
+  "cv": null,
+  "contact": {
+    "office": "อาคาร LC-2 ชั้น 2",
+    "phone": "02-546-4444",
+    "extension": "2157",
+    "email": "satanat@tu.ac.th"
+  },
+  "education": [],
+  "research_interests": [
+    "Bioinformatics",
+    "Machine Learning/ Data Mining",
+    "Mathematical Modeling"
+  ],
+  "expertise": [],
+  "selected_publications": [],
+  "publication_profiles": []
+}

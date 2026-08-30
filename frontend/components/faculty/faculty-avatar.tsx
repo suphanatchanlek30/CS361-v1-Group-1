@@ -5,7 +5,7 @@ import { useState } from 'react';
 interface FacultyAvatarProps {
   url: string | null;
   alt: string;
-  /** true = การ์ดใน grid (มี hover zoom), false = หน้ารายละเอียด */
+  /** true = grid card (has hover zoom), false = detail page */
   interactive?: boolean;
 }
 
@@ -32,15 +32,17 @@ function AvatarPlaceholder() {
 }
 
 /**
- * Client Component เล็ก ๆ ที่มีหน้าที่เดียวคือ fallback เมื่อรูปโหลดไม่ขึ้น
- * (`onError` ต้องรันบน browser) ส่วนที่เหลือของการ์ดยังเป็น Server Component
+ * A small Client Component whose only job is the fallback when an image
+ * fails to load (`onError` must run in the browser) — the rest of the card
+ * stays a Server Component.
  *
- * ใช้ <img> แทน next/image เพราะ cs.sci.tu.ac.th บล็อก hotlink ผ่าน referer
- * ทำให้ image optimizer ของ Next ดึงรูปไม่ได้
+ * Uses <img> instead of next/image because cs.sci.tu.ac.th blocks hotlinking
+ * by referer, which stops Next's image optimizer from fetching the image.
  */
 export function FacultyAvatar({ url, alt, interactive = false }: FacultyAvatarProps) {
-  // เก็บ "url ที่โหลดพลาด" แทน boolean เพื่อให้สถานะ reset เองเมื่อ url เปลี่ยน
-  // โดยไม่ต้องพึ่ง useEffect (กันค้างที่ placeholder ตอน component ถูก reuse)
+  // Track the "url that failed" instead of a boolean so the state resets
+  // itself when the url changes, without needing a useEffect (avoids the
+  // placeholder getting stuck when the component is reused)
   const [failedUrl, setFailedUrl] = useState<string | null>(null);
   const hasError = failedUrl !== null && failedUrl === url;
 

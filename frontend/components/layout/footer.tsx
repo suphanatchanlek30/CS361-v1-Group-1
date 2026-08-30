@@ -2,9 +2,11 @@ import Image from 'next/image';
 
 import csTuLogo from '@/public/cs-tu-logo.png';
 
-/** ลิงก์ท้ายเว็บตาม design #30 — V1 ยังไม่มีหน้าปลายทางจริง
- *  จึง render เป็น <button aria-disabled> ที่โฟกัสได้ แทน <span cursor-pointer>
- *  ที่ดูเหมือนลิงก์แต่คีย์บอร์ดกดไม่ได้ */
+/**
+ * Footer links per design #30 — V1 has no real destination pages yet,
+ * so these render as focusable <button aria-disabled> elements instead of
+ * a <span cursor-pointer> that looks like a link but is unreachable by keyboard.
+ */
 const FOOTER_LINKS = [
   'นโยบายความเป็นส่วนตัว',
   'ข้อกำหนดการใช้งาน',
@@ -15,12 +17,12 @@ const FOOTER_LINKS = [
 export function Footer() {
   return (
     <footer className="mt-auto bg-footer">
-      {/* เส้นแดงคั่นด้านบน ชุดเดียวกับใต้ navbar */}
+      {/* Red divider line on top, matching the one under the navbar */}
       <div className="h-1 w-full bg-brand" aria-hidden="true" />
 
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between md:gap-12">
-          {/* โลโก้ + copyright */}
+          {/* Logo + copyright */}
           <div className="flex flex-col items-center gap-4 text-center md:items-start md:text-left">
             <Image
               src={csTuLogo}
@@ -34,7 +36,7 @@ export function Footer() {
             </p>
           </div>
 
-          {/* ลิงก์ท้ายเว็บ */}
+          {/* Footer links */}
           <nav aria-label="ลิงก์ท้ายเว็บ" className="shrink-0">
             <h2 className="mb-4 text-center text-xs font-bold tracking-wide text-brand uppercase md:text-left">
               ลิงก์ที่เกี่ยวข้อง

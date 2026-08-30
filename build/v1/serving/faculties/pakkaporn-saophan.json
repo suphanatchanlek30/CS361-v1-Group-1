@@ -1,0 +1,49 @@
+{
+  "id": "pakkaporn-saophan",
+  "name": {
+    "th": "อ.ดร.ภัคพร เสาร์ฝั้น",
+    "en": "Ajarn Dr.Pakkaporn Saophan"
+  },
+  "academic_position": "อาจารย์",
+  "profile_image": {
+    "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2024/05/aj.hong_.png",
+    "alt": "อ.ดร.ภัคพร เสาร์ฝั้น"
+  },
+  "badges": [],
+  "cv": null,
+  "contact": {
+    "office": "อาคาร LC-2 ชั้น 2",
+    "phone": "02-546-4444",
+    "extension": "2157",
+    "email": "pakkp@tu.ac.th"
+  },
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "field": "Knowledge Science",
+      "institution": "Japan Advanced Institute of Science and Technology (JAIST)",
+      "country": "Japan"
+    },
+    {
+      "degree": "M.Sc.",
+      "field": "Management Mathematics",
+      "institution": "Sirindhorn International Institute of Technology (SIIT), Thammasat University",
+      "country": "Thailand"
+    },
+    {
+      "degree": "B.Sc.",
+      "field": "Management Mathematics (Second Class Honors)",
+      "institution": "Thammasat University",
+      "country": "Thailand"
+    }
+  ],
+  "research_interests": [
+    "Optimization",
+    "Production Scheduling & Management",
+    "Management Mathematics",
+    "Machine Learning"
+  ],
+  "expertise": [],
+  "selected_publications": [],
+  "publication_profiles": []
+}

@@ -1,10 +1,26 @@
-# V1 Issue #22 Package
+# เอกสาร V1
 
-This package contains:
+## เอกสารหลักฉบับสุดท้าย
 
-- `V1_Validate_Source_Dataset_Public_Faculty_Data_Contract_22.md` — central data contract
-- `source_to_serving_mapping_template.csv` — fill with exact source columns after inspection
-- `data_classification_register_template.csv` — field-level visibility register
-- `fixtures/` — synthetic development fixture; **not real department data**
+**[`V1_Final_Documentation_Architecture_Decisions_Demo_Evidence.md`](./V1_Final_Documentation_Architecture_Decisions_Demo_Evidence.md)**
+(Issue #29) เป็นเอกสารหลักเพียงฉบับเดียวของ V1 — ครอบคลุมความต้องการ/ขอบเขต, สถาปัตยกรรมฉบับสุดท้าย,
+การไหลของข้อมูลจาก Source ไป Serving, API contract, IAM/ความปลอดภัย, การ deploy, เหตุผลการตัดสินใจ
+เชิงสถาปัตยกรรม, ข้อแลกเปลี่ยน (trade-offs), ทิศทาง V1 → V2 และรายการหลักฐานสำหรับปิด Issue #29
+เนื้อหาเป็นภาษาอังกฤษเพราะเป็นเอกสารเทคนิคที่ใช้อ้างอิงศัพท์ตรงกับโค้ด/AWS ให้เริ่มอ่านจากไฟล์นี้
 
-Important: the actual department source dataset was not available in the supplied materials, so source-dependent acceptance criteria remain pending until the real Excel/CSV/assets are inspected.
+**[`CS361-29_เช็คลิสต์ปิดงาน.md`](./CS361-29_เช็คลิสต์ปิดงาน.md)** เป็นเวอร์ชันสรุปภาษาไทยของ
+Issue #29 พร้อมสถานะจริงของแต่ละงาน (อันไหนทำเสร็จแล้วจริง อันไหนยังต้องรอทีมเข้า AWS/Vercel
+เพื่อเก็บหลักฐานเพิ่ม) เหมาะสำหรับอ่านเร็วๆ ก่อนประชุมทีม
+
+**[`../evidence/README.md`](../evidence/README.md)** คือชุดหลักฐานสำหรับปิด Issue #29 — ตอนนี้มี
+หลักฐานข้อมูลจริง (source snapshot, serving JSON, ผลเตรียมข้อมูล 22 คน) แนบไว้แล้วในหมวด `data/`
+ส่วนหมวด architecture/aws/api/frontend/security/e2e ยังเป็นแค่โครงที่รอทีม capture screenshot/URL
+จริงจากระบบที่ deploy แล้วมาใส่
+
+## คลังเอกสารเก่า
+
+โฟลเดอร์ [`archive/`](./archive/) เก็บร่างเอกสารและไฟล์ที่ทำขึ้น**ก่อน**จะมีชุดข้อมูลจริงจาก
+เว็บไซต์สาขาวิชา (ร่าง Issue #21, #22, ตาราง mapping/classification ตัวอย่าง 1 คน, ภาพร่าง
+สถาปัตยกรรมเก่า ฯลฯ) เนื้อหาในนั้น**ไม่ตรงกับระบบที่ implement จริง**อีกต่อไป (เช่น ยังอ้างว่า
+Source เป็น Excel/CSV) เก็บไว้เป็นบันทึกประวัติการทำงานเท่านั้น ดูรายละเอียดแต่ละไฟล์ได้ใน
+[`archive/README.md`](./archive/README.md)

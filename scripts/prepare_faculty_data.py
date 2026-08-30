@@ -93,12 +93,21 @@ def valid_url(value: str | None) -> bool:
 # ============================================================
 
 TITLE_PREFIXES = [
-    "asst.prof.dr.",
-    "asst. prof. dr.",
-    "assoc.prof.dr.",
+    # Longest / most specific prefixes first.
     "assoc. prof. dr.",
-    "prof.dr.",
+    "assoc.prof. dr.",
+    "assoc.prof.dr.",
+    "asst. prof. dr.",
+    "asst.prof. dr.",
+    "asst.prof.dr.",
     "prof. dr.",
+    "prof.dr.",
+    "ajarn dr.",
+    "ajarn dr",
+    "ajarn",
+    "lecturer dr.",
+    "lecturer dr",
+    "lecturer",
     "dr.",
 ]
 
@@ -491,6 +500,9 @@ def prepare_faculty(record):
         "profile_image": profile_image,
 
         "research_interests": research_interests,
+
+        # Required by the frozen Faculty Summary contract.
+        "expertise": expertise,
     }
 
     return {

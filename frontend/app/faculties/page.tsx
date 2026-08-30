@@ -18,9 +18,9 @@ interface FacultiesPageProps {
 }
 
 /**
- * Server Component — ดึงข้อมูลจาก `GET /api/v1/faculties` บน server
- * ถ้า getFaculties() โยน error จะตกไปที่ `error.tsx` ของ segment นี้เอง
- * และระหว่างรอ render จะเห็น `loading.tsx` — ไม่ต้องมี useEffect/useState เลย
+ * Server Component — fetches `GET /api/v1/faculties` on the server.
+ * If getFaculties() throws, it falls through to this segment's `error.tsx`,
+ * and `loading.tsx` shows while rendering waits — no useEffect/useState needed.
  */
 export default async function FacultiesPage({ searchParams }: FacultiesPageProps) {
   const params = await searchParams;
@@ -35,7 +35,7 @@ export default async function FacultiesPage({ searchParams }: FacultiesPageProps
   );
 
   return (
-    /* ไม่ใส่ <main> ซ้ำที่นี่ — layout.tsx มี <main> เดียวของทั้งเว็บอยู่แล้ว */
+    /* No nested <main> here — layout.tsx already provides the site's single <main> */
     <div>
       <DirectoryBanner />
 
@@ -56,7 +56,7 @@ export default async function FacultiesPage({ searchParams }: FacultiesPageProps
             <>
               <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-6">
                 {items.map((faculty) => (
-                  /* key ใช้ id ที่เสถียรจาก API เสมอ ห้ามใช้ index ของ array */
+                  /* Always key on the API's stable id — never use the array index */
                   <li key={faculty.id} className="h-full">
                     <FacultyCard faculty={faculty} />
                   </li>
