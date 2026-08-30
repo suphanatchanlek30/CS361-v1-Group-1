@@ -1,0 +1,52 @@
+{
+  "id": "krittakom-srijiranon",
+  "name": {
+    "th": "ผศ.ดร.กฤตคม ศรีจิรานนท์",
+    "en": "Asst.Prof.Dr. Krittakom Srijiranon"
+  },
+  "academic_position": "ผู้ช่วยศาสตราจารย์",
+  "profile_image": {
+    "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/1580868758.jpg",
+    "alt": "ผศ.ดร.กฤตคม ศรีจิรานนท์"
+  },
+  "badges": [],
+  "cv": {
+    "url": "https://docs.google.com/document/d/1ndWW4gUVdXYS66qVc75dZLW9Zla-ZkUgBWrTbLGDKN4/edit"
+  },
+  "contact": {
+    "office": "อาคารบุญชูปณิธาน ห้อง 7301/2",
+    "phone": "0-5423-7999",
+    "extension": "5627",
+    "email": "non_krit@tu.ac.th"
+  },
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "field": "Computer Engineering",
+      "institution": "Chiang Mai University",
+      "country": "Thailand",
+      "graduation_year": "2021"
+    },
+    {
+      "degree": "M.Eng.",
+      "field": "Computer Engineering",
+      "institution": "Chiang Mai University",
+      "country": "Thailand",
+      "graduation_year": "2015"
+    },
+    {
+      "degree": "B.Eng.",
+      "field": "Computer Engineering",
+      "institution": "Chiang Mai University",
+      "country": "Thailand",
+      "graduation_year": "2014"
+    }
+  ],
+  "research_interests": [
+    "Data Mining",
+    "Machine Learning"
+  ],
+  "expertise": [],
+  "selected_publications": [],
+  "publication_profiles": []
+}

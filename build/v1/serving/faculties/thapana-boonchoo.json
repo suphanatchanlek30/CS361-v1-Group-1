@@ -13,34 +13,28 @@
   "cv": null,
   "contact": {
     "office": "อาคาร LC-2 ชั้น 2 ห้อง 222",
-    "phone": "02-564-4444 ต่อ 2157 ต่อ 222",
-    "extension": null,
+    "phone": "02-564-4444",
+    "extension": "2157 ต่อ 222",
     "email": "thapana@cs.tu.ac.th"
   },
   "education": [
     {
       "degree": "Ph.D.",
       "field": "Computer Science and Technology",
-      "institution": "University of Chinese Academy of Sciences",
-      "country": "China",
-      "graduation_year": null,
-      "additional_information": "Machine Learning and Data Mining Group, Institute of Computing Technology"
+      "institution": "Machine Learning and Data Mining Group, Institute of Computing Technology, University of Chinese Academy of Sciences",
+      "country": "China"
     },
     {
       "degree": "M.Sc.",
       "field": "Computer Science and Technology",
-      "institution": "Tsinghua University",
-      "country": "China",
-      "graduation_year": null,
-      "additional_information": "Institute of High-Performance Computing"
+      "institution": "Institute of High-Performance Computing, Tsinghua University",
+      "country": "China"
     },
     {
       "degree": "B.Sc.",
-      "field": "Computer Science",
+      "field": "Computer Science, First Class Honours",
       "institution": "Thammasat University",
-      "country": "Thailand",
-      "graduation_year": null,
-      "additional_information": "First Class Honours"
+      "country": "Thailand"
     }
   ],
   "research_interests": [

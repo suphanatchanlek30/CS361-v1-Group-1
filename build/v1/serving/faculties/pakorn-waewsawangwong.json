@@ -1,0 +1,36 @@
+{
+  "id": "pakorn-waewsawangwong",
+  "name": {
+    "th": "อาจารย์ปกรณ์ แววสว่างวงศ์",
+    "en": "Ajarn Pakorn Waewsawangwong"
+  },
+  "academic_position": "อาจารย์",
+  "profile_image": {
+    "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/1580870990.jpg",
+    "alt": "อาจารย์ปกรณ์ แววสว่างวงศ์"
+  },
+  "badges": [],
+  "cv": {
+    "url": "https://docs.google.com/document/d/1ml-vlMIy3LHN4LQHfIPGKHGRkhA7R_avBnPM0Cb9G6A/edit"
+  },
+  "contact": {
+    "office": null,
+    "phone": "0-5423-7999",
+    "extension": "5627",
+    "email": "wpakorn@tu.ac.th"
+  },
+  "education": [
+    {
+      "degree": "M.Sc.",
+      "field": "Software Engineering (Distinction)",
+      "institution": "University of York",
+      "graduation_year": "2001"
+    }
+  ],
+  "research_interests": [
+    "Formal Modeling"
+  ],
+  "expertise": [],
+  "selected_publications": [],
+  "publication_profiles": []
+}

@@ -1,14 +1,25 @@
 {
   "status": "PASSED_WITH_WARNINGS",
-  "faculty_records": 2,
-  "valid_faculty": 2,
+  "faculty_records": 22,
+  "valid_faculty": 22,
   "invalid_faculty": 0,
   "selected_publications": 7,
-  "warnings": 1,
+  "warnings": 12,
   "errors": 0,
   "duplicate_faculty": 0,
   "duplicate_publications": 0,
   "warning_details": [
-    "thapana-boonchoo: CV missing"
+    "kasidit-chanchio: CV missing",
+    "nuttanont-hongwarittorrn: CV missing",
+    "songsakdi-rongviriyapanish: CV missing",
+    "tanatorn-tanantong: CV missing",
+    "saowaluk-watanapa: CV missing",
+    "wanida-putthividhya: CV missing",
+    "sirikunya-nilpanich: CV missing",
+    "lumpapun-punchoojit: CV missing",
+    "thapana-boonchoo: CV missing",
+    "nawarerk-chalarak: CV missing",
+    "satanat-kitsiranuwat: CV missing",
+    "pakkaporn-saophan: CV missing"
   ]
 }

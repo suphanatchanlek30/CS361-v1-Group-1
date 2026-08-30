@@ -12,7 +12,7 @@
   "badges": [
     {
       "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2022/07/All_Badges.png",
-      "label": "All_Badges"
+      "label": "All Badges"
     }
   ],
   "cv": {
@@ -30,24 +30,21 @@
       "field": "Electrical and Computer Engineering",
       "institution": "University of Florida",
       "country": "USA",
-      "graduation_year": 2554,
-      "additional_information": null
+      "graduation_year": "2554"
     },
     {
       "degree": "M.Sc.",
       "field": "Computer Science",
       "institution": "University of Southern California",
       "country": "USA",
-      "graduation_year": 2547,
-      "additional_information": null
+      "graduation_year": "2547"
     },
     {
       "degree": "วศ.บ.",
-      "field": "วิศวกรรมคอมพิวเตอร์",
+      "field": "วิศวกรรมคอมพิวเตอร์ (เกียรตินิยมอันดับสอง)",
       "institution": "มหาวิทยาลัยเกษตรศาสตร์",
       "country": "ประเทศไทย",
-      "graduation_year": 2544,
-      "additional_information": "เกียรตินิยมอันดับสอง"
+      "graduation_year": "2544"
     }
   ],
   "research_interests": [
@@ -65,87 +62,59 @@
   ],
   "selected_publications": [
     {
-      "authors": "Thongthavorn, Wongsatorn & Rattanatamrong, Prapaporn",
       "title": "Multi-Container Application Migration with Load Balanced and Adaptive Parallel TCP",
       "year": 2019,
-      "venue": null,
-      "volume": null,
-      "issue": null,
       "pages": "55-62",
       "doi": "10.1109/HPCS48598.2019.9188218",
-      "url": null,
       "citation_text": "Thongthavorn, Wongsatorn & Rattanatamrong, Prapaporn. (2019). Multi-Container Application Migration with Load Balanced and Adaptive Parallel TCP. 55-62. 10.1109/HPCS48598.2019.9188218."
     },
     {
-      "authors": "Wantanakorn, Pornchanok & Harintajinda, Supamas & Chuthapisith, Jariya & Anurathapan, Usanarat & Rattanatamrong, Prapaporn",
       "title": "A New Mobile Application to Reduce Anxiety in Pediatric Patients Before Bone Marrow Aspiration Procedures",
       "year": 2018,
-      "venue": "Hospital pediatrics",
+      "venue": "Hospital Pediatrics",
       "volume": "8",
-      "issue": null,
-      "pages": null,
       "doi": "10.1542/hpeds.2018-0073",
-      "url": null,
       "citation_text": "Wantanakorn, Pornchanok & Harintajinda, Supamas & Chuthapisith, Jariya & Anurathapan, Usanarat & Rattanatamrong, Prapaporn. (2018). A New Mobile Application to Reduce Anxiety in Pediatric Patients Before Bone Marrow Aspiration Procedures. Hospital pediatrics. 8. 10.1542/hpeds.2018-0073."
     },
     {
-      "authors": "Rattanatamrong, Prapaporn & Fortes, Jose",
       "title": "Dynamic Scheduling of Real-Time Mixture-of-Experts Systems on Limited Resources",
       "year": 2014,
-      "venue": "Computers, IEEE Transactions on",
+      "venue": "IEEE Transactions on Computers",
       "volume": "63",
-      "issue": null,
       "pages": "1751-1764",
       "doi": "10.1109/TC.2013.50",
-      "url": null,
       "citation_text": "Rattanatamrong, Prapaporn & Fortes, Jose. (2014). Dynamic Scheduling of Real-Time Mixture-of-Experts Systems on Limited Resources. Computers, IEEE Transactions on. 63. 1751-1764. 10.1109/TC.2013.50."
     },
     {
-      "authors": "Rattanatamrong, Prapaporn & Fortes, Jose",
       "title": "Improved real-time scheduling of periodic tasks on multiprocessors",
       "year": 2012,
-      "venue": "Concurrency and Computation Practice and Experience",
+      "venue": "Concurrency and Computation: Practice and Experience",
       "volume": "27",
-      "issue": null,
-      "pages": null,
       "doi": "10.1002/cpe.2969",
-      "url": null,
       "citation_text": "Rattanatamrong, Prapaporn & Fortes, Jose. (2012). Improved real-time scheduling of periodic tasks on multiprocessors. Concurrency and Computation Practice and Experience. 27. 10.1002/cpe.2969."
     },
     {
-      "authors": "Rattanatamrong, Prapaporn & Fortes, Jose",
       "title": "Mode Transition for Online Scheduling of Adaptive Real-Time Systems on Multiprocessors",
       "year": 2011,
-      "venue": null,
-      "volume": "1",
-      "issue": null,
       "pages": "25-32",
       "doi": "10.1109/RTCSA.2011.71",
-      "url": null,
-      "citation_text": "Rattanatamrong, Prapaporn & Fortes, Jose. (2011). Mode Transition for Online Scheduling of Adaptive Real-Time Systems on Multiprocessors. 1. 25-32. 10.1109/RTCSA.2011.71."
+      "citation_text": "Rattanatamrong, Prapaporn & Fortes, José. (2011). Mode Transition for Online Scheduling of Adaptive Real-Time Systems on Multiprocessors. 1. 25-32. 10.1109/RTCSA.2011.71."
     },
     {
-      "authors": "Rattanatamrong, Prapaporn & Fortes, José",
       "title": "Real-time scheduling of mixture-of-experts systems with limited resources",
       "year": 2010,
-      "venue": "HSCC’10 - Proceedings of the 13th ACM International Conference on Hybrid Systems: Computation and Control",
-      "volume": null,
-      "issue": null,
+      "venue": "HSCC 2010 - Proceedings of the 13th ACM International Conference on Hybrid Systems: Computation and Control",
       "pages": "71-80",
       "doi": "10.1145/1755952.1755964",
-      "url": null,
       "citation_text": "Rattanatamrong, Prapaporn & Fortes, José. (2010). Real-time scheduling of mixture-of-experts systems with limited resources. HSCC’10 - Proceedings of the 13th ACM International Conference on Hybrid Systems: Computation and Control. 71-80. 10.1145/1755952.1755964."
     },
     {
-      "authors": "Digiovanna, Jack & Rattanatamrong, Prapaporn & Zhao, Ming & Mahmoudi, Babak & Hermer, Linda & Figueiredo, Renato & Principe, Jose & Fortes, Jose & Sanchez, Justin",
       "title": "Cyber-Workstation for Computational Neuroscience",
       "year": 2010,
-      "venue": "Frontiers in neuroengineering",
+      "venue": "Frontiers in Neuroengineering",
       "volume": "2",
-      "issue": null,
       "pages": "17",
       "doi": "10.3389/neuro.16.017.2009",
-      "url": null,
       "citation_text": "Digiovanna, Jack & Rattanatamrong, Prapaporn & Zhao, Ming & Mahmoudi, Babak & Hermer, Linda & Figueiredo, Renato & Principe, Jose & Fortes, Jose & Sanchez, Justin. (2010). Cyber-Workstation for Computational Neuroscience. Frontiers in neuroengineering. 2. 17. 10.3389/neuro.16.017.2009."
     }
   ],
