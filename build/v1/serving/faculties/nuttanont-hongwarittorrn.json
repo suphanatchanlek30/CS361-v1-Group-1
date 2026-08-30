@@ -1,0 +1,84 @@
+{
+  "id": "nuttanont-hongwarittorrn",
+  "name": {
+    "th": "รศ.ดร.ณัฐธนนท์ หงส์วริทธิ์ธร",
+    "en": "Assoc.Prof.Dr. Nuttanont Hongwarittorrn"
+  },
+  "academic_position": "รองศาสตราจารย์",
+  "profile_image": {
+    "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/1587629164.jpg",
+    "alt": "รศ.ดร.ณัฐธนนท์ หงส์วริทธิ์ธร"
+  },
+  "badges": [],
+  "cv": null,
+  "contact": {
+    "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+    "phone": "0-2986-9156",
+    "extension": "229",
+    "email": "nuttanon@tu.ac.th"
+  },
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "field": "Information Science",
+      "institution": "University of Pittsburgh",
+      "country": "USA",
+      "graduation_year": "2545"
+    },
+    {
+      "degree": "M.S.",
+      "field": "Information Science",
+      "institution": "University of Pittsburgh",
+      "country": "USA",
+      "graduation_year": "2545"
+    },
+    {
+      "degree": "M.Ed.",
+      "field": "Research Methodology",
+      "institution": "University of Pittsburgh",
+      "country": "USA",
+      "graduation_year": "2545"
+    },
+    {
+      "degree": "M.Sc.",
+      "field": "Computer and Information Sciences",
+      "institution": "New Jersey Institute of Technology",
+      "country": "USA",
+      "graduation_year": "2539"
+    },
+    {
+      "degree": "ศศ.ม.",
+      "field": "จิตวิทยาอุตสาหกรรมและองค์การ",
+      "institution": "มหาวิทยาลัยธรรมศาสตร์",
+      "country": "ประเทศไทย",
+      "graduation_year": "2539"
+    },
+    {
+      "degree": "วท.บ.",
+      "field": "ศาสตร์คอมพิวเตอร์",
+      "institution": "มหาวิทยาลัยธรรมศาสตร์",
+      "country": "ประเทศไทย",
+      "graduation_year": "2533"
+    }
+  ],
+  "research_interests": [
+    "Human Computer Interaction",
+    "Animated Characters",
+    "Pedagogical Agents",
+    "Individual Differences in HCI",
+    "Adaptive Interface",
+    "Usability Testing"
+  ],
+  "expertise": [],
+  "selected_publications": [],
+  "publication_profiles": [
+    {
+      "provider": "semantic_scholar",
+      "url": "https://www.semanticscholar.org/author/Nuttanont-Hongwarittorrn/8654996"
+    },
+    {
+      "provider": "researchgate",
+      "url": "https://www.researchgate.net/profile/Nuttanont-Hongwarittorrn"
+    }
+  ]
+}

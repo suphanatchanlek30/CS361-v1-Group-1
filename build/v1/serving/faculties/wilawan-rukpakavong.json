@@ -1,0 +1,61 @@
+{
+  "id": "wilawan-rukpakavong",
+  "name": {
+    "th": "ผศ.ดร.วิลาวรรณ รักผกาวงศ์",
+    "en": "Asst.Prof. Dr. Wilawan Rukpakavong"
+  },
+  "academic_position": "ผู้ช่วยศาสตราจารย์",
+  "profile_image": {
+    "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture28.jpg",
+    "alt": "ผศ.ดร.วิลาวรรณ รักผกาวงศ์"
+  },
+  "badges": [],
+  "cv": {
+    "url": "https://docs.google.com/document/d/12bONVOyWkVggalWSIPdfQsC6T530zOWD36kJuaD8Gm8/edit?usp=sharing"
+  },
+  "contact": {
+    "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+    "phone": "0-2986-9156",
+    "extension": "215",
+    "email": "wilawan@cs.tu.ac.th"
+  },
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "field": "Computer Science",
+      "institution": "Loughborough University",
+      "country": "UK",
+      "graduation_year": "2557"
+    },
+    {
+      "degree": "M.Sc.",
+      "field": "Computer Technology",
+      "institution": "Asian Institute of Technology",
+      "country": "ประเทศไทย",
+      "graduation_year": "2534"
+    },
+    {
+      "degree": "วท.บ.",
+      "field": "ศาสตร์คอมพิวเตอร์",
+      "institution": "มหาวิทยาลัยธรรมศาสตร์",
+      "country": "ประเทศไทย",
+      "graduation_year": "2533"
+    }
+  ],
+  "research_interests": [
+    "Distributed Systems",
+    "Programming Languages"
+  ],
+  "expertise": [],
+  "selected_publications": [],
+  "publication_profiles": [
+    {
+      "provider": "semantic_scholar",
+      "url": "https://www.semanticscholar.org/author/W.-Rukpakavong/1767714"
+    },
+    {
+      "provider": "researchgate",
+      "url": "https://www.researchgate.net/profile/Wilawan_Rukpakavong2"
+    }
+  ]
+}

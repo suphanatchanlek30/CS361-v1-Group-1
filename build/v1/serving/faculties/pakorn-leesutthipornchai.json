@@ -1,0 +1,59 @@
+{
+  "id": "pakorn-leesutthipornchai",
+  "name": {
+    "th": "ผศ.ดร.ปกรณ์ ลี้สุทธิพรชัย",
+    "en": "Asst.Prof.Dr. Pakorn Leesutthipornchai"
+  },
+  "academic_position": "ผู้ช่วยศาสตราจารย์",
+  "profile_image": {
+    "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2020/05/Picture3.jpg",
+    "alt": "ผศ.ดร.ปกรณ์ ลี้สุทธิพรชัย"
+  },
+  "badges": [],
+  "cv": {
+    "url": "https://docs.google.com/document/d/1vekBy1AXOxkOeFyaQV1ouvOIdzOjxhqwb9RqxDyO7I0/edit?usp=sharing"
+  },
+  "contact": {
+    "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+    "phone": "0-2986-9156",
+    "extension": "217",
+    "email": "pakornl@tu.ac.th"
+  },
+  "education": [
+    {
+      "degree": "ปร.ด.",
+      "field": "วิศวกรรมไฟฟ้าและคอมพิวเตอร์",
+      "institution": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี",
+      "country": "ประเทศไทย",
+      "graduation_year": "2554"
+    },
+    {
+      "degree": "วศ.ม.",
+      "field": "วิศวกรรมคอมพิวเตอร์",
+      "institution": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี",
+      "country": "ประเทศไทย",
+      "graduation_year": "2550"
+    },
+    {
+      "degree": "วศ.บ.",
+      "field": "วิศวกรรมคอมพิวเตอร์ (เกียรตินิยมอันดับสอง)",
+      "institution": "มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี",
+      "country": "ประเทศไทย",
+      "graduation_year": "2547"
+    }
+  ],
+  "research_interests": [
+    "Machine Learning",
+    "Data Mining",
+    "Data Analytics",
+    "Association Mining Mobile and Web Applications"
+  ],
+  "expertise": [],
+  "selected_publications": [],
+  "publication_profiles": [
+    {
+      "provider": "other",
+      "url": "http://www.cs.tu.ac.th/staff.php"
+    }
+  ]
+}

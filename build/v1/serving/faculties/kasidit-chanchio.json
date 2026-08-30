@@ -1,0 +1,61 @@
+{
+  "id": "kasidit-chanchio",
+  "name": {
+    "th": "ผศ.ดร.กษิดิศ ชาญเชี่ยว",
+    "en": "Asst.Prof.Dr. Kasidit Chanchio"
+  },
+  "academic_position": "ผู้ช่วยศาสตราจารย์",
+  "profile_image": {
+    "url": "https://cs.sci.tu.ac.th/wp-content/uploads/2021/02/5-scaled-e1612367119916.jpg",
+    "alt": "ผศ.ดร.กษิดิศ ชาญเชี่ยว"
+  },
+  "badges": [],
+  "cv": null,
+  "contact": {
+    "office": "อาคาร LC-2 ชั้น 2 ห้อง 210",
+    "phone": "0-2986-9156",
+    "extension": "200",
+    "email": "ckasidit@tu.ac.th"
+  },
+  "education": [
+    {
+      "degree": "Ph.D.",
+      "field": "Computer Science",
+      "institution": "Louisiana State University",
+      "country": "USA",
+      "graduation_year": "2543"
+    },
+    {
+      "degree": "M.S.",
+      "field": "Computer Science",
+      "institution": "Louisiana State University",
+      "country": "USA",
+      "graduation_year": "2539"
+    },
+    {
+      "degree": "วท.บ.",
+      "field": "ศาสตร์คอมพิวเตอร์",
+      "institution": "มหาวิทยาลัยธรรมศาสตร์",
+      "country": "ประเทศไทย",
+      "graduation_year": "2533"
+    }
+  ],
+  "research_interests": [
+    "Fault Tolerance",
+    "Distributed and Parallel Processing",
+    "High Performance Computing",
+    "System Software"
+  ],
+  "expertise": [],
+  "selected_publications": [],
+  "publication_profiles": [
+    {
+      "provider": "google_scholar",
+      "url": "https://scholar.google.co.th/citations?hl=th&user=Xa3otrYAAAAJ&view_op=list_works&sortby=pubdate"
+    },
+    {
+      "provider": "researchgate",
+      "url": "https://www.researchgate.net/profile/K_Chanchio"
+    }
+  ]
+}
